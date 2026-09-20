@@ -2,6 +2,10 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import http from 'node:http';
 import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import { spawn } from 'node:child_process';
+import { setTimeout as delay } from 'node:timers/promises';
 import { createAppServer } from './server.mjs';
 import { createLlmService, AppError, validateMatch } from './llm.mjs';
 
@@ -80,6 +84,70 @@ function abortableFetch(_url, { signal }) {
     else signal.addEventListener('abort', () => reject(signal.reason), { once: true });
   });
 }
+
+test('release symlink starts the server while importing it has no startup side effect', { timeout: 15000 }, async () => {
+  // Copy only runtime modules into a temporary release: never load a real .env.
+  const sandbox = await fs.mkdtemp(path.join(os.tmpdir(), 'anzhen-entry-test-'));
+  const release = path.join(sandbox, 'releases', 'test-release');
+  const current = path.join(sandbox, 'current');
+  const children = [];
+  const startChild = entry => {
+    const child = spawn(process.execPath, [entry], {
+      cwd: sandbox,
+      env: { PORT: String(port), MOONSHOT_API_KEY: '', KIMI_API_KEY: '', PUBLIC_ORIGIN: '' },
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    let output = '';
+    child.stdout.on('data', chunk => { output += chunk; });
+    child.stderr.on('data', chunk => { output += chunk; });
+    const closed = new Promise((resolve, reject) => {
+      child.once('error', reject);
+      child.once('close', (code, signal) => resolve({ code, signal }));
+    });
+    // Cleanup retains the promise even if a startup assertion fails.
+    children.push({ child, closed });
+    return { child, closed, output: () => output };
+  };
+  let port;
+  try {
+    await fs.mkdir(path.join(release, 'data'), { recursive: true });
+    for (const file of ['server.mjs', 'config.mjs', 'llm.mjs', 'care-ai.mjs', 'matching.mjs', 'data/doctors.json']) {
+      await fs.copyFile(new URL(file, import.meta.url), path.join(release, file));
+    }
+    await fs.symlink(release, current, 'dir');
+    const reservation = http.createServer();
+    await new Promise(resolve => reservation.listen(0, '127.0.0.1', resolve));
+    port = reservation.address().port;
+    await new Promise(resolve => reservation.close(resolve));
+
+    const running = startChild(path.join(current, 'server.mjs'));
+    let health;
+    for (let attempt = 0; attempt < 100; attempt++) {
+      assert.equal(running.child.exitCode, null, `Symlink entry exited before listening: ${running.output()}`);
+      try { health = await request(port, '/api/health'); break; }
+      catch (error) { if (error.code !== 'ECONNREFUSED') throw error; }
+      await delay(25);
+    }
+    assert.equal(health?.status, 200, `Symlink entry did not start: ${running.output()}`);
+    assert.deepEqual(health.json, { service: 'anzhen-referral-workspace', status: 'ok' });
+    assert.equal((await request(port, '/api/config')).json.configured, false);
+    running.child.kill('SIGTERM');
+    await running.closed;
+
+    const wrapper = path.join(sandbox, 'import-only.mjs');
+    await fs.writeFile(wrapper, 'await import("./current/server.mjs");\nprocess.stdout.write("IMPORTED_ONLY\\n");\n');
+    const imported = startChild(wrapper);
+    const result = await Promise.race([imported.closed, delay(3000, undefined, { ref: false }).then(() => ({ timedOut: true }))]);
+    assert.deepEqual(result, { code: 0, signal: null }, 'Importing the server must finish without opening a listener');
+    assert.equal(imported.output(), 'IMPORTED_ONLY\n');
+  } finally {
+    for (const { child, closed } of children) {
+      if (child.exitCode === null && child.signalCode === null) child.kill('SIGKILL');
+      await closed.catch(() => {});
+    }
+    await fs.rm(sandbox, { recursive: true, force: true });
+  }
+});
 
 test('K3 match requests use strict schema, low reasoning effort and completion-token budget', async () => {
   const { service, calls } = mockedService();

@@ -38,7 +38,21 @@ export function sameReferral(left, right) {
     left.snapshot.sourceDoctor.trim() === right.snapshot.sourceDoctor.trim();
 }
 
-export function newRecordId(day, uuid = globalThis.crypto.randomUUID()) {
+function randomRecordUuid() {
+  const crypto = globalThis.crypto;
+  if (typeof crypto?.randomUUID === 'function') return crypto.randomUUID();
+  if (typeof crypto?.getRandomValues !== 'function') {
+    throw new Error('当前浏览器无法安全生成转诊编号，请更换浏览器后重试。');
+  }
+  // randomUUID requires a secure context; getRandomValues also works on HTTP.
+  const bytes = crypto.getRandomValues(new Uint8Array(16));
+  bytes[6] = (bytes[6] & 0x0f) | 0x40;
+  bytes[8] = (bytes[8] & 0x3f) | 0x80;
+  const hex = Array.from(bytes, byte => byte.toString(16).padStart(2, '0')).join('');
+  return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
+}
+
+export function newRecordId(day, uuid = randomRecordUuid()) {
   return `AZ-${day.replaceAll('-', '')}-${uuid.replaceAll('-', '').toUpperCase()}`;
 }
 

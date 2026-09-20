@@ -1,7 +1,7 @@
 import http from 'node:http';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import {fileURLToPath,pathToFileURL} from 'node:url';
+import {fileURLToPath} from 'node:url';
 import {loadConfig} from './config.mjs';
 import {createLlmService,AppError} from './llm.mjs';
 import {createCareAiService,RECORD_EXTRACT_BODY_LIMIT} from './care-ai.mjs';
@@ -65,7 +65,11 @@ export async function createAppServer({config,fetchImpl=fetch}={}) {
   server.requestTimeout=15000;server.headersTimeout=10000;
   return server;
 }
-if (process.argv[1] && import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href) {
+// Node resolves imported module URLs through release symlinks, but argv keeps
+// the launch path. Compare real files so current/server.mjs remains executable
+// without starting a listener when this module is imported by another entry.
+const entryFile=process.argv[1]?await fs.realpath(path.resolve(process.argv[1])).catch(()=>null):null;
+if (entryFile && entryFile===await fs.realpath(fileURLToPath(import.meta.url))) {
   try {
     const config=await loadConfig(root);const server=await createAppServer({config});
     server.on('error',error=>{console.error(error.code==='EADDRINUSE'?`端口 ${config.port} 已被占用，请停止旧服务或修改 .env 中 PORT。`:'启动失败，请检查本地端口和配置。');process.exitCode=1;});

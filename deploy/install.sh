@@ -96,7 +96,10 @@ for photo_file in "${photo_files[@]}"; do
 done
 for source_module in "$release_dir"/*.mjs; do "$node_bin" --check "$source_module"; done
 
-previous_release=$(readlink -f "$install_root/current" 2>/dev/null || true)
+previous_release=''
+if [[ -L "$install_root/current" ]]; then
+  previous_release=$(readlink -f "$install_root/current")
+fi
 unit_backup="$release_dir/previous-service.unit"
 had_unit=false
 if [[ -f "$unit_file" ]]; then cp -p "$unit_file" "$unit_backup"; had_unit=true; fi

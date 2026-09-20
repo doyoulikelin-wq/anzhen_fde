@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { webcrypto } from 'node:crypto';
 import { storageKey, parseRecords, mergeRecords, sameReferral, newRecordId, updateRecords } from './record-store.mjs';
 
 const copy = value => JSON.parse(JSON.stringify(value));
@@ -14,6 +15,16 @@ function record(id = 'AZ-20260919-001', fields = {}) {
 function storage(initial = []) {
   let value = JSON.stringify(initial);
   return { getItem(key) { assert.equal(key, storageKey); return value; }, setItem(key, next) { assert.equal(key, storageKey); value = next; } };
+}
+
+function withCrypto(crypto, run) {
+  const descriptor = Object.getOwnPropertyDescriptor(globalThis, 'crypto');
+  Object.defineProperty(globalThis, 'crypto', { configurable: true, value: crypto });
+  try { return run(); }
+  finally {
+    if (descriptor) Object.defineProperty(globalThis, 'crypto', descriptor);
+    else delete globalThis.crypto;
+  }
 }
 
 test('existing record format and IDs remain readable', () => {
@@ -37,6 +48,35 @@ test('new record IDs do not reuse array lengths or collide between tabs', () => 
   const ids = Array.from({ length: 1000 }, () => newRecordId('2026-09-19'));
   assert.equal(new Set(ids).size, ids.length);
   assert.ok(ids.every(id => /^AZ-20260919-[0-9A-F]{32}$/.test(id)));
+});
+
+test('HTTP contexts without randomUUID generate unique UUIDv4 record IDs with getRandomValues', () => {
+  withCrypto({ getRandomValues: bytes => webcrypto.getRandomValues(bytes) }, () => {
+    const ids = Array.from({ length: 1000 }, () => newRecordId('2026-09-19'));
+    assert.equal(new Set(ids).size, ids.length);
+    assert.ok(ids.every(id => /^AZ-20260919-[0-9A-F]{12}4[0-9A-F]{3}[89AB][0-9A-F]{15}$/.test(id)));
+  });
+});
+
+test('secure contexts continue using native randomUUID', () => {
+  withCrypto({
+    randomUUID: () => '12345678-1234-4123-8123-123456789abc',
+    getRandomValues: () => { throw new Error('fallback must not run'); },
+  }, () => {
+    assert.equal(newRecordId('2026-09-19'), 'AZ-20260919-12345678123441238123123456789ABC');
+  });
+});
+
+test('missing secure random generators fail explicitly without creating a weak ID', () => {
+  for (const crypto of [undefined, {}]) {
+    withCrypto(crypto, () => assert.throws(() => newRecordId('2026-09-19'), /无法安全生成转诊编号/));
+  }
+});
+
+test('explicit UUIDs remain supported even without browser crypto', () => {
+  withCrypto(undefined, () => {
+    assert.equal(newRecordId('2026-09-19', '12345678-1234-4123-8123-123456789abc'), 'AZ-20260919-12345678123441238123123456789ABC');
+  });
 });
 
 test('stale pending references cannot downgrade accepted records and events are preserved', () => {
