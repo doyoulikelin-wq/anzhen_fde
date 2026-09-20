@@ -7,7 +7,7 @@ const template=await read('index.html');
 const doctors=JSON.parse(await read('data/doctors.json'));
 for(const d of doctors){const buffer=await fs.readFile(path.join(root,d.photo));d.photo=`data:image/png;base64,${buffer.toString('base64')}`;d.profile={officialClinics:d.profile?.officialClinics||[]};}
 const safeJson=JSON.stringify(doctors).replaceAll('<','\\u003c');
-const modules=['matching.mjs','record-store.mjs','shared-ui.mjs','portal.mjs','downward.mjs','guidance.mjs'];
+const modules=['matching.mjs','record-store.mjs','shared-client.mjs','shared-ui.mjs','portal.mjs','downward.mjs','guidance.mjs'];
 function rewriteImports(source){return source.replace(/^import\s*\{([^}]+)\}\s*from\s*['"]\.\/([^'"]+)['"];?\s*$/gm,(_,names,file)=>`const {${names.replace(/\s+as\s+/g,':')}}=offlineModules[${JSON.stringify(file)}];`);}
 let script='const offlineModules={};\n';
 for(const file of modules){

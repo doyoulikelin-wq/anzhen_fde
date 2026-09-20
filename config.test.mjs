@@ -52,3 +52,11 @@ test('deployment environment can set its own origin without editing a bundled en
   assert.equal((await loadConfig(root, { PUBLIC_ORIGIN: 'https://referral.example' })).publicOrigin, 'https://referral.example');
   assert.equal((await loadConfig(root, { PUBLIC_ORIGIN: '' })).publicOrigin, '');
 });
+
+test('shared records use a configurable durable directory independent of releases', async t=>{
+  const root=await isolatedRoot(t);
+  assert.equal((await loadConfig(root,{})).dataDir,path.join(root,'var'));
+  assert.equal((await loadConfig(root,{DATA_DIR:'/var/lib/anzhen-fde'})).dataDir,'/var/lib/anzhen-fde');
+  assert.equal((await loadConfig(root,{DATA_DIR:'custom-data'})).dataDir,path.join(root,'custom-data'));
+  await assert.rejects(loadConfig(root,{DATA_DIR:null}),/DATA_DIR/);
+});

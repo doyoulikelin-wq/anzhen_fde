@@ -4,6 +4,7 @@ import { renderWorkingSchedule } from './shared-ui.mjs';
 import { createPortal } from './portal.mjs';
 import { createDownwardWorkspace } from './downward.mjs';
 import { createGuidanceWorkspace } from './guidance.mjs';
+import { createSharedWorkspace, migrateLegacyWorkspace } from './shared-client.mjs';
 
 const $ = (s, root = document) => root.querySelector(s);
 const esc = (v = '') => String(v).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -36,9 +37,10 @@ let chatMessages = [], chatDraft = '', chatDoctorId = '', chatPending = false, c
 let caseText = presets[0].text, patient = {...presets[0]}, sourceHospital = '青禾县人民医院', sourceDoctor = '李明';
 let selectedDoctor = null, selectedDate = null, selectedSlot = null, modalType = null, currentRecord = null, restoreFocus = null;
 let records = readRecords(), recordSaving = false;
-let portalWorkspace, downwardWorkspace, guidanceWorkspace;
+let portalWorkspace, downwardWorkspace, guidanceWorkspace, sharedWorkspace=null, sharedStatus='loading';
+function renderSharedStatus(){const node=$('#shared-status');if(node){node.textContent=sharedStatus==='synced'?'云端已同步':sharedStatus==='error'?'连接中断，请重试':'正在同步';node.classList.toggle('sync-error',sharedStatus==='error');node.title=sharedStatus==='error'?'暂时无法同步，保存时会再次尝试连接。':'此网址下的记录由服务器统一保存。';}}
 function readRecords(){try{return parseRecords(localStorage.getItem(storageKey));}catch{return [];}}
-async function saveRecordChange(change){const result=await updateRecords(localStorage,()=>records,change);records=result.records;if(currentRecord)currentRecord=records.find(r=>r.id===currentRecord.id)||currentRecord;return result;}
+async function saveRecordChange(change){const result=sharedWorkspace?await sharedWorkspace.updateRecords(change):await updateRecords(localStorage,()=>records,change);records=result.records;if(currentRecord)currentRecord=records.find(r=>r.id===currentRecord.id)||currentRecord;return result;}
 function syncRecordViews(){const nav=document.querySelector('[data-nav="receive"]');if(nav){const count=pendingCount();let badge=nav.querySelector('.count');if(count){if(!badge){badge=document.createElement('b');badge.className='count';nav.append(badge);}badge.textContent=count;}else badge?.remove();}if(['receive','records'].includes(page)&&$('#page-content'))renderQueue();if(page==='home'&&portalWorkspace)portalWorkspace.render($('#page-content'));}
 function toast(message){const el=$('#toast');el.textContent=message;el.classList.add('visible');clearTimeout(timer);timer=setTimeout(()=>el.classList.remove('visible'),3500);}
 function localDay(date=new Date()){return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;}
@@ -56,7 +58,7 @@ async function api(path,body,signal){
   if(offlineBuild)throw Error('智能分析功能请通过本地工作台网址使用。');
   const response=await fetch(path,{method:body?'POST':'GET',cache:'no-store',headers:body?{'Content-Type':'application/json'}:{},body:body?JSON.stringify(body):undefined,signal});
   let data;try{data=await response.json();}catch{throw Error('服务返回了无法读取的内容，请检查启动程序后重试。');}
-  if(!response.ok)throw Error(data?.error?.message||`请求失败（${response.status}），请稍后重试。`);
+  if(!response.ok){const error=Error(data?.error?.message||`请求失败（${response.status}），请稍后重试。`);error.status=response.status;error.code=data?.error?.code;throw error;}
   return data;
 }
 async function loadConfig(){
@@ -129,12 +131,13 @@ const pageInfo={
   records:{title:'上转记录',eyebrow:'REFERRAL HISTORY',description:'跟踪每一次上转，从发起到接收。'},
 };
 function initializeWorkspaces(){
-  const context={getDoctors:()=>doctors,api,openModal:(html,label)=>setModal(html,'extension',label),closeModal,toast,navigate,renderSchedule:renderWorkingSchedule,escape:esc,icon,photo,onUpdate:updateGlobalSummaries};
+  const context={workspace:sharedWorkspace,getDoctors:()=>doctors,api,openModal:(html,label)=>setModal(html,'extension',label),closeModal,toast,navigate,renderSchedule:renderWorkingSchedule,escape:esc,icon,photo,onUpdate:updateGlobalSummaries};
   downwardWorkspace=createDownwardWorkspace(context);
   guidanceWorkspace=createGuidanceWorkspace(context);
   portalWorkspace=createPortal({...context,getUpStats:()=>({total:records.length,pending:pendingCount()}),getDownStats:()=>downwardWorkspace.summary?.()||{patients:0,pending:0,urgent:0}});
 }
 function updateGlobalSummaries(){
+  renderSharedStatus();
   const urgent=downwardWorkspace?.summary?.().urgent||0;
   const notification=$('#global-notification');
   if(notification){notification.classList.toggle('urgent',urgent>0);notification.innerHTML=`${icon('bell')}<span>${urgent?'紧急待处理':'照护通知'}</span>${urgent?`<b>${urgent}</b>`:''}`;notification.setAttribute('aria-label',urgent?`${urgent} 条紧急照护通知`:'查看照护通知');}
@@ -149,7 +152,7 @@ function shell(){
   const info=pageInfo[page]||pageInfo.home;
   const nav=[['home','home','服务首页'],['workbench','upward','下级转上级'],['downward','downward','上级转下级'],['guidance','compass','患者导诊'],['receive','receive','上转接收中心'],['records','records','上转记录']];
   const person=page==='guidance'?['患','患者服务','就诊信息与院内指引']:page==='downward'?['协','连续照护团队','上级指导 · 下级接续']:page==='receive'?['接','转诊中心工作人员','北京安贞医院安徽医院']:['李','李明 · 协同工作台','医联体医疗服务'];
-  $('#app').innerHTML=`<div class="shell"><aside class="sidebar"><div class="brand"><button class="brand-home" data-nav="home" aria-label="返回服务首页"><div class="brand-symbol">${icon('pulse')}</div><div><strong>安贞医联</strong><small>ANZHEN CONNECT</small></div></button></div><div class="nav-heading">CARE WORKSPACE</div><nav aria-label="主导航">${nav.map(([id,ic,label],index)=>`${index===4?'<div class="nav-group-divider"></div>':''}<button class="nav-item ${page===id?'active':''}" data-nav="${id}" ${page===id?'aria-current="page"':''}>${icon(ic)}<span>${label}</span>${id==='receive'&&pendingCount()?`<b class="count">${pendingCount()}</b>`:''}</button>`).join('')}</nav><div class="sidebar-bottom"><div class="network-card">${icon('hospital')}<strong>北京安贞医院安徽医院</strong><p>双向转诊 · 连续照护<br>围绕患者，连接诊疗与康复</p></div><div class="sidebar-footer">医联体协同服务平台</div></div></aside><div class="main-shell"><header class="topbar"><div class="breadcrumb">医联体协同 ${icon('chevron')} <b>${info.title}</b></div><div class="topbar-right"><button class="global-alert" id="global-notification" data-action="open-down-alerts" aria-label="查看照护通知">${icon('bell')}<span>照护通知</span></button><div class="user"><div class="avatar">${person[0]}</div><div><strong>${person[1]}</strong><small>${person[2]}</small></div></div></div></header><main class="page page-${page}"><div class="page-heading"><div><div class="eyebrow">${info.eyebrow}</div><h1>${info.title}</h1><p>${info.description}</p></div><div class="date-label">${icon('calendar')}${new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric',weekday:'long'})}</div></div><div id="page-content"></div></main></div></div>`;
+  $('#app').innerHTML=`<div class="shell"><aside class="sidebar"><div class="brand"><button class="brand-home" data-nav="home" aria-label="返回服务首页"><div class="brand-symbol">${icon('pulse')}</div><div><strong>安贞医联</strong><small>ANZHEN CONNECT</small></div></button></div><div class="nav-heading">CARE WORKSPACE</div><nav aria-label="主导航">${nav.map(([id,ic,label],index)=>`${index===4?'<div class="nav-group-divider"></div>':''}<button class="nav-item ${page===id?'active':''}" data-nav="${id}" ${page===id?'aria-current="page"':''}>${icon(ic)}<span>${label}</span>${id==='receive'&&pendingCount()?`<b class="count">${pendingCount()}</b>`:''}</button>`).join('')}</nav><div class="sidebar-bottom"><div class="network-card">${icon('hospital')}<strong>北京安贞医院安徽医院</strong><p>双向转诊 · 连续照护<br>围绕患者，连接诊疗与康复</p></div><div class="sidebar-footer">医联体协同服务平台</div></div></aside><div class="main-shell"><header class="topbar"><div class="breadcrumb">医联体协同 ${icon('chevron')} <b>${info.title}</b></div><div class="topbar-right">${sharedWorkspace?'<span class="shared-status" id="shared-status" role="status"></span>':''}<button class="global-alert" id="global-notification" data-action="open-down-alerts" aria-label="查看照护通知">${icon('bell')}<span>照护通知</span></button><div class="user"><div class="avatar">${person[0]}</div><div><strong>${person[1]}</strong><small>${person[2]}</small></div></div></div></header><main class="page page-${page}"><div class="page-heading"><div><div class="eyebrow">${info.eyebrow}</div><h1>${info.title}</h1><p>${info.description}</p></div><div class="date-label">${icon('calendar')}${new Date().toLocaleDateString('zh-CN',{year:'numeric',month:'long',day:'numeric',weekday:'long'})}</div></div><div id="page-content"></div></main></div></div>`;
   const container=$('#page-content');
   if(page==='home')portalWorkspace.render(container);
   else if(page==='workbench')renderWorkbench();
@@ -196,12 +199,12 @@ async function submitTransfer(){
       return {records:duplicate?latest:[r,...latest],recordId:duplicate?.id||r.id,duplicate:Boolean(duplicate)};
     });
     currentRecord=records.find(record=>record.id===result.recordId);shell();showSuccess(currentRecord,result.duplicate);
-  }catch(error){if(error.message!=='cancelled')toast('转诊申请未保存，请检查浏览器存储后重试。');}
+  }catch(error){if(error.message!=='cancelled')toast(sharedWorkspace?'转诊申请未保存，请检查网络并重试。':'转诊申请未保存，请检查浏览器存储后重试。');}
   finally{recordSaving=false;if($('#submit-referral'))$('#submit-referral').disabled=!$('#reviewed')?.checked||!hasCurrentMatch();}
 }
-function showSuccess(r,duplicate=false){setModal(`<div class="success"><div class="success-icon">${icon('check')}</div><h2>${duplicate?'已存在相同转诊申请':'转诊申请已保存'}</h2><p>${esc(r.doctor.name)} · ${esc(r.doctor.department)}<br>${r.snapshot.urgent?'紧急转诊，等待接收中心协调':esc(`${formatDate(r.date)} ${r.session} ${r.time}`)}</p><div class="receipt-number">转诊单号 ${esc(r.id)}</div><div class="timeline"><span class="complete">已保存申请</span><i></i><span>${r.status==='accepted'?'已登记待核实':'待接收中心确认'}</span><i></i><span>诊疗衔接</span></div><p style="font-size:10px;margin-top:20px">记录已保存在当前浏览器，尚未发送院方。</p></div><div class="modal-footer"><button class="secondary" data-action="close">继续查看医生</button><button class="primary" data-action="go-receive">进入接收中心 ${icon('arrow')}</button></div>`,'success');}
+function showSuccess(r,duplicate=false){setModal(`<div class="success"><div class="success-icon">${icon('check')}</div><h2>${duplicate?'已存在相同转诊申请':'转诊申请已保存'}</h2><p>${esc(r.doctor.name)} · ${esc(r.doctor.department)}<br>${r.snapshot.urgent?'紧急转诊，等待接收中心协调':esc(`${formatDate(r.date)} ${r.session} ${r.time}`)}</p><div class="receipt-number">转诊单号 ${esc(r.id)}</div><div class="timeline"><span class="complete">已保存申请</span><i></i><span>${r.status==='accepted'?'已登记待核实':'待接收中心确认'}</span><i></i><span>诊疗衔接</span></div><p style="font-size:10px;margin-top:20px">${sharedWorkspace?'记录已保存至服务器，同一网址下可共同查看。院方接收需另行确认。':'记录已保存在当前浏览器，尚未发送院方。'}</p></div><div class="modal-footer"><button class="secondary" data-action="close">继续查看医生</button><button class="primary" data-action="go-receive">进入接收中心 ${icon('arrow')}</button></div>`,'success');}
 function renderQueue(){const list=page==='receive'?records.filter(r=>r.status==='pending'):records;$('#page-content').innerHTML=`<div class="queue-toolbar"><div><h2>${page==='receive'?'待协调的转诊申请':'全部转诊申请'}</h2><p>${page==='receive'?'复核病情与来源信息，登记科室、就诊地点及协调安排。':'汇总转诊申请与协调记录，跟进后续接诊安排。'}</p></div><span class="queue-count">${list.length} 条${page==='receive'?'待接收':'记录'}</span></div>${!list.length?`<div class="empty">${icon(page==='receive'?'receive':'records')}<h3>${page==='receive'?'暂无待接收的申请':'尚未创建转诊申请'}</h3><p>先在转诊工作台选择医生并确认转诊，再在这里登记接诊协调情况。</p><button class="primary" data-nav="workbench">前往转诊工作台 ${icon('arrow')}</button>${page==='receive'&&records.length?'<button class="secondary" data-nav="records" style="margin-left:10px">查看已接收记录</button>':''}</div>`:`<div class="referral-list">${list.map(r=>`<article class="referral-card"><div class="avatar">${esc(r.snapshot.patient.name.slice(0,1))}</div><div class="referral-info"><h3>${esc(recordText(r.snapshot.patient.name))} <span class="status-pill ${r.status==='accepted'?'accepted':''}">${r.status==='accepted'?'已登记待核实':'待接收'}</span>${r.snapshot.urgent?'<span class="urgency">紧急</span>':''}</h3><p>${esc(recordText(r.snapshot.sourceHospital))} → 北京安贞医院安徽医院<br>${esc(r.doctor.name)} · ${esc(r.doctor.department)} · ${esc(r.date)} ${esc(r.session)}</p><div class="referral-meta">${esc(r.id)} · ${timeText(r.createdAt)}创建 · 转诊申请</div></div><div class="record-actions"><button class="${page==='receive'?'primary':'secondary'}" data-record="${esc(r.id)}">${page==='receive'?'查看并协调接收':'查看转诊详情'} ${icon('arrow')}</button></div></article>`).join('')}</div>`}`;}
-function openRecord(id){currentRecord=records.find(r=>r.id===id);if(!currentRecord)return;const r=currentRecord;setModal(`<div class="modal-title-bar"><small>${esc(r.id)} · ${r.status==='accepted'?'已登记待核实':'待接收中心确认'}</small><h2>转诊申请详情</h2></div><div class="confirmation"><div class="confirm-grid">${[['患者信息',recordText(patientLabel(r.snapshot.patient))],['来源医院',recordText(r.snapshot.sourceHospital)],['发起医生',recordText(r.snapshot.sourceDoctor)],['意向接诊',`${r.doctor.name} · ${r.doctor.department}`],['安排',`${r.date} ${r.session} ${r.time}`],['匹配摘要',`${r.snapshot.category||'专病转诊'} · ${r.snapshot.provider==='kimi'?'AI 匹配分':'匹配参考分'} ${r.snapshot.score}/100`]].map(([l,v])=>`<div class="confirm-field"><small>${l}</small><strong>${esc(v)}</strong></div>`).join('')}</div><div class="case-data"><label class="field-label">来源医院提供的病情与治疗摘要</label><p>${esc(r.snapshot.text)}</p></div>${r.status==='pending'?`<div class="receive-arrange"><label>意向接收科室<select id="receive-department"><option>${esc(r.doctor.department)}</option><option>心血管内科</option><option>心脏大血管外科</option><option>心脏康复中心</option></select></label><label>拟安排床位或就诊地点<input id="receive-location" maxlength="60" placeholder="请填写待与院方核实的安排" value=""></label></div><label class="consent"><input type="checkbox" id="receive-checked"><span>我已复核协调信息；院方接收结果另行核实。</span></label>`:`<div class="accepted-info">登记科室：${esc(r.acceptedDepartment)}<br>拟安排：${esc(recordText(r.acceptedLocation))}<br>后续诊疗记录与康复下转可基于这张转诊单继续衔接。</div>`}<div class="history-timeline">${r.events.map(e=>`<div>${icon('check')}${esc(recordText(e.label))}<span>${timeText(e.at)}</span></div>`).join('')}</div></div><div class="modal-footer"><p>协调信息保存在当前浏览器<br>院方尚未确认接收</p>${r.status==='pending'?'<button class="primary" data-action="accept" id="accept-referral" disabled>保存协调安排</button>':'<button class="secondary" data-action="close">关闭详情</button>'}</div>`,'record');}
+function openRecord(id){currentRecord=records.find(r=>r.id===id);if(!currentRecord)return;const r=currentRecord;setModal(`<div class="modal-title-bar"><small>${esc(r.id)} · ${r.status==='accepted'?'已登记待核实':'待接收中心确认'}</small><h2>转诊申请详情</h2></div><div class="confirmation"><div class="confirm-grid">${[['患者信息',recordText(patientLabel(r.snapshot.patient))],['来源医院',recordText(r.snapshot.sourceHospital)],['发起医生',recordText(r.snapshot.sourceDoctor)],['意向接诊',`${r.doctor.name} · ${r.doctor.department}`],['安排',`${r.date} ${r.session} ${r.time}`],['匹配摘要',`${r.snapshot.category||'专病转诊'} · ${r.snapshot.provider==='kimi'?'AI 匹配分':'匹配参考分'} ${r.snapshot.score}/100`]].map(([l,v])=>`<div class="confirm-field"><small>${l}</small><strong>${esc(v)}</strong></div>`).join('')}</div><div class="case-data"><label class="field-label">来源医院提供的病情与治疗摘要</label><p>${esc(r.snapshot.text)}</p></div>${r.status==='pending'?`<div class="receive-arrange"><label>意向接收科室<select id="receive-department"><option>${esc(r.doctor.department)}</option><option>心血管内科</option><option>心脏大血管外科</option><option>心脏康复中心</option></select></label><label>拟安排床位或就诊地点<input id="receive-location" maxlength="60" placeholder="请填写待与院方核实的安排" value=""></label></div><label class="consent"><input type="checkbox" id="receive-checked"><span>我已复核协调信息；院方接收结果另行核实。</span></label>`:`<div class="accepted-info">登记科室：${esc(r.acceptedDepartment)}<br>拟安排：${esc(recordText(r.acceptedLocation))}<br>后续诊疗记录与康复下转可基于这张转诊单继续衔接。</div>`}<div class="history-timeline">${r.events.map(e=>`<div>${icon('check')}${esc(recordText(e.label))}<span>${timeText(e.at)}</span></div>`).join('')}</div></div><div class="modal-footer"><p>${sharedWorkspace?'协调信息已同步至服务器':'协调信息保存在当前浏览器'}<br>院方尚未确认接收</p>${r.status==='pending'?'<button class="primary" data-action="accept" id="accept-referral" disabled>保存协调安排</button>':'<button class="secondary" data-action="close">关闭详情</button>'}</div>`,'record');}
 async function acceptReferral(){
   if(recordSaving||!currentRecord||currentRecord.status!=='pending'||!$('#receive-checked')?.checked)return;
   const location=$('#receive-location').value.trim();
@@ -217,10 +220,10 @@ async function acceptReferral(){
       return {records:latest.map(r=>r.id===id?accepted:r),alreadyAccepted:false};
     });
     shell();openRecord(id);toast(result.alreadyAccepted?'这份申请的协调安排已在其他页面保存。':'已保存协调安排，可在转诊记录中查看');
-  }catch{toast('协调安排未保存，请检查浏览器存储后重试。');}
+  }catch{toast(sharedWorkspace?'协调安排未保存，请检查网络并重试。':'协调安排未保存，请检查浏览器存储后重试。');}
   finally{recordSaving=false;if($('#accept-referral'))$('#accept-referral').disabled=!$('#receive-checked')?.checked;}
 }
-function showMethod(){setModal(`<div class="modal-title-bar"><small>智能转诊助手</small><h2>匹配依据与使用说明</h2></div><div class="method-modal"><p>根据病例、转诊目的与医生公开专业资料，提供候选医生、匹配分及资料依据，供转诊医生复核。</p><h3>评分依据</h3><p>专业方向 45 分、相关技术 30 分、转诊目的 15 分、资料充分性 10 分。缺少技术证据时限制相应分值；排班、学历和职称不参与评分。匹配分不代表疗效、接收概率或医生能力排名。</p><h3>病例信息</h3><p>请填写脱敏的病情与检查摘要。点击匹配或发送问题后，相关内容交由外部智能分析服务处理；修改病例会使原匹配结果失效。</p><h3>接诊安排</h3><p>当前未同步院方排班，日期与时段由本地生成，仅用于登记接诊意向，不代表实际号源。紧急病例需立即联系接收方核实团队、床位和转运安排。</p><h3>记录与资料</h3><p>当前操作仅保存至本浏览器，尚未发送院方；协调登记不等于医院确认接收。当前收录 ${doctors.length} 位有照片医生，公开专业资料于 2026 年 9 月 14 日核实，实际接诊安排以院方确认为准。</p></div><div class="modal-footer"><p>转诊前请复核病例与接诊安排</p><button class="primary" data-action="close">我知道了</button></div>`,'method');}
+function showMethod(){setModal(`<div class="modal-title-bar"><small>智能转诊助手</small><h2>匹配依据与使用说明</h2></div><div class="method-modal"><p>根据病例、转诊目的与医生公开专业资料，提供候选医生、匹配分及资料依据，供转诊医生复核。</p><h3>评分依据</h3><p>专业方向 45 分、相关技术 30 分、转诊目的 15 分、资料充分性 10 分。缺少技术证据时限制相应分值；排班、学历和职称不参与评分。匹配分不代表疗效、接收概率或医生能力排名。</p><h3>病例信息</h3><p>请填写脱敏的病情与检查摘要。点击匹配或发送问题后，相关内容交由外部智能分析服务处理；修改病例会使原匹配结果失效。</p><h3>接诊安排</h3><p>当前未同步院方排班，日期与时段由本地生成，仅用于登记接诊意向，不代表实际号源。紧急病例需立即联系接收方核实团队、床位和转运安排。</p><h3>记录与资料</h3><p>${sharedWorkspace?'当前记录由服务器统一保存，同一网址下可共同查看和协作；':'当前操作仅保存至本浏览器，尚未发送院方；'}协调登记不等于医院确认接收。当前收录 ${doctors.length} 位有照片医生，公开专业资料于 2026 年 9 月 14 日核实，实际接诊安排以院方确认为准。</p></div><div class="modal-footer"><p>转诊前请复核病例与接诊安排</p><button class="primary" data-action="close">我知道了</button></div>`,'method');}
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;
   if(b.dataset.nav){navigate(b.dataset.nav);return;}
   if(b.dataset.action==='open-down-alerts'){navigate('downward');downwardWorkspace.openAlerts?.();return;}
@@ -241,7 +244,7 @@ document.addEventListener('input',e=>{
 document.addEventListener('submit',e=>{if(e.target.id==='chat-form'){e.preventDefault();void sendChat();}});
 document.addEventListener('change',e=>{if(e.target.id==='reviewed')$('#submit-referral').disabled=!e.target.checked||!hasCurrentMatch();if(e.target.id==='receive-checked')$('#accept-referral').disabled=!e.target.checked;if(e.target.id==='chat-doctor'){chatDoctorId=e.target.value;cancelChat();renderChat();}});
 window.addEventListener('storage',e=>{
-  if(e.key!==storageKey||!e.newValue)return;
+  if(sharedWorkspace||e.key!==storageKey||!e.newValue)return;
   try{
     const previous=currentRecord;
     records=mergeRecords(records,parseRecords(e.newValue),parseRecords(localStorage.getItem(storageKey)));
@@ -254,4 +257,29 @@ window.addEventListener('storage',e=>{
 });
 document.addEventListener('error',e=>{if(e.target instanceof HTMLImageElement&&e.target.dataset.photoId){const id=e.target.dataset.photoId;doctors=doctors.filter(d=>d.id!==id);ranked=ranked.filter(d=>d.id!==id);e.target.closest('[data-doctor-card]')?.remove();if(selectedDoctor?.id===id){closeModal();toast('该医生照片无法显示，已从医生列表移除');}if(chatDoctorId===id){chatDoctorId='';cancelChat();renderChat();}}},true);
 document.addEventListener('keydown',e=>{if(!modalType)return;if(e.key==='Escape'){closeModal();return;}if(e.key==='Tab'){const controls=[...$('.modal').querySelectorAll('button:not(:disabled),a,input,select,textarea,summary,[tabindex="0"]')].filter(x=>x.getClientRects().length);const first=controls[0],last=controls.at(-1);if(e.shiftKey&&(document.activeElement===first||document.activeElement===$('.modal'))){e.preventDefault();last?.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}}});
-try{doctors=window.__DOCTOR_DATA__||await fetch('data/doctors.json').then(r=>{if(!r.ok)throw Error('data');return r.json();});doctors=doctors.filter(d=>d.photo&&d.name);initializeWorkspaces();shell();if(!offlineBuild)void loadConfig();}catch(error){$('#app').innerHTML='<div class="boot"><p>资料加载失败，请通过本地启动程序打开，或联系管理员。</p></div>';console.error(error);}
+try{
+  doctors=window.__DOCTOR_DATA__||await fetch('data/doctors.json').then(r=>{if(!r.ok)throw Error('医生资料加载失败。');return r.json();});
+  doctors=doctors.filter(d=>d.photo&&d.name);
+  if(!offlineBuild){
+    sharedWorkspace=createSharedWorkspace({request:api,onStatus:status=>{sharedStatus=status;renderSharedStatus();}});
+    await sharedWorkspace.refresh();
+    await migrateLegacyWorkspace({workspace:sharedWorkspace,storage:localStorage,parseRecords,recordKey:storageKey});
+    records=sharedWorkspace.getSnapshot().records;
+  }
+  initializeWorkspaces();shell();
+  if(sharedWorkspace){
+    sharedWorkspace.subscribe(snapshot=>{
+      const previous=currentRecord;records=snapshot.records;
+      if(currentRecord)currentRecord=records.find(r=>r.id===currentRecord.id)||currentRecord;
+      syncRecordViews();updateGlobalSummaries();
+      if(!recordSaving&&modalType==='record'&&previous&&currentRecord&&previous.status!==currentRecord.status){openRecord(currentRecord.id);toast('这份申请的协调安排已由协作方更新。');}
+    });
+    sharedWorkspace.startPolling();
+    window.addEventListener('focus',()=>{void sharedWorkspace.refresh().catch(()=>{});});
+    void loadConfig();
+  }
+}catch(error){
+  $('#app').innerHTML=`<div class="boot"><p>暂时无法加载共享工作台，请检查网络后重试。</p><p>${esc(error.message)}</p><button class="primary" id="reload-workspace">重新加载</button></div>`;
+  $('#reload-workspace')?.addEventListener('click',()=>window.location.reload());
+  console.error(error);
+}

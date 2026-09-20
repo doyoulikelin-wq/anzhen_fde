@@ -1,6 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import http from 'node:http';
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
 import { createCareAiService, validateRecordImage, validateAlertInput, MAX_RECORD_IMAGE_BYTES, RECORD_EXTRACT_BODY_LIMIT } from './care-ai.mjs';
 import { createAppServer } from './server.mjs';
 import { AppError } from './llm.mjs';
@@ -25,7 +28,9 @@ function mockService(raw = extracted, overrides = {}) {
 const errorIs = (code, status) => error => { assert.ok(error instanceof AppError); assert.equal(error.code, code); assert.equal(error.status, status); return true; };
 function abortableFetch(_url, { signal }) { return new Promise((_resolve, reject) => { if (signal.aborted) reject(signal.reason); else signal.addEventListener('abort', () => reject(signal.reason), { once: true }); }); }
 async function localServer(t, fetchImpl, overrides = {}) {
-  const server = await createAppServer({ config: { ...config, ...overrides }, fetchImpl });
+  const dataDir=await fs.mkdtemp(path.join(os.tmpdir(),'anzhen-care-store-'));
+  t.after(()=>fs.rm(dataDir,{recursive:true,force:true}));
+  const server = await createAppServer({ config: { ...config, ...overrides }, fetchImpl, dataDir });
   await new Promise((resolve, reject) => { server.once('error', reject); server.listen(0, '127.0.0.1', resolve); });
   t.after(async () => { server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); });
   return server.address().port;

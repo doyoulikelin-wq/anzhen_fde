@@ -1,0 +1,128 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import {createWorkspaceStore,WORKSPACE_BODY_LIMIT} from './workspace-store.mjs';
+import {createAppServer} from './server.mjs';
+import {createDownwardSeed} from './downward.mjs';
+
+const doctors=JSON.parse(await fs.readFile(new URL('./data/doctors.json',import.meta.url),'utf8'));
+const clone=value=>structuredClone(value);
+async function setup(t,options={}){const dataDir=await fs.mkdtemp(path.join(os.tmpdir(),'anzhen-workspace-test-'));t.after(()=>fs.rm(dataDir,{recursive:true,force:true}));const store=await createWorkspaceStore({dataDir,doctors,...options});return {store,dataDir};}
+function record(id='AZ-TEST-1',status='pending'){
+  const d=doctors.find(d=>d.photo);
+  return {id,doctor:{id:d.id,name:d.name,department:d.department,title:d.title},snapshot:{text:'虚构患者心脏康复转诊记录，仅用于自动化验证。',patient:{name:'验证患者',sex:'男',age:60},sourceHospital:'验证来源医院',sourceDoctor:'验证医生',score:85,urgent:false,reasons:['专科方向相关']},date:'2026-09-20',slotId:'2026-09-20-am',session:'上午',time:'09:00–11:30',status,createdAt:'2026-09-20T01:00:00.000Z',events:[{label:'申请已保存',at:'2026-09-20T01:00:00.000Z'}],...(status==='accepted'?{acceptedAt:'2026-09-20T02:00:00.000Z',acceptedDepartment:'心血管内科',acceptedLocation:'门诊协调台'}:{})};
+}
+const failure=code=>error=>error.code===code;
+function addCare(state){
+  const down=clone(state.downward),p=down.patients[0];
+  down.plans.push({id:'DOWN-TEST',patientId:p.id,doctorId:'down-zhouzhiyuan',doctorName:'周知远',hospital:'青禾康复医院',department:'康复医学科',service:'心脏康复',date:'2026-09-21',goal:'落实康复衔接',handoff:'核对交接材料',status:'arranged',createdAt:'2026-09-20T01:00:00Z',updatedAt:'2026-09-20T02:00:00Z',acceptedDepartment:'康复医学科',location:'接待台',arrangement:'每天记录监测'});
+  down.alerts.push({id:'ALERT-TEST',patientId:p.id,measurementId:p.measurements.at(-1).id,at:'2026-09-20T01:00:00Z',note:'虚构事件记录',severity:'urgent',status:'handled',handledAt:'2026-09-20T02:00:00Z',handledNote:'已核查记录',handledBy:'验证团队'});
+  return down;
+}
+
+test('first bootstrap is durably shared and survives a new server store',async t=>{
+  const {store,dataDir}=await setup(t);
+  const initial=await store.read();assert.equal(initial.revision,0);assert.equal(initial.downward.patients.length,3);assert.equal(initial.downward.patients[0].measurements.length,7);
+  const saved=await store.commit({revision:0,records:[record()]});assert.equal(saved.revision,1);
+  const restarted=await createWorkspaceStore({dataDir,doctors});assert.deepEqual(await restarted.read(),saved);
+  const leaked=await store.read();leaked.records.length=0;assert.equal((await store.read()).records.length,1);
+  assert.equal((await fs.stat(path.join(dataDir,'workspace.json'))).mode&0o777,0o600);
+  assert.equal((await fs.stat(path.join(dataDir,'workspace.backup.json'))).mode&0o777,0o600);
+});
+
+test('concurrent same-revision writes serialize; losing caller receives409 without lost entries',async t=>{
+  const {store}=await setup(t);
+  const results=await Promise.allSettled([store.commit({revision:0,records:[record('AZ-A')]}),store.commit({revision:0,records:[record('AZ-B')]})]);
+  assert.equal(results.filter(x=>x.status==='fulfilled').length,1);const failed=results.find(x=>x.status==='rejected').reason;assert.equal(failed.status,409);assert.equal(failed.code,'WORKSPACE_CONFLICT');
+  const latest=await store.read(),winner=latest.records[0].id;const missing=winner==='AZ-A'?'AZ-B':'AZ-A';
+  const next=await store.commit({revision:latest.revision,records:[...latest.records,record(missing)]});assert.equal(next.records.length,2);
+});
+
+test('commits update only a supplied slice and reject deletion attempts',async t=>{
+  const {store}=await setup(t);const initial=await store.read();
+  const a=await store.commit({revision:0,records:[record()]});assert.deepEqual(a.downward,initial.downward);
+  const b=await store.commit({revision:a.revision,downward:addCare(a)});assert.deepEqual(b.records,a.records);
+  await assert.rejects(store.commit({revision:b.revision,records:[]}),failure('INVALID_WORKSPACE'));
+  const down=clone(b.downward);down.patients[0].measurements.pop();await assert.rejects(store.commit({revision:b.revision,downward:down}),failure('INVALID_WORKSPACE'));
+  assert.deepEqual(await store.read(),b);
+});
+
+test('legacy imports merge every slice idempotently and never downgrade accepted/handled/arranged',async t=>{
+  const {store}=await setup(t);const before=await store.read();const down=addCare(before);
+  const imported=await store.import({records:[record('AZ-TEST','accepted')],downward:down});
+  const stale=clone(down);stale.plans[0].status='pending';stale.plans[0].updatedAt='2026-09-21T04:00:00Z';stale.alerts[0].status='processing';
+  const after=await store.import({records:[record('AZ-TEST')],downward:stale});
+  assert.equal(after.records[0].status,'accepted');assert.equal(after.downward.plans[0].status,'arranged');assert.equal(after.downward.alerts[0].status,'handled');
+  assert.deepEqual(after,imported);assert.deepEqual(await store.import({records:[record('AZ-TEST')],downward:stale}),after);
+});
+
+test('imports preserve dated baseline histories from different browser initialization days',async t=>{
+  const {store}=await setup(t);const before=await store.read(),old=clone(before.downward);
+  old.patients[0].measurements[0].date='2020-01-01T09:00';
+  old.alerts.push({id:'ALERT-OLD-BASELINE',patientId:old.patients[0].id,measurementId:old.patients[0].measurements[0].id,at:'2020-01-01T09:01:00+08:00',severity:'urgent',status:'processing',note:'旧浏览器的基线事件'});
+  const after=await store.import({downward:old});assert.equal(after.downward.patients[0].measurements.length,8);assert.ok(after.downward.patients[0].measurements.some(m=>m.date==='2020-01-01T09:00'));
+  assert.equal(after.downward.patients[0].measurements.find(m=>m.id===after.downward.alerts[0].measurementId).date,'2020-01-01T09:00');
+  assert.deepEqual(await store.import({downward:old}),after);
+});
+
+test('current-revision edits replace an arranged plan and reopen lower-hospital coordination',async t=>{
+  const {store}=await setup(t),initial=await store.read();
+  const arranged=await store.import({records:[record('AZ-ACCEPTED','accepted')],downward:addCare(initial)});
+  const down=clone(arranged.downward),previous=down.plans[0];
+  down.plans[0]={id:previous.id,patientId:previous.patientId,doctorId:'down-lincheng',doctorName:'林澄',hospital:'青禾县人民医院',department:'心血管内科',service:'住院延续治疗',date:'2026-09-23',goal:'修改为住院衔接，请重新确认',handoff:'补充出院材料',status:'pending',createdAt:previous.createdAt,updatedAt:'2026-09-22T02:00:00Z'};
+  down.alerts[0].status='processing';
+  const edited=await store.commit({revision:arranged.revision,downward:down,records:[record('AZ-ACCEPTED')]});
+  assert.deepEqual(edited.downward.plans[0],down.plans[0]);assert.equal(edited.downward.plans[0].location,undefined);
+  assert.equal(edited.records[0].status,'accepted');assert.equal(edited.downward.alerts[0].status,'handled');
+  await assert.rejects(store.commit({revision:arranged.revision,downward:arranged.downward}),failure('WORKSPACE_CONFLICT'));
+});
+
+test('same-revision retry can reorganize a ready summary but cannot unhandle an event',async t=>{
+  const {store}=await setup(t),initial=await store.read();let down=addCare(initial);down.alerts[0].status='ready';down.alerts[0].ai={summary:'已整理',changes:[],missing:[],handoff:'人工复核',source:'ai'};
+  const saved=await store.import({downward:down});down=clone(saved.downward);down.alerts[0].status='processing';
+  const retried=await store.commit({revision:saved.revision,downward:down});assert.equal(retried.downward.alerts[0].status,'processing');
+  down=clone(retried.downward);down.alerts[0].status='handled';const handled=await store.commit({revision:retried.revision,downward:down});down=clone(handled.downward);down.alerts[0].status='ready';
+  assert.equal((await store.commit({revision:handled.revision,downward:down})).downward.alerts[0].status,'handled');
+});
+
+test('invalid records, patient references, duplicate IDs and unbounded values leave state unchanged',async t=>{
+  const {store}=await setup(t),initial=await store.read();
+  const attempts=[{records:[null]},{records:[record(),record()]},{records:[{...record(),doctor:{id:'unknown',name:'虚构',department:'未知'}}]},{records:[{...record(),events:[]}]},{records:[{...record(),snapshot:{...record().snapshot,text:'x'.repeat(10001)}}]}];
+  for(const mutate of [d=>d.patients[0].name='替换姓名',d=>d.patients[0].measurements[0].spo2=999,d=>d.patients[0].measurements[0].date='2026-02-30T09:00',d=>d.alerts.push({id:'invalid'})]){const downward=clone(initial.downward);mutate(downward);attempts.push({downward});}
+  for(const body of attempts)await assert.rejects(store.import(body),failure('INVALID_WORKSPACE'));
+  assert.deepEqual(await store.read(),initial);
+});
+
+test('atomic write failure never reports success and preserves confirmed state on disk',async t=>{
+  let fail=false;const fsImpl={...fs,open:async(file,...args)=>{if(fail&&file.includes('workspace.json.')&&file.endsWith('.tmp'))throw Object.assign(new Error('injected disk failure'),{code:'ENOSPC'});return fs.open(file,...args);}};
+  const {store,dataDir}=await setup(t,{fsImpl});const initial=await store.read();fail=true;
+  await assert.rejects(store.commit({revision:0,records:[record()]}),failure('WORKSPACE_UNAVAILABLE'));assert.deepEqual(await store.read(),initial);
+  const reopened=await createWorkspaceStore({dataDir,doctors});assert.deepEqual(await reopened.read(),initial);
+  fail=false;assert.equal((await store.commit({revision:0,records:[record()]})).revision,1);
+});
+
+test('corruption recovers last valid backup and preserves damaged file, never silently reseeds',async t=>{
+  const {store,dataDir}=await setup(t);const saved=await store.commit({revision:0,records:[record()]});await store.commit({revision:saved.revision,records:[...saved.records,record('AZ-SECOND')]});
+  await fs.writeFile(path.join(dataDir,'workspace.json'),'{broken-json');
+  const recovered=await createWorkspaceStore({dataDir,doctors});assert.deepEqual(await recovered.read(),saved);assert.ok((await fs.readdir(dataDir)).some(x=>x.startsWith('workspace.json.corrupt-')));
+  await fs.writeFile(path.join(dataDir,'workspace.json'),'broken');await fs.writeFile(path.join(dataDir,'workspace.backup.json'),'also-broken');
+  await assert.rejects(createWorkspaceStore({dataDir,doctors}),/已停止启动/);assert.equal(await fs.readFile(path.join(dataDir,'workspace.json'),'utf8'),'broken');
+});
+
+test('HTTP shared APIs persist and enforce revision/body limits without exposing private paths',async t=>{
+  const {store}=await setup(t);
+  const config={apiKey:'test-private-key',baseURL:'https://api.moonshot.cn/v1',model:'kimi-k3',effort:'low',port:4173,timeoutMs:1000};
+  const server=await createAppServer({config,workspaceStore:store,fetchImpl:()=>{throw Error('No model calls in storage tests');}});
+  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));t.after(async()=>{server.closeAllConnections();await new Promise(resolve=>server.close(resolve));});
+  const url=`http://127.0.0.1:${server.address().port}`;const post=(endpoint,body)=>fetch(url+endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+  assert.equal((await (await fetch(url+'/api/workspace')).json()).downward.patients.length,3);
+  assert.equal((await post('/api/workspace/commit',{revision:0,records:[record()]})).status,200);
+  const conflict=await post('/api/workspace/commit',{revision:0,records:[record()]});assert.equal(conflict.status,409);assert.equal((await conflict.json()).error.code,'WORKSPACE_CONFLICT');
+  assert.equal((await post('/api/workspace/import',{records:[record('AZ-HTTP')]})).status,200);
+  assert.equal((await (await fetch(url+'/api/workspace')).json()).records.length,2);
+  const large=await post('/api/workspace/import',{records:[],unused:'x'.repeat(WORKSPACE_BODY_LIMIT)});assert.equal(large.status,413);
+  for(const endpoint of ['/.env','/.env.deploy','/workspace-store.mjs','/var/workspace.json','/workspace.json','/data/workspace.json']){const response=await fetch(url+endpoint);assert.equal(response.status,404);assert.equal((await response.text()).includes('test-private-key'),false);}
+  assert.equal((await fetch(url+'/api/workspace/commit')).status,405);
+});

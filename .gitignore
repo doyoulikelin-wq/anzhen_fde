@@ -3,6 +3,14 @@
 !.env.example
 node_modules
 dist/
+var/
+backups/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
 qa/
 demo-screenshots/
 *.zip

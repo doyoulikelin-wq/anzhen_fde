@@ -27,7 +27,9 @@ export async function loadConfig(root, environment = process.env) {
   const port = Number(env.PORT || 4173);
   const timeoutMs = Number(env.KIMI_TIMEOUT_MS || 90000);
   const publicOrigin = parsePublicOrigin(env.PUBLIC_ORIGIN);
+  if (env.DATA_DIR!==undefined && typeof env.DATA_DIR!=='string') throw new Error('DATA_DIR 必须是有效目录路径。');
+  const dataDir = path.resolve(root, env.DATA_DIR || 'var');
   if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('PORT 必须是有效端口。');
   if (!Number.isInteger(timeoutMs) || timeoutMs < 1000 || timeoutMs > 180000) throw new Error('KIMI_TIMEOUT_MS 应在 1000–180000 之间。');
-  return { apiKey: (env.MOONSHOT_API_KEY || env.KIMI_API_KEY || '').trim(), baseURL, model, effort, port, timeoutMs, publicOrigin };
+  return { apiKey: (env.MOONSHOT_API_KEY || env.KIMI_API_KEY || '').trim(), baseURL, model, effort, port, timeoutMs, publicOrigin, dataDir };
 }

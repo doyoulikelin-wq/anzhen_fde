@@ -13,6 +13,7 @@ const domain=`gui/${process.getuid?.()}`;
 const target=`${domain}/${label}`;
 const support=path.join(os.homedir(),'Library/Application Support/AnzhenReferralWorkspace');
 const current=path.join(support,'current');
+const dataDirectory=path.join(support,'var');
 const logs=path.join(os.homedir(),'Library/Logs/AnzhenReferralWorkspace');
 const plist=path.join(os.homedir(),'Library/LaunchAgents',`${label}.plist`);
 const metadataFile=path.join(support,'service.json');
@@ -83,7 +84,7 @@ function makePlist(binary,port,release){
   <key>Label</key><string>${label}</string>
   <key>ProgramArguments</key><array><string>${xml(binary)}</string><string>${xml(path.join(release,'server.mjs'))}</string></array>
   <key>WorkingDirectory</key><string>${xml(release)}</string>
-  <key>EnvironmentVariables</key><dict><key>PATH</key><string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string><key>NODE_ENV</key><string>production</string><key>PORT</key><string>${port}</string></dict>
+  <key>EnvironmentVariables</key><dict><key>PATH</key><string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string><key>NODE_ENV</key><string>production</string><key>PORT</key><string>${port}</string><key>DATA_DIR</key><string>${xml(dataDirectory)}</string></dict>
   <key>RunAtLoad</key><true/>
   <key>KeepAlive</key><true/>
   <key>ThrottleInterval</key><integer>5</integer>
@@ -97,7 +98,7 @@ function makePlist(binary,port,release){
 async function prepareRelease(){
   const release=path.join(support,'releases',`${new Date().toISOString().replaceAll(':','-')}-${randomUUID().slice(0,8)}`);
   await fs.mkdir(release,{recursive:true,mode:0o700});
-  const files=['index.html','styles.css','portal.css','downward.css','guidance.css','app.mjs','portal.mjs','downward.mjs','guidance.mjs','shared-ui.mjs','care-ai.mjs','matching.mjs','record-store.mjs','server.mjs','config.mjs','llm.mjs','package.json','data/doctors.json'];
+  const files=['index.html','styles.css','portal.css','downward.css','guidance.css','app.mjs','portal.mjs','downward.mjs','guidance.mjs','shared-ui.mjs','shared-client.mjs','care-ai.mjs','matching.mjs','record-store.mjs','workspace-store.mjs','server.mjs','config.mjs','llm.mjs','package.json','data/doctors.json'];
   try{
     for(const file of files){const destination=path.join(release,file);await fs.mkdir(path.dirname(destination),{recursive:true});await fs.copyFile(path.join(root,file),destination);}
     await fs.cp(path.join(root,'assets/doctors'),path.join(release,'assets/doctors'),{recursive:true});
@@ -109,8 +110,8 @@ async function prepareRelease(){
 async function install(){
   // Read configuration inside the process; keys are never printed or written to the plist.
   const config=await loadConfig(root,{});
-  for(const dir of [support,logs,path.dirname(plist)])await fs.mkdir(dir,{recursive:true,mode:0o700});
-  await fs.chmod(support,0o700);await fs.chmod(logs,0o700);
+  for(const dir of [support,dataDirectory,logs,path.dirname(plist)])await fs.mkdir(dir,{recursive:true,mode:0o700});
+  await fs.chmod(support,0o700);await fs.chmod(dataDirectory,0o700);await fs.chmod(logs,0o700);
   const old={link:await linkTarget(),plist:await readOptional(plist),metadata:await readOptional(metadataFile),loaded:launch(['print',target],true)!==null};
   const release=await prepareRelease();const binary=await nodePath();
   let changed=false;
@@ -148,7 +149,7 @@ async function status(){
   const ok=await healthy(port);const pid=Number(loaded?.match(/^\s*pid = (\d+)/m)?.[1])||null;
   let configured=false;
   if(ok){try{const response=await fetch(`http://127.0.0.1:${port}/api/config`,{signal:AbortSignal.timeout(1500)});configured=Boolean((await response.json()).configured);}catch{}}
-  console.log(JSON.stringify({installed:Boolean(saved),managed:Boolean(loaded),pid,healthy:ok,configured,url:saved?.url||`http://127.0.0.1:${port}/`,runtimeDirectory:current,logDirectory:logs},null,2));
+  console.log(JSON.stringify({installed:Boolean(saved),managed:Boolean(loaded),pid,healthy:ok,configured,url:saved?.url||`http://127.0.0.1:${port}/`,runtimeDirectory:current,dataDirectory,logDirectory:logs},null,2));
   if(!loaded||!ok)process.exitCode=1;
 }
 async function stop(){

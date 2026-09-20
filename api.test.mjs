@@ -55,7 +55,9 @@ function errorIs(code, status) {
   return error => { assert.ok(error instanceof AppError); assert.equal(error.code, code); assert.equal(error.status, status); return true; };
 }
 async function localServer(t, fetchImpl, overrides = {}) {
-  const server = await createAppServer({ config: { ...config, ...overrides }, fetchImpl });
+  const dataDir=await fs.mkdtemp(path.join(os.tmpdir(),'anzhen-api-store-'));
+  t.after(()=>fs.rm(dataDir,{recursive:true,force:true}));
+  const server = await createAppServer({ config: { ...config, ...overrides }, fetchImpl, dataDir });
   await new Promise((resolve, reject) => { server.once('error', reject); server.listen(0, '127.0.0.1', resolve); });
   t.after(async () => { server.closeAllConnections(); await new Promise(resolve => server.close(resolve)); });
   return { server, port: server.address().port };
@@ -111,7 +113,7 @@ test('release symlink starts the server while importing it has no startup side e
   let port;
   try {
     await fs.mkdir(path.join(release, 'data'), { recursive: true });
-    for (const file of ['server.mjs', 'config.mjs', 'llm.mjs', 'care-ai.mjs', 'matching.mjs', 'data/doctors.json']) {
+    for (const file of ['server.mjs', 'config.mjs', 'llm.mjs', 'care-ai.mjs', 'matching.mjs', 'downward.mjs', 'workspace-store.mjs', 'data/doctors.json']) {
       await fs.copyFile(new URL(file, import.meta.url), path.join(release, file));
     }
     await fs.symlink(release, current, 'dir');

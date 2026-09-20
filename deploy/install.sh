@@ -18,6 +18,7 @@ service_name=anzhen-fde.service
 install_root=/opt/anzhen-fde
 release_dir="$install_root/releases/$release_id"
 env_file=/etc/anzhen-fde/app.env
+data_dir=/var/lib/anzhen-fde
 unit_file="/etc/systemd/system/$service_name"
 node_bin=${ANZHEN_NODE_BIN:-/usr/bin/node}
 
@@ -29,7 +30,7 @@ done
 [[ -d /run/systemd/system ]] || { printf '%s\n' 'A running systemd host is required.' >&2; exit 1; }
 [[ ! -e "$release_dir" && ! -L "$release_dir" ]] || { printf '%s\n' 'Release id already exists; choose a new one.' >&2; exit 1; }
 [[ ! -e "$install_root/current" || -L "$install_root/current" ]] || { printf '%s\n' 'Refusing to replace current: it is not a symbolic link.' >&2; exit 1; }
-for protected_dir in "$install_root" "$install_root/releases" /etc/anzhen-fde; do
+for protected_dir in "$install_root" "$install_root/releases" /etc/anzhen-fde "$data_dir"; do
   [[ ! -L "$protected_dir" ]] || { printf 'Refusing linked installation directory: %s\n' "$protected_dir" >&2; exit 1; }
 done
 if [[ -L "$install_root/current" ]]; then
@@ -52,7 +53,7 @@ if [[ -n "$port_listeners" ]]; then
   [[ -z "$other_pids" ]] || { printf '%s\n' 'Other processes also listen on port 4173; deployment stopped.' >&2; exit 1; }
 fi
 
-runtime_files=(package.json index.html styles.css portal.css downward.css guidance.css app.mjs matching.mjs record-store.mjs shared-ui.mjs portal.mjs downward.mjs guidance.mjs server.mjs config.mjs llm.mjs care-ai.mjs data/doctors.json)
+runtime_files=(package.json index.html styles.css portal.css downward.css guidance.css app.mjs matching.mjs record-store.mjs shared-client.mjs shared-ui.mjs portal.mjs downward.mjs guidance.mjs server.mjs config.mjs llm.mjs care-ai.mjs workspace-store.mjs data/doctors.json)
 for relative in "${runtime_files[@]}" deploy/anzhen-fde.service deploy/app.env.example; do
   [[ -f "$source_dir/$relative" && ! -L "$source_dir/$relative" ]] || { printf 'Missing or linked source file: %s\n' "$relative" >&2; exit 1; }
 done
@@ -83,6 +84,9 @@ if ! getent passwd anzhen >/dev/null; then
 fi
 account_entry=$(getent passwd anzhen)
 [[ $(id -u anzhen) -ne 0 && $(id -gn anzhen) == anzhen && ( "$account_entry" == *:/usr/sbin/nologin || "$account_entry" == *:/sbin/nologin || "$account_entry" == *:/bin/false ) ]] || { printf '%s\n' 'Existing anzhen account is not a dedicated non-login service account.' >&2; exit 1; }
+# State is separate from release code: updates and rollbacks never replace it.
+[[ ! -L "$data_dir" && ( ! -e "$data_dir" || -d "$data_dir" ) ]] || { printf '%s\n' 'Refusing an invalid shared-data directory.' >&2; exit 1; }
+install -d -o anzhen -g anzhen -m 0700 "$data_dir"
 install -d -m 0755 "$install_root" "$install_root/releases" "$release_dir" "$release_dir/data" "$release_dir/assets/doctors"
 for relative in "${runtime_files[@]}"; do
   install -m 0644 "$source_dir/$relative" "$release_dir/$relative"
@@ -152,3 +156,4 @@ printf 'Application deployed: %s\n' "$release_id"
 printf 'Previous release: %s\n' "${previous_release:-none}"
 printf '%s\n' 'Loopback health check passed. Nginx, public connectivity and AI requests require separate verification.'
 printf '%s\n' 'Existing nginx sites and firewall rules were left unchanged.'
+printf 'Shared records remain outside releases: %s\n' "$data_dir"

@@ -10,7 +10,10 @@ User=anzhen
 Group=anzhen
 WorkingDirectory=/opt/anzhen-fde/current
 Environment=NODE_ENV=production
+Environment=DATA_DIR=/var/lib/anzhen-fde
 EnvironmentFile=/etc/anzhen-fde/app.env
+StateDirectory=anzhen-fde
+StateDirectoryMode=0700
 ExecStart=/usr/bin/node /opt/anzhen-fde/current/server.mjs
 Restart=always
 RestartSec=5
@@ -19,6 +22,7 @@ UMask=0077
 NoNewPrivileges=true
 PrivateTmp=true
 ProtectSystem=strict
+ReadWritePaths=/var/lib/anzhen-fde
 ProtectHome=true
 ProtectKernelTunables=true
 ProtectKernelModules=true

@@ -2,18 +2,19 @@
 
 已于 **2026-09-20** 部署到 `8.147.71.90`。公开入口为 **[http://8.147.71.90](http://8.147.71.90)**；应用进程仅监听服务器自己的 `127.0.0.1:4173`，由服务器原有宝塔 Nginx 转发请求。当前使用 HTTP 公网 IP，未配置域名和 HTTPS；日后启用时须同时修改 Nginx 和 `PUBLIC_ORIGIN`。
 
-当前转诊、照护、接收登记等记录仍保存在各自浏览器的本地存储中；不同电脑之间没有共享患者数据库、真实院方接口或人员账号权限。页面中的上级与下级视图读取同一浏览器档案，尚无跨院业务后端。由本地网址改用公网网址，也不会自动迁移原浏览器记录。
+在线转诊、照护、接收登记、连续监测和告警统一保存在服务器持久目录 `/var/lib/anzhen-fde`。不同电脑访问同一服务时共享业务记录，页面约每 5 秒检查更新；页面中的上级与下级视图读取同一档案。医生资料与照片随代码部署，模拟照护数据首次启动时初始化。当前仍未连接真实院方接口或人员账号权限系统，所有访问者共用一个工作区。
 
 ## 当前部署清单
 
 | 项目 | 已部署配置 |
 | --- | --- |
-| 源码 | [GitHub 仓库](https://github.com/doyoulikelin-wq/anzhen_fde)，应用提交 `0e93362`；后续文档提交可能不同 |
+| 源码 | [GitHub 仓库](https://github.com/doyoulikelin-wq/anzhen_fde)，实际运行版本以服务器 `current` 链接为准 |
 | 系统 | Alibaba Cloud Linux 4.0.6，x86_64 |
 | Node.js | `/opt/anzhen-runtime/node-v24.21.0-linux-x64/bin/node`，官方发行包，SHA-256 校验通过 |
-| 当前版本 | `/opt/anzhen-fde/current` → `/opt/anzhen-fde/releases/20260920-0e93362` |
+| 当前版本 | `/opt/anzhen-fde/current` → `/opt/anzhen-fde/releases/<release-id>` |
 | 应用服务 | `anzhen-fde.service`，独立非 root 账户 `anzhen`，已启用开机启动和进程退出重启 |
 | 服务器私有配置 | `/etc/anzhen-fde/app.env`，root 所有、权限 `0600`；仅含应用配置及 API Key，不含 SSH 密码 |
+| 共享业务记录 | `/var/lib/anzhen-fde`，`anzhen:anzhen` 所有、目录权限 `0700`；与代码版本和公开资源分开 |
 | 公网站点配置 | `/www/server/panel/vhost/nginx/anzhen-fde.conf`，新增独立站点，保留原有宝塔配置与其他站点 |
 | Nginx 管理 | 由宝塔管理；执行 `nginx -t && nginx -s reload`，不要使用 `systemctl reload nginx` |
 
@@ -23,7 +24,7 @@ Node.js 来源为 [官方下载页](https://nodejs.org/en/download) 对应的 [v
 
 | 文件 | 用途 |
 | --- | --- |
-| `deploy/anzhen-fde.service` | 非 root 的 `anzhen` 账户运行应用；异常退出自动重启；系统登录不影响进程 |
+| `deploy/anzhen-fde.service` | 非 root 的 `anzhen` 账户运行应用；异常退出自动重启；系统登录不影响进程；只向独立持久目录写业务记录 |
 | `deploy/nginx.conf.example` | 独立站点模板，保留原始 Host 和 Origin，上传上限 6 MB，模型响应等待上限 200 秒 |
 | `deploy/app.env.example` | 仅包含空密钥的服务器环境配置模板 |
 | `deploy/install.sh` | 复制必要运行文件到新版本目录、切换版本、健康检查、失败时恢复旧版本 |
@@ -78,7 +79,7 @@ ANZHEN_NODE_BIN=/opt/anzhen-runtime/node-v24.21.0-linux-x64/bin/node bash deploy
 vi /etc/anzhen-fde/app.env
 ```
 
-保留 `PORT=4173`，公网入口设为 `PUBLIC_ORIGIN=http://8.147.71.90`。API Key 仅留在这个 root 可读的文件中，权限为 `0600`；不要将填好的环境文件复制进源码、发布包或公开目录。随后再次运行安装器：
+保留 `PORT=4173`，公网入口设为 `PUBLIC_ORIGIN=http://8.147.71.90`。API Key 仅留在这个 root 可读的文件中，权限为 `0600`；不要将填好的环境文件复制进源码、发布包或公开目录。`DATA_DIR=/var/lib/anzhen-fde` 已由 systemd 单元提供默认值，原有环境配置无需补写也可使用共享存储；如需指定其他目录，应同时为服务账户设置目录权限并调整 systemd 写入许可。随后再次运行安装器：
 
 ```sh
 ANZHEN_NODE_BIN=/opt/anzhen-runtime/node-v24.21.0-linux-x64/bin/node bash deploy/install.sh "$PWD"
@@ -90,7 +91,29 @@ ANZHEN_NODE_BIN=/opt/anzhen-runtime/node-v24.21.0-linux-x64/bin/node bash deploy
 ANZHEN_NODE_BIN=/opt/anzhen-runtime/node-v24.21.0-linux-x64/bin/node bash deploy/install.sh "$PWD"
 ```
 
-版本保存在 `/opt/anzhen-fde/releases/<release-id>`，`/opt/anzhen-fde/current` 指向当前版本。应用以独立非登录账户运行。安装器不会复制 `.env`、Git 历史、测试截图或用户浏览器记录。
+版本保存在 `/opt/anzhen-fde/releases/<release-id>`，`/opt/anzhen-fde/current` 指向当前版本。应用以独立非登录账户运行。安装器不会复制 `.env`、Git 历史、测试截图或用户浏览器记录。运行文件白名单包含共享客户端和持久存储模块；发布、重启或回滚代码不会覆盖 `/var/lib/anzhen-fde` 中的数据。
+
+## 共享记录、旧版迁移与备份
+
+每次在线保存都会提交服务器，其他浏览器通过约 5 秒一次的同步获取更新。预置的 3 位患者及各自 7 日监测只在全新数据空间中建立，服务重启和升级不会反复创建或重置；共享数据不是写入公开静态目录的下载文件。当前数据写入由单个应用进程管理，不应让多个实例同时使用同一持久目录。
+
+当前状态文件为 `workspace.json`，上一份已确认状态保存在 `workspace.backup.json`，文件权限均为 `0600`。写入先落临时文件、刷新后原子替换，并校验记录版本以拒绝过时覆盖。主文件损坏时可用有效备份恢复，同时保留带时间戳的损坏副本；主文件和备份均无效时停止启动，不以默认场景重置已有数据。上一版状态不是完整历史备份，仍需根据使用需求另做保留策略。
+
+首次使用新版时，当前网址下旧版浏览器的上转、下转记录会尝试一次性合并到服务器；完成后标记已迁移，避免每次打开都重复导入。`http://127.0.0.1:4173` 与 `http://8.147.71.90` 属于不同浏览器来源，云端页面无法读取本地网址历史。需要搬迁本地历史时，从原来源提取后通过迁移入口合并，再核对数量、日期及接收状态；成功核对前保留原浏览器存储。
+
+向同事分享 URL 即可访问已配置的服务器，不需给他们 `.env` 或 API Key。服务器私有配置只由服务端使用；本地 `.env.deploy` 中的 SSH 密码不上传，已配置 API Key 也不会出现在页面资源或业务记录中。
+
+业务数据不进入 Git、代码发布包或离线 HTML。需要迁移服务器或离线备份时，可在空闲时停止应用，将持久目录复制到 root 私有备份目录后恢复运行。下面的复制步骤保留权限和目录结构，不涉及环境文件：
+
+```sh
+install -d -m 0700 /root/anzhen-fde-backups
+systemctl stop anzhen-fde
+cp -a /var/lib/anzhen-fde "/root/anzhen-fde-backups/data-$(date -u +%Y%m%dT%H%M%SZ)"
+systemctl start anzhen-fde
+curl --fail http://127.0.0.1:4173/api/health
+```
+
+备份副本仍含业务记录，应保留私有权限。恢复数据前先停服务、保留当前数据副本，再恢复经核对的备份并确认 `anzhen:anzhen` 所有权；恢复后重新检查页面记录。此处是人工备份方法，不代表已配置定时备份或验证过灾难恢复。
 
 ## 公网入口与宝塔 Nginx
 
@@ -135,6 +158,6 @@ systemctl start anzhen-fde
 journalctl -u anzhen-fde -f
 ```
 
-后续发布上传新的已检查版本，再运行安装器即可。它在端口被其他进程占用时停止，不杀掉无关服务；切换版本后的本机健康检查失败会恢复上一版链接和服务文件。安装器不会删除历史版本，不会更新环境文件内容，不会安装自动更新 Webhook。进程重启会中断正在执行的 AI 请求，选择空闲时发布即可；当前方案是单实例部署，不提供零停机切换。
+后续发布上传新的已检查版本，再运行安装器即可。它在端口被其他进程占用时停止，不杀掉无关服务；切换版本后的本机健康检查失败会恢复上一版链接和服务文件。安装器不会删除历史版本、持久业务目录或备份，不会更新环境文件内容，不会安装自动更新 Webhook。代码回滚不撤销已经保存的业务变更。进程重启会中断正在执行的 AI 请求，选择空闲时发布即可；当前方案是单实例部署，不提供零停机切换。
 
 回滚失败时，先查看日志和 `/opt/anzhen-fde/current`，不要盲目重复安装。恢复后仍需重新验证 Nginx、公网访问与一次 AI 请求；本机健康检查通过不等于整个公网链路通过。

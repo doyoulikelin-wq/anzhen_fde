@@ -16,3 +16,5 @@
 
 .service-notice{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;margin-bottom:14px;border:1px solid #e8dfcd;border-radius:7px;background:#fcfaf5;color:#8a7957;font-size:11px;line-height:1.7}.service-notice[hidden]{display:none}.service-notice>span{display:flex;align-items:flex-start;gap:7px}.service-notice svg{flex-shrink:0;width:15px;height:15px;margin-top:2px}.service-notice button{white-space:nowrap}.schedule-status{color:#6b858b;background:#f0f5f5;border:1px solid #e4eded}
 .receipt-number,.referral-meta,.modal-title-bar small{overflow-wrap:anywhere}.referral-info{min-width:0}
+
+.shared-status{font-size:11px;color:#428b78;white-space:nowrap}.shared-status::before{content:"";display:inline-block;width:6px;height:6px;margin-right:6px;border-radius:50%;background:currentColor}.shared-status.sync-error{color:#b8623c}@media(max-width:680px){.shared-status{font-size:10px}}
