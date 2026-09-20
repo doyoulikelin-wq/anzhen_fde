@@ -1,0 +1,2492 @@
+{
+  "generatedAt": "2026-09-16",
+  "professionalDataVerifiedAt": "2026-09-14",
+  "sourceWorkbook": "安贞医院-姓名-照片.xlsx",
+  "sourceWorkbookSha256": "8f89365dc27acd70ab010bb76f37c0c44c2d7a7b28a5d25332a6c4d4850a0746",
+  "mappingMethod": "OOXML: Sheet1!A[row] doctor name; Sheet1!B[row] DISPIMG image ID; xl/cellimages.xml cNvPr@name; a:blip r:embed; xl/_rels/cellimages.xml.rels Target; original xl/media image bytes. No order-based or visual-identity guessing.",
+  "sheetCount": 1,
+  "doctorNameRows": 65,
+  "embeddedMediaCount": 54,
+  "cellImageCount": 54,
+  "displayDoctorCount": 54,
+  "exactProfileMatchCount": 53,
+  "detailedBiographyCount": 52,
+  "portraitOrientedImageCount": 2,
+  "landscapeImageCount": 52,
+  "imageReview": "曹海学为竖版肖像；陈斌、胡运涛、吴章敏抽查确认为含头像、姓名、职称及文字的挂号卡截图。所有提取文件保持原始字节，未裁剪、缩放或重编码。",
+  "excludedWithoutPhotos": [
+    {
+      "row": 7,
+      "name": "陈思源",
+      "reason": "照片单元格为空或未引用图片"
+    },
+    {
+      "row": 11,
+      "name": "胡晓俊",
+      "reason": "照片单元格为空或未引用图片"
+    },
+    {
+      "row": 16,
+      "name": "梁丰",
+      "reason": "照片单元格为空或未引用图片"
+    },
+    {
+      "row": 27,
+      "name": "王凤兰",
+      "reason": "照片单元格为空或未引用图片"
+    },
+    {
+      "row": 34,
+      "name": "于芳",
+      "reason": "照片单元格为空或未引用图片"
+    },
+    {
+      "row": 36,
+      "name": "张嵩",
+      "reason": "照片单元格为空或未引用图片"
+    },
+    {
+      "row": 41,
+      "name": "朱延",
+      "reason": "照片单元格为空或未引用图片"
+    },
+    {
+      "row": 43,
+      "name": "储诚豪",
+      "reason": "照片单元格为空或未引用图片"
+    },
+    {
+      "row": 47,
+      "name": "龚倩",
+      "reason": "照片单元格为空或未引用图片"
+    },
+    {
+      "row": 55,
+      "name": "刘善东",
+      "reason": "照片单元格为空或未引用图片"
+    },
+    {
+      "row": 66,
+      "name": "王亚明",
+      "reason": "照片单元格为空或未引用图片"
+    }
+  ],
+  "excludedOther": [],
+  "unusedEmbeddedMedia": [],
+  "unresolvedImageReferences": [],
+  "sourceProfileCounts": {
+    "internal_medicine.json": 45,
+    "surgery_doctors.json": 34
+  },
+  "checks": {
+    "uniqueIds": true,
+    "uniqueNames": true,
+    "allPhotosExist": true,
+    "allPhotoBytesUnchanged": true,
+    "allNamesMatchImageCellRow": true,
+    "allOfficialNamesMatched": true,
+    "allBiosAtMost250Characters": true,
+    "noGenericClinicEntries": true,
+    "sourceWorkbookUnchanged": true
+  },
+  "mappings": [
+    {
+      "name": "曹海学",
+      "sheet": "Sheet1",
+      "row": 2,
+      "nameCell": "A2",
+      "imageCell": "B2",
+      "formula": "_xlfn.DISPIMG(\"ID_7DFFD9628F73462890C0DE3B73129BFD\",1)",
+      "id": "ID_7DFFD9628F73462890C0DE3B73129BFD",
+      "attributes": {
+        "id": "3",
+        "name": "ID_7DFFD9628F73462890C0DE3B73129BFD"
+      },
+      "relationId": "rId2",
+      "imagePart": "xl/media/image2.png",
+      "size": [
+        344,
+        460
+      ],
+      "doctorId": "doctor-bfbc6333a9",
+      "photo": "assets/doctors/doctor-bfbc6333a9.png",
+      "imageSha256": "0834840d0a5b3966b1facd0212ebb4f74548c96bc09d13e4513d6d574074b802",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "陈斌",
+      "sheet": "Sheet1",
+      "row": 3,
+      "nameCell": "A3",
+      "imageCell": "B3",
+      "formula": "_xlfn.DISPIMG(\"ID_208AF0D69CFA43729C9C40246FB0020C\",1)",
+      "id": "ID_208AF0D69CFA43729C9C40246FB0020C",
+      "attributes": {
+        "id": "4",
+        "name": "ID_208AF0D69CFA43729C9C40246FB0020C"
+      },
+      "relationId": "rId3",
+      "imagePart": "xl/media/image3.png",
+      "size": [
+        776,
+        400
+      ],
+      "doctorId": "doctor-0fc643d4b5",
+      "photo": "assets/doctors/doctor-0fc643d4b5.png",
+      "imageSha256": "aecb999ba4028d3dc47b42cd41dbea921375a2c74d9e706356c42ab74ab6665c",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "陈大年",
+      "sheet": "Sheet1",
+      "row": 4,
+      "nameCell": "A4",
+      "imageCell": "B4",
+      "formula": "_xlfn.DISPIMG(\"ID_895EBBA8FB274C04AFF9625C77EF0730\",1)",
+      "id": "ID_895EBBA8FB274C04AFF9625C77EF0730",
+      "attributes": {
+        "id": "5",
+        "name": "ID_895EBBA8FB274C04AFF9625C77EF0730"
+      },
+      "relationId": "rId4",
+      "imagePart": "xl/media/image4.png",
+      "size": [
+        774,
+        414
+      ],
+      "doctorId": "doctor-3d1e002263",
+      "photo": "assets/doctors/doctor-3d1e002263.png",
+      "imageSha256": "07a6ca09b8d3cac73e348c7a941e053244b2f2163c535efad8824738a9285f98",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "陈刚",
+      "sheet": "Sheet1",
+      "row": 5,
+      "nameCell": "A5",
+      "imageCell": "B5",
+      "formula": "_xlfn.DISPIMG(\"ID_745E59202EAD4499962CD141E8772164\",1)",
+      "id": "ID_745E59202EAD4499962CD141E8772164",
+      "attributes": {
+        "id": "6",
+        "name": "ID_745E59202EAD4499962CD141E8772164"
+      },
+      "relationId": "rId5",
+      "imagePart": "xl/media/image5.png",
+      "size": [
+        776,
+        426
+      ],
+      "doctorId": "doctor-532738a7c7",
+      "photo": "assets/doctors/doctor-532738a7c7.png",
+      "imageSha256": "492da5ce429720235ad467ef9e24e19bb6b13171c8302c03b14742be0eed4327",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "陈洁霞",
+      "sheet": "Sheet1",
+      "row": 6,
+      "nameCell": "A6",
+      "imageCell": "B6",
+      "formula": "_xlfn.DISPIMG(\"ID_855E7E2A6F044AA99C4775590120BF19\",1)",
+      "id": "ID_855E7E2A6F044AA99C4775590120BF19",
+      "attributes": {
+        "id": "7",
+        "name": "ID_855E7E2A6F044AA99C4775590120BF19"
+      },
+      "relationId": "rId6",
+      "imagePart": "xl/media/image6.png",
+      "size": [
+        774,
+        410
+      ],
+      "doctorId": "doctor-dfc5deb0c1",
+      "photo": "assets/doctors/doctor-dfc5deb0c1.png",
+      "imageSha256": "3f6c2198bc1af32bd0526e898c91d37c08d0f5c369e0197890fd209fb3cb5da5",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "陈旭华",
+      "sheet": "Sheet1",
+      "row": 8,
+      "nameCell": "A8",
+      "imageCell": "B8",
+      "formula": "_xlfn.DISPIMG(\"ID_DB79421F2F5F4120A311EB741B43B064\",1)",
+      "id": "ID_DB79421F2F5F4120A311EB741B43B064",
+      "attributes": {
+        "id": "8",
+        "name": "ID_DB79421F2F5F4120A311EB741B43B064"
+      },
+      "relationId": "rId7",
+      "imagePart": "xl/media/image7.png",
+      "size": [
+        768,
+        402
+      ],
+      "doctorId": "doctor-5bce2c6be0",
+      "photo": "assets/doctors/doctor-5bce2c6be0.png",
+      "imageSha256": "70aae241daeaf7f9df189fca6af0ad978f7f1eef2681b2a91105d139d3a9e21a",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "宫孟琦",
+      "sheet": "Sheet1",
+      "row": 9,
+      "nameCell": "A9",
+      "imageCell": "B9",
+      "formula": "_xlfn.DISPIMG(\"ID_D116208DD2B944C99A9C9A49B03B04B5\",1)",
+      "id": "ID_D116208DD2B944C99A9C9A49B03B04B5",
+      "attributes": {
+        "id": "9",
+        "name": "ID_D116208DD2B944C99A9C9A49B03B04B5"
+      },
+      "relationId": "rId8",
+      "imagePart": "xl/media/image8.png",
+      "size": [
+        778,
+        396
+      ],
+      "doctorId": "doctor-91d6bd3979",
+      "photo": "assets/doctors/doctor-91d6bd3979.png",
+      "imageSha256": "f7395051df216dc885fcae2850ba4ee8fab0b052a25f5612a04de25efc7abc27",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主治医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "郭杰",
+      "sheet": "Sheet1",
+      "row": 10,
+      "nameCell": "A10",
+      "imageCell": "B10",
+      "formula": "_xlfn.DISPIMG(\"ID_96B4A78E36054138BCFC46BF7D5BDCE9\",1)",
+      "id": "ID_96B4A78E36054138BCFC46BF7D5BDCE9",
+      "attributes": {
+        "id": "10",
+        "name": "ID_96B4A78E36054138BCFC46BF7D5BDCE9"
+      },
+      "relationId": "rId9",
+      "imagePart": "xl/media/image9.png",
+      "size": [
+        774,
+        388
+      ],
+      "doctorId": "doctor-3d4bccbfa7",
+      "photo": "assets/doctors/doctor-3d4bccbfa7.png",
+      "imageSha256": "e29837df4c842379895b09620eb6ac9b1cdd25be431b7beaa344d3b88a3bde22",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "胡泽平",
+      "sheet": "Sheet1",
+      "row": 12,
+      "nameCell": "A12",
+      "imageCell": "B12",
+      "formula": "_xlfn.DISPIMG(\"ID_2E96474998234F2093CD89DB176F72BC\",1)",
+      "id": "ID_2E96474998234F2093CD89DB176F72BC",
+      "attributes": {
+        "id": "11",
+        "name": "ID_2E96474998234F2093CD89DB176F72BC"
+      },
+      "relationId": "rId10",
+      "imagePart": "xl/media/image10.png",
+      "size": [
+        774,
+        408
+      ],
+      "doctorId": "doctor-77566cdaa5",
+      "photo": "assets/doctors/doctor-77566cdaa5.png",
+      "imageSha256": "571761bffb2b2c4cc863194db1146a8997754fe5ac88d258326cb3a57df998d7",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "黄颖",
+      "sheet": "Sheet1",
+      "row": 13,
+      "nameCell": "A13",
+      "imageCell": "B13",
+      "formula": "_xlfn.DISPIMG(\"ID_67ECFF4F8AF9413BA1AFC121B0E18E0C\",1)",
+      "id": "ID_67ECFF4F8AF9413BA1AFC121B0E18E0C",
+      "attributes": {
+        "id": "12",
+        "name": "ID_67ECFF4F8AF9413BA1AFC121B0E18E0C"
+      },
+      "relationId": "rId11",
+      "imagePart": "xl/media/image11.png",
+      "size": [
+        776,
+        404
+      ],
+      "doctorId": "doctor-a94dabdbaa",
+      "photo": "assets/doctors/doctor-a94dabdbaa.png",
+      "imageSha256": "a340b34b00d5788600ff5b2a79af906d34d75aa27f6d07d428928128b9bc5971",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "解杨婧",
+      "sheet": "Sheet1",
+      "row": 14,
+      "nameCell": "A14",
+      "imageCell": "B14",
+      "formula": "_xlfn.DISPIMG(\"ID_B0C6D5BC024648D1821A0FB3DEC0B34B\",1)",
+      "id": "ID_B0C6D5BC024648D1821A0FB3DEC0B34B",
+      "attributes": {
+        "id": "13",
+        "name": "ID_B0C6D5BC024648D1821A0FB3DEC0B34B"
+      },
+      "relationId": "rId12",
+      "imagePart": "xl/media/image12.png",
+      "size": [
+        772,
+        416
+      ],
+      "doctorId": "doctor-8cd7d29313",
+      "photo": "assets/doctors/doctor-8cd7d29313.png",
+      "imageSha256": "ba004399c2c24bdaf57dc6275db91adcdd720eb13edd050809d3c8de8eaba5eb",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "柯道正",
+      "sheet": "Sheet1",
+      "row": 15,
+      "nameCell": "A15",
+      "imageCell": "B15",
+      "formula": "_xlfn.DISPIMG(\"ID_A71B2549986E4988B5F8AB6A06CA497C\",1)",
+      "id": "ID_A71B2549986E4988B5F8AB6A06CA497C",
+      "attributes": {
+        "id": "14",
+        "name": "ID_A71B2549986E4988B5F8AB6A06CA497C"
+      },
+      "relationId": "rId13",
+      "imagePart": "xl/media/image13.png",
+      "size": [
+        794,
+        432
+      ],
+      "doctorId": "doctor-fd489030ef",
+      "photo": "assets/doctors/doctor-fd489030ef.png",
+      "imageSha256": "45b8c8ebada085094f5a554e3f52e9e266a122966348e11d5b9320ed6f4f3eed",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "梁有峰",
+      "sheet": "Sheet1",
+      "row": 17,
+      "nameCell": "A17",
+      "imageCell": "B17",
+      "formula": "_xlfn.DISPIMG(\"ID_00172F8B120D4AA7B4DA038ADB739E46\",1)",
+      "id": "ID_00172F8B120D4AA7B4DA038ADB739E46",
+      "attributes": {
+        "id": "15",
+        "name": "ID_00172F8B120D4AA7B4DA038ADB739E46"
+      },
+      "relationId": "rId14",
+      "imagePart": "xl/media/image14.png",
+      "size": [
+        762,
+        372
+      ],
+      "doctorId": "doctor-ba54ccd1be",
+      "photo": "assets/doctors/doctor-ba54ccd1be.png",
+      "imageSha256": "a096a0cd670806f3cebc6754700c0c6f72eecca34a3a85a3554f5b399a330846",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "刘和俊",
+      "sheet": "Sheet1",
+      "row": 18,
+      "nameCell": "A18",
+      "imageCell": "B18",
+      "formula": "_xlfn.DISPIMG(\"ID_0B9267ABA50A40CBA1D8759A5DA029F9\",1)",
+      "id": "ID_0B9267ABA50A40CBA1D8759A5DA029F9",
+      "attributes": {
+        "id": "16",
+        "name": "ID_0B9267ABA50A40CBA1D8759A5DA029F9"
+      },
+      "relationId": "rId15",
+      "imagePart": "xl/media/image15.png",
+      "size": [
+        772,
+        396
+      ],
+      "doctorId": "doctor-f5c2b3bcb4",
+      "photo": "assets/doctors/doctor-f5c2b3bcb4.png",
+      "imageSha256": "1c9199c6ad721c6eb007525910b98e160529e6141f0895fd3def5a2f1aada5a4",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "刘敏",
+      "sheet": "Sheet1",
+      "row": 19,
+      "nameCell": "A19",
+      "imageCell": "B19",
+      "formula": "_xlfn.DISPIMG(\"ID_7F645CBDA511486E9592B9B912F850EF\",1)",
+      "id": "ID_7F645CBDA511486E9592B9B912F850EF",
+      "attributes": {
+        "id": "17",
+        "name": "ID_7F645CBDA511486E9592B9B912F850EF"
+      },
+      "relationId": "rId16",
+      "imagePart": "xl/media/image16.png",
+      "size": [
+        768,
+        400
+      ],
+      "doctorId": "doctor-a2d9decb06",
+      "photo": "assets/doctors/doctor-a2d9decb06.png",
+      "imageSha256": "1afff70993d42c54b94cec1eb21f1d62d07f37db0369c3b131209d8f6a55cd15",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "卢振华",
+      "sheet": "Sheet1",
+      "row": 20,
+      "nameCell": "A20",
+      "imageCell": "B20",
+      "formula": "_xlfn.DISPIMG(\"ID_8A3FD514CB304125950364BBA56B98DE\",1)",
+      "id": "ID_8A3FD514CB304125950364BBA56B98DE",
+      "attributes": {
+        "id": "18",
+        "name": "ID_8A3FD514CB304125950364BBA56B98DE"
+      },
+      "relationId": "rId17",
+      "imagePart": "xl/media/image17.png",
+      "size": [
+        792,
+        412
+      ],
+      "doctorId": "doctor-c54d410219",
+      "photo": "assets/doctors/doctor-c54d410219.png",
+      "imageSha256": "66dea7e8c1e253e2d95c76f33e1a0cb1354af515128b7b981951d4b0a02138ea",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "骆志刚",
+      "sheet": "Sheet1",
+      "row": 21,
+      "nameCell": "A21",
+      "imageCell": "B21",
+      "formula": "_xlfn.DISPIMG(\"ID_55D3602CF8A147EFAEFAA01241DC70A8\",1)",
+      "id": "ID_55D3602CF8A147EFAEFAA01241DC70A8",
+      "attributes": {
+        "id": "19",
+        "name": "ID_55D3602CF8A147EFAEFAA01241DC70A8"
+      },
+      "relationId": "rId18",
+      "imagePart": "xl/media/image18.png",
+      "size": [
+        782,
+        390
+      ],
+      "doctorId": "doctor-c726c00985",
+      "photo": "assets/doctors/doctor-c726c00985.png",
+      "imageSha256": "d2b60b8e4747d2c11882493512247c332e2f9825f0c15710c749863c9cfea566",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "马东宇",
+      "sheet": "Sheet1",
+      "row": 22,
+      "nameCell": "A22",
+      "imageCell": "B22",
+      "formula": "_xlfn.DISPIMG(\"ID_914195293E11445983A643CE4A1D7731\",1)",
+      "id": "ID_914195293E11445983A643CE4A1D7731",
+      "attributes": {
+        "id": "20",
+        "name": "ID_914195293E11445983A643CE4A1D7731"
+      },
+      "relationId": "rId19",
+      "imagePart": "xl/media/image19.png",
+      "size": [
+        786,
+        408
+      ],
+      "doctorId": "doctor-273bbb06bc",
+      "photo": "assets/doctors/doctor-273bbb06bc.png",
+      "imageSha256": "d85562a05f1946e323755168bdea159efdd2a9621538b01655c2d2cb0ca22c0c",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "宋兵",
+      "sheet": "Sheet1",
+      "row": 23,
+      "nameCell": "A23",
+      "imageCell": "B23",
+      "formula": "_xlfn.DISPIMG(\"ID_FD68624EA08A4E1EBACB5BE03EA6FDBB\",1)",
+      "id": "ID_FD68624EA08A4E1EBACB5BE03EA6FDBB",
+      "attributes": {
+        "id": "21",
+        "name": "ID_FD68624EA08A4E1EBACB5BE03EA6FDBB"
+      },
+      "relationId": "rId20",
+      "imagePart": "xl/media/image20.png",
+      "size": [
+        762,
+        378
+      ],
+      "doctorId": "doctor-94e4f25b82",
+      "photo": "assets/doctors/doctor-94e4f25b82.png",
+      "imageSha256": "974c12ea340c28bafe074fa15c1e842db9c8e75dad391b5e34845e6cccac3608",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "王邦宁",
+      "sheet": "Sheet1",
+      "row": 24,
+      "nameCell": "A24",
+      "imageCell": "B24",
+      "formula": "_xlfn.DISPIMG(\"ID_69B44115C2754E53A6DB0BCC7AEF7D46\",1)",
+      "id": "ID_69B44115C2754E53A6DB0BCC7AEF7D46",
+      "attributes": {
+        "id": "22",
+        "name": "ID_69B44115C2754E53A6DB0BCC7AEF7D46"
+      },
+      "relationId": "rId21",
+      "imagePart": "xl/media/image21.png",
+      "size": [
+        774,
+        404
+      ],
+      "doctorId": "doctor-2c130a4313",
+      "photo": "assets/doctors/doctor-2c130a4313.png",
+      "imageSha256": "b43c64529d7cfef7a5007c00e1741f60a2affbd768ffb9d4f807cf34473793b7",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "王昌会",
+      "sheet": "Sheet1",
+      "row": 25,
+      "nameCell": "A25",
+      "imageCell": "B25",
+      "formula": "_xlfn.DISPIMG(\"ID_2A666C3A62834E1F8A8B4F883582EF37\",1)",
+      "id": "ID_2A666C3A62834E1F8A8B4F883582EF37",
+      "attributes": {
+        "id": "23",
+        "name": "ID_2A666C3A62834E1F8A8B4F883582EF37"
+      },
+      "relationId": "rId22",
+      "imagePart": "xl/media/image22.png",
+      "size": [
+        772,
+        410
+      ],
+      "doctorId": "doctor-61136e19fd",
+      "photo": "assets/doctors/doctor-61136e19fd.png",
+      "imageSha256": "20d623f11ed9bdb9a1530855ef68df7d4e02497c7749d6c7f9c5e629bd2698d4",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "王春苗",
+      "sheet": "Sheet1",
+      "row": 26,
+      "nameCell": "A26",
+      "imageCell": "B26",
+      "formula": "_xlfn.DISPIMG(\"ID_9378D3947EE34AD390E56E90C3B9017D\",1)",
+      "id": "ID_9378D3947EE34AD390E56E90C3B9017D",
+      "attributes": {
+        "id": "24",
+        "name": "ID_9378D3947EE34AD390E56E90C3B9017D"
+      },
+      "relationId": "rId23",
+      "imagePart": "xl/media/image23.png",
+      "size": [
+        780,
+        392
+      ],
+      "doctorId": "doctor-e0da2f079b",
+      "photo": "assets/doctors/doctor-e0da2f079b.png",
+      "imageSha256": "16712b651439ba535cc91f1ef2f92eab18ddd2fbc4dc99d62badab4264c9d294",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "王建龙",
+      "sheet": "Sheet1",
+      "row": 28,
+      "nameCell": "A28",
+      "imageCell": "B28",
+      "formula": "_xlfn.DISPIMG(\"ID_7E2965084EBE438EB735FFEA8E1BC69E\",1)",
+      "id": "ID_7E2965084EBE438EB735FFEA8E1BC69E",
+      "attributes": {
+        "id": "2",
+        "name": "ID_7E2965084EBE438EB735FFEA8E1BC69E"
+      },
+      "relationId": "rId1",
+      "imagePart": "xl/media/image1.png",
+      "size": [
+        410,
+        490
+      ],
+      "doctorId": "doctor-fcfa17e82a",
+      "photo": "assets/doctors/doctor-fcfa17e82a.png",
+      "imageSha256": "e15e9f1ace6f14cd9daaacbbeba6d1d9f1b3fe1b45ffb962b741139efd966591",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)",
+        "心血管内科特需门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "伍梦佐",
+      "sheet": "Sheet1",
+      "row": 29,
+      "nameCell": "A29",
+      "imageCell": "B29",
+      "formula": "_xlfn.DISPIMG(\"ID_0EB1F3B969514EEC80CC2C6C6BFF1179\",1)",
+      "id": "ID_0EB1F3B969514EEC80CC2C6C6BFF1179",
+      "attributes": {
+        "id": "25",
+        "name": "ID_0EB1F3B969514EEC80CC2C6C6BFF1179"
+      },
+      "relationId": "rId24",
+      "imagePart": "xl/media/image24.png",
+      "size": [
+        766,
+        392
+      ],
+      "doctorId": "doctor-3168c44dcf",
+      "photo": "assets/doctors/doctor-3168c44dcf.png",
+      "imageSha256": "01ad836fe0eeecf19da59c11adab3d8dd4eeb2503d821a34c93679ec9958a60a",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "谢峻",
+      "sheet": "Sheet1",
+      "row": 30,
+      "nameCell": "A30",
+      "imageCell": "B30",
+      "formula": "_xlfn.DISPIMG(\"ID_1CE6916B57F24540BCA59DF44B2AD900\",1)",
+      "id": "ID_1CE6916B57F24540BCA59DF44B2AD900",
+      "attributes": {
+        "id": "26",
+        "name": "ID_1CE6916B57F24540BCA59DF44B2AD900"
+      },
+      "relationId": "rId25",
+      "imagePart": "xl/media/image25.png",
+      "size": [
+        780,
+        390
+      ],
+      "doctorId": "doctor-b435af25ff",
+      "photo": "assets/doctors/doctor-b435af25ff.png",
+      "imageSha256": "0b984c62f8c02dd0364af711552de41888290cc99ba1f16580f5b81ec47cafc8",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "邢亦明",
+      "sheet": "Sheet1",
+      "row": 31,
+      "nameCell": "A31",
+      "imageCell": "B31",
+      "formula": "_xlfn.DISPIMG(\"ID_392113FF25734C76A81934573C952DB0\",1)",
+      "id": "ID_392113FF25734C76A81934573C952DB0",
+      "attributes": {
+        "id": "27",
+        "name": "ID_392113FF25734C76A81934573C952DB0"
+      },
+      "relationId": "rId26",
+      "imagePart": "xl/media/image26.png",
+      "size": [
+        790,
+        396
+      ],
+      "doctorId": "doctor-15d535d804",
+      "photo": "assets/doctors/doctor-15d535d804.png",
+      "imageSha256": "2ca2d4772676a52104bcf9f90617cea908154a9879d9f252bd199b4c81547b78",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "许锋",
+      "sheet": "Sheet1",
+      "row": 32,
+      "nameCell": "A32",
+      "imageCell": "B32",
+      "formula": "_xlfn.DISPIMG(\"ID_A07A8B1A396E4847A520989CC98C3854\",1)",
+      "id": "ID_A07A8B1A396E4847A520989CC98C3854",
+      "attributes": {
+        "id": "28",
+        "name": "ID_A07A8B1A396E4847A520989CC98C3854"
+      },
+      "relationId": "rId27",
+      "imagePart": "xl/media/image27.png",
+      "size": [
+        774,
+        388
+      ],
+      "doctorId": "doctor-085cd489a7",
+      "photo": "assets/doctors/doctor-085cd489a7.png",
+      "imageSha256": "b393d0259ca15fa32a2d1666912258b47e639fd852507e1300591acb2cade3fe",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "杨宇",
+      "sheet": "Sheet1",
+      "row": 33,
+      "nameCell": "A33",
+      "imageCell": "B33",
+      "formula": "_xlfn.DISPIMG(\"ID_67AF6B94DC1743489346483C616A7323\",1)",
+      "id": "ID_67AF6B94DC1743489346483C616A7323",
+      "attributes": {
+        "id": "29",
+        "name": "ID_67AF6B94DC1743489346483C616A7323"
+      },
+      "relationId": "rId28",
+      "imagePart": "xl/media/image28.png",
+      "size": [
+        780,
+        408
+      ],
+      "doctorId": "doctor-00bf9c6dba",
+      "photo": "assets/doctors/doctor-00bf9c6dba.png",
+      "imageSha256": "5cc215e35aa6480b37fe6f6267f0fb831d11001e3cb9c948360e5f7dff132194",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主治医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": false
+    },
+    {
+      "name": "喻荣辉",
+      "sheet": "Sheet1",
+      "row": 35,
+      "nameCell": "A35",
+      "imageCell": "B35",
+      "formula": "_xlfn.DISPIMG(\"ID_A0CA354B1B9843C99A595001EBCBAB66\",1)",
+      "id": "ID_A0CA354B1B9843C99A595001EBCBAB66",
+      "attributes": {
+        "id": "30",
+        "name": "ID_A0CA354B1B9843C99A595001EBCBAB66"
+      },
+      "relationId": "rId29",
+      "imagePart": "xl/media/image29.png",
+      "size": [
+        768,
+        388
+      ],
+      "doctorId": "doctor-7965aa5c5a",
+      "photo": "assets/doctors/doctor-7965aa5c5a.png",
+      "imageSha256": "189bd85865e0f6c9ef28acdfa613bd51e6bf5166f502e4cb1ca089d631144e0f",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)",
+        "心血管内科特需门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "张勇",
+      "sheet": "Sheet1",
+      "row": 37,
+      "nameCell": "A37",
+      "imageCell": "B37",
+      "formula": "_xlfn.DISPIMG(\"ID_FA8404C2110640B7A472DA5CD7620DF0\",1)",
+      "id": "ID_FA8404C2110640B7A472DA5CD7620DF0",
+      "attributes": {
+        "id": "31",
+        "name": "ID_FA8404C2110640B7A472DA5CD7620DF0"
+      },
+      "relationId": "rId30",
+      "imagePart": "xl/media/image30.png",
+      "size": [
+        774,
+        404
+      ],
+      "doctorId": "doctor-de156ba09c",
+      "photo": "assets/doctors/doctor-de156ba09c.png",
+      "imageSha256": "b1aee8f85db0082ed1dd25eb7f73f427bb293f9ad06c564b63403f1c49067746",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "赵韧",
+      "sheet": "Sheet1",
+      "row": 38,
+      "nameCell": "A38",
+      "imageCell": "B38",
+      "formula": "_xlfn.DISPIMG(\"ID_E76B2E06C5DF43C4B8CF7BBC3FCF6451\",1)",
+      "id": "ID_E76B2E06C5DF43C4B8CF7BBC3FCF6451",
+      "attributes": {
+        "id": "32",
+        "name": "ID_E76B2E06C5DF43C4B8CF7BBC3FCF6451"
+      },
+      "relationId": "rId31",
+      "imagePart": "xl/media/image31.png",
+      "size": [
+        766,
+        400
+      ],
+      "doctorId": "doctor-d402515b22",
+      "photo": "assets/doctors/doctor-d402515b22.png",
+      "imageSha256": "f3fde1775571d36809299a9f7f6bf3121721e470a5f0aa03589ed6beeeaa0103",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "郑林林",
+      "sheet": "Sheet1",
+      "row": 39,
+      "nameCell": "A39",
+      "imageCell": "B39",
+      "formula": "_xlfn.DISPIMG(\"ID_2DDFF6FF61064A83A6CFB75892F7C284\",1)",
+      "id": "ID_2DDFF6FF61064A83A6CFB75892F7C284",
+      "attributes": {
+        "id": "33",
+        "name": "ID_2DDFF6FF61064A83A6CFB75892F7C284"
+      },
+      "relationId": "rId32",
+      "imagePart": "xl/media/image32.png",
+      "size": [
+        770,
+        404
+      ],
+      "doctorId": "doctor-6e2128a807",
+      "photo": "assets/doctors/doctor-6e2128a807.png",
+      "imageSha256": "efd106bf82cc80e36bd50c43859230ea1598f3653744b4f8998e81e426bbe926",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "周碧蓉",
+      "sheet": "Sheet1",
+      "row": 40,
+      "nameCell": "A40",
+      "imageCell": "B40",
+      "formula": "_xlfn.DISPIMG(\"ID_8E98A34A5CFE479791ADF1175187A697\",1)",
+      "id": "ID_8E98A34A5CFE479791ADF1175187A697",
+      "attributes": {
+        "id": "34",
+        "name": "ID_8E98A34A5CFE479791ADF1175187A697"
+      },
+      "relationId": "rId33",
+      "imagePart": "xl/media/image33.png",
+      "size": [
+        794,
+        424
+      ],
+      "doctorId": "doctor-9537cb83ae",
+      "photo": "assets/doctors/doctor-9537cb83ae.png",
+      "imageSha256": "a539a57103af23195cf6c46c6f20bd2477a62c94a340c4913615aee04ee07db8",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "displayDepartment": "心血管内科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "车轰",
+      "sheet": "Sheet1",
+      "row": 42,
+      "nameCell": "A42",
+      "imageCell": "B42",
+      "formula": "_xlfn.DISPIMG(\"ID_2234C7E79BF04085B83B66DBA49C3DDB\",1)",
+      "id": "ID_2234C7E79BF04085B83B66DBA49C3DDB",
+      "attributes": {
+        "id": "35",
+        "name": "ID_2234C7E79BF04085B83B66DBA49C3DDB"
+      },
+      "relationId": "rId34",
+      "imagePart": "xl/media/image34.png",
+      "size": [
+        782,
+        422
+      ],
+      "doctorId": "doctor-1bbb7a34db",
+      "photo": "assets/doctors/doctor-1bbb7a34db.png",
+      "imageSha256": "42624f3a920387338f34f2faec251971d5608db9ddc84d855e34bd4112d238b9",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "冯俊波",
+      "sheet": "Sheet1",
+      "row": 44,
+      "nameCell": "A44",
+      "imageCell": "B44",
+      "formula": "_xlfn.DISPIMG(\"ID_E05A5FB666D34691AF220C11495DEC2D\",1)",
+      "id": "ID_E05A5FB666D34691AF220C11495DEC2D",
+      "attributes": {
+        "id": "36",
+        "name": "ID_E05A5FB666D34691AF220C11495DEC2D"
+      },
+      "relationId": "rId35",
+      "imagePart": "xl/media/image35.png",
+      "size": [
+        780,
+        414
+      ],
+      "doctorId": "doctor-f895a0574e",
+      "photo": "assets/doctors/doctor-f895a0574e.png",
+      "imageSha256": "2e548f7d1b8fde145dfecadb336a4fbcee7931c21f3c1b1f30fe6ec3382479f7",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "高晓天",
+      "sheet": "Sheet1",
+      "row": 45,
+      "nameCell": "A45",
+      "imageCell": "B45",
+      "formula": "_xlfn.DISPIMG(\"ID_61D9830404B24507806B51CDE694C885\",1)",
+      "id": "ID_61D9830404B24507806B51CDE694C885",
+      "attributes": {
+        "id": "37",
+        "name": "ID_61D9830404B24507806B51CDE694C885"
+      },
+      "relationId": "rId36",
+      "imagePart": "xl/media/image36.png",
+      "size": [
+        762,
+        404
+      ],
+      "doctorId": "doctor-35cf3277ca",
+      "photo": "assets/doctors/doctor-35cf3277ca.png",
+      "imageSha256": "aca8db2896f3eafc5519de5687e28484650976531063a1ea7152cd2ec44beb84",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "葛圣林",
+      "sheet": "Sheet1",
+      "row": 46,
+      "nameCell": "A46",
+      "imageCell": "B46",
+      "formula": "_xlfn.DISPIMG(\"ID_ED392659ABEB4A95996F1E463CF43B90\",1)",
+      "id": "ID_ED392659ABEB4A95996F1E463CF43B90",
+      "attributes": {
+        "id": "38",
+        "name": "ID_ED392659ABEB4A95996F1E463CF43B90"
+      },
+      "relationId": "rId37",
+      "imagePart": "xl/media/image37.png",
+      "size": [
+        770,
+        404
+      ],
+      "doctorId": "doctor-bda4677a78",
+      "photo": "assets/doctors/doctor-bda4677a78.png",
+      "imageSha256": "95c0bc084f85799ee47471b3683f896a0e01ab5eeb5ae388e0a5ab5c6a6ed14f",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)",
+        "心脏大血管外科特需门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "龚文辉",
+      "sheet": "Sheet1",
+      "row": 48,
+      "nameCell": "A48",
+      "imageCell": "B48",
+      "formula": "_xlfn.DISPIMG(\"ID_D991DA0FDD34400D9BD933814DAF8C25\",1)",
+      "id": "ID_D991DA0FDD34400D9BD933814DAF8C25",
+      "attributes": {
+        "id": "39",
+        "name": "ID_D991DA0FDD34400D9BD933814DAF8C25"
+      },
+      "relationId": "rId38",
+      "imagePart": "xl/media/image38.png",
+      "size": [
+        782,
+        414
+      ],
+      "doctorId": "doctor-a53982c6b2",
+      "photo": "assets/doctors/doctor-a53982c6b2.png",
+      "imageSha256": "3050c5040c85ac4546fb47c6cb9d7bcaa8a55773f94e3d5c706a3d63e78c7509",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "郭志祥",
+      "sheet": "Sheet1",
+      "row": 49,
+      "nameCell": "A49",
+      "imageCell": "B49",
+      "formula": "_xlfn.DISPIMG(\"ID_019F1BDA11364352964D69D46376CD55\",1)",
+      "id": "ID_019F1BDA11364352964D69D46376CD55",
+      "attributes": {
+        "id": "40",
+        "name": "ID_019F1BDA11364352964D69D46376CD55"
+      },
+      "relationId": "rId39",
+      "imagePart": "xl/media/image39.png",
+      "size": [
+        746,
+        394
+      ],
+      "doctorId": "doctor-3082bb1e6c",
+      "photo": "assets/doctors/doctor-3082bb1e6c.png",
+      "imageSha256": "c4188af3f4890a8318fb21d178ae04c0ad3524d8e2c423146ec417d72aae1f77",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "何维来",
+      "sheet": "Sheet1",
+      "row": 50,
+      "nameCell": "A50",
+      "imageCell": "B50",
+      "formula": "_xlfn.DISPIMG(\"ID_6893B55DEFA14B12B7F62F0769D8E452\",1)",
+      "id": "ID_6893B55DEFA14B12B7F62F0769D8E452",
+      "attributes": {
+        "id": "41",
+        "name": "ID_6893B55DEFA14B12B7F62F0769D8E452"
+      },
+      "relationId": "rId40",
+      "imagePart": "xl/media/image40.png",
+      "size": [
+        784,
+        398
+      ],
+      "doctorId": "doctor-85de5e8704",
+      "photo": "assets/doctors/doctor-85de5e8704.png",
+      "imageSha256": "91ccbbb44703973b698859d462d0dc1c8acf0fca60c40c6c65d862bf9551b4e8",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "胡运涛",
+      "sheet": "Sheet1",
+      "row": 51,
+      "nameCell": "A51",
+      "imageCell": "B51",
+      "formula": "_xlfn.DISPIMG(\"ID_92F70B8BC7DB4324B9EECB47C0997E4D\",1)",
+      "id": "ID_92F70B8BC7DB4324B9EECB47C0997E4D",
+      "attributes": {
+        "id": "42",
+        "name": "ID_92F70B8BC7DB4324B9EECB47C0997E4D"
+      },
+      "relationId": "rId41",
+      "imagePart": "xl/media/image41.png",
+      "size": [
+        766,
+        300
+      ],
+      "doctorId": "doctor-4fc36ae68a",
+      "photo": "assets/doctors/doctor-4fc36ae68a.png",
+      "imageSha256": "4fe6caf973faaa50c44b4dfecd473107d2dba998965bcc6f8951641345eb99b5",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "李宁",
+      "sheet": "Sheet1",
+      "row": 52,
+      "nameCell": "A52",
+      "imageCell": "B52",
+      "formula": "_xlfn.DISPIMG(\"ID_69977B683D744CADADF310E0849520B4\",1)",
+      "id": "ID_69977B683D744CADADF310E0849520B4",
+      "attributes": {
+        "id": "44",
+        "name": "ID_69977B683D744CADADF310E0849520B4"
+      },
+      "relationId": "rId42",
+      "imagePart": "xl/media/image42.png",
+      "size": [
+        768,
+        394
+      ],
+      "doctorId": "doctor-4a6956ec96",
+      "photo": "assets/doctors/doctor-4a6956ec96.png",
+      "imageSha256": "5049f135782409945a728573aeed3bb7608e475ee97c03dec91450417da0207e",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主治医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "李伟",
+      "sheet": "Sheet1",
+      "row": 53,
+      "nameCell": "A53",
+      "imageCell": "B53",
+      "formula": "_xlfn.DISPIMG(\"ID_CC297CD0BB8A4BE08B6642F504E43ACA\",1)",
+      "id": "ID_CC297CD0BB8A4BE08B6642F504E43ACA",
+      "attributes": {
+        "id": "45",
+        "name": "ID_CC297CD0BB8A4BE08B6642F504E43ACA"
+      },
+      "relationId": "rId43",
+      "imagePart": "xl/media/image43.png",
+      "size": [
+        772,
+        408
+      ],
+      "doctorId": "doctor-5ed4d58e5d",
+      "photo": "assets/doctors/doctor-5ed4d58e5d.png",
+      "imageSha256": "5e5c13e2e8dcaede46f7ebb23801c3e0dd4bc95f60e29572897f37eaa74027c9",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主治医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "李晓锋",
+      "sheet": "Sheet1",
+      "row": 54,
+      "nameCell": "A54",
+      "imageCell": "B54",
+      "formula": "_xlfn.DISPIMG(\"ID_1AAD1452268442F2A8FA49504DEB44C4\",1)",
+      "id": "ID_1AAD1452268442F2A8FA49504DEB44C4",
+      "attributes": {
+        "id": "46",
+        "name": "ID_1AAD1452268442F2A8FA49504DEB44C4"
+      },
+      "relationId": "rId44",
+      "imagePart": "xl/media/image44.png",
+      "size": [
+        766,
+        396
+      ],
+      "doctorId": "doctor-d566194fd3",
+      "photo": "assets/doctors/doctor-d566194fd3.png",
+      "imageSha256": "45b69df2a44f10d99231e3e5c4064f8cdcb8e3eb645a87861b68707461552144",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "刘状",
+      "sheet": "Sheet1",
+      "row": 56,
+      "nameCell": "A56",
+      "imageCell": "B56",
+      "formula": "_xlfn.DISPIMG(\"ID_DBA1B41F75E14212BDE1051342297CEE\",1)",
+      "id": "ID_DBA1B41F75E14212BDE1051342297CEE",
+      "attributes": {
+        "id": "47",
+        "name": "ID_DBA1B41F75E14212BDE1051342297CEE"
+      },
+      "relationId": "rId45",
+      "imagePart": "xl/media/image45.png",
+      "size": [
+        750,
+        404
+      ],
+      "doctorId": "doctor-4dbe99e8ca",
+      "photo": "assets/doctors/doctor-4dbe99e8ca.png",
+      "imageSha256": "d85317a9e14f210f285e5422ee8588d1b2f44de03f02e65c95918e1ce0a8bd9a",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "时应路",
+      "sheet": "Sheet1",
+      "row": 57,
+      "nameCell": "A57",
+      "imageCell": "B57",
+      "formula": "_xlfn.DISPIMG(\"ID_56382CFB3A964502B7F31D1EBA8F0C97\",1)",
+      "id": "ID_56382CFB3A964502B7F31D1EBA8F0C97",
+      "attributes": {
+        "id": "48",
+        "name": "ID_56382CFB3A964502B7F31D1EBA8F0C97"
+      },
+      "relationId": "rId46",
+      "imagePart": "xl/media/image46.png",
+      "size": [
+        776,
+        396
+      ],
+      "doctorId": "doctor-54658c0d84",
+      "photo": "assets/doctors/doctor-54658c0d84.png",
+      "imageSha256": "cf374f0c7de6660cef9fd5422c8d4d5bfad13a60d49fc836c8f2bbcf248eaab1",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "王保存",
+      "sheet": "Sheet1",
+      "row": 58,
+      "nameCell": "A58",
+      "imageCell": "B58",
+      "formula": "_xlfn.DISPIMG(\"ID_5B1EA42FD43A4F3D83F0B36BA7B1672E\",1)",
+      "id": "ID_5B1EA42FD43A4F3D83F0B36BA7B1672E",
+      "attributes": {
+        "id": "49",
+        "name": "ID_5B1EA42FD43A4F3D83F0B36BA7B1672E"
+      },
+      "relationId": "rId47",
+      "imagePart": "xl/media/image47.png",
+      "size": [
+        780,
+        392
+      ],
+      "doctorId": "doctor-5244cbb5db",
+      "photo": "assets/doctors/doctor-5244cbb5db.png",
+      "imageSha256": "850c6f9d91a58973dd0bcab1bf6504fd39cd4fffab95b9729d7a711296fce96f",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主治医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "韦小勇",
+      "sheet": "Sheet1",
+      "row": 59,
+      "nameCell": "A59",
+      "imageCell": "B59",
+      "formula": "_xlfn.DISPIMG(\"ID_E8B787840A01479FAC952F902DB14A7F\",1)",
+      "id": "ID_E8B787840A01479FAC952F902DB14A7F",
+      "attributes": {
+        "id": "50",
+        "name": "ID_E8B787840A01479FAC952F902DB14A7F"
+      },
+      "relationId": "rId48",
+      "imagePart": "xl/media/image48.png",
+      "size": [
+        760,
+        396
+      ],
+      "doctorId": "doctor-e38db45e4a",
+      "photo": "assets/doctors/doctor-e38db45e4a.png",
+      "imageSha256": "3b24c2b5a9a1fc2857ae18d9d7a9383aaa7f1bca0383cdf3fff9d67b3b08be01",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "吴章敏",
+      "sheet": "Sheet1",
+      "row": 60,
+      "nameCell": "A60",
+      "imageCell": "B60",
+      "formula": "_xlfn.DISPIMG(\"ID_E68CA723970B4553BDD0AE0E9E1D4DF6\",1)",
+      "id": "ID_E68CA723970B4553BDD0AE0E9E1D4DF6",
+      "attributes": {
+        "id": "51",
+        "name": "ID_E68CA723970B4553BDD0AE0E9E1D4DF6"
+      },
+      "relationId": "rId49",
+      "imagePart": "xl/media/image49.png",
+      "size": [
+        768,
+        398
+      ],
+      "doctorId": "doctor-a173ea6fd0",
+      "photo": "assets/doctors/doctor-a173ea6fd0.png",
+      "imageSha256": "78a51d66dc2cce07c263fe3403010def735037b950de6995fbddc5936870d14a",
+      "profileSourceFile": null,
+      "profileExactNameMatch": false,
+      "officialNameMatch": true,
+      "officialTitle": "主治医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": false
+    },
+    {
+      "name": "许金国",
+      "sheet": "Sheet1",
+      "row": 61,
+      "nameCell": "A61",
+      "imageCell": "B61",
+      "formula": "_xlfn.DISPIMG(\"ID_B2DB52B821C640B3944055B16C2D899C\",1)",
+      "id": "ID_B2DB52B821C640B3944055B16C2D899C",
+      "attributes": {
+        "id": "52",
+        "name": "ID_B2DB52B821C640B3944055B16C2D899C"
+      },
+      "relationId": "rId50",
+      "imagePart": "xl/media/image50.png",
+      "size": [
+        776,
+        414
+      ],
+      "doctorId": "doctor-a00e18b9b2",
+      "photo": "assets/doctors/doctor-a00e18b9b2.png",
+      "imageSha256": "3139acb867d723ad1ff9fa055868e5cb09020a56a0a3b41bd22efcb197e0d8f1",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "张成鑫",
+      "sheet": "Sheet1",
+      "row": 62,
+      "nameCell": "A62",
+      "imageCell": "B62",
+      "formula": "_xlfn.DISPIMG(\"ID_0A3E06BE65084F66B9F8580D97811B0B\",1)",
+      "id": "ID_0A3E06BE65084F66B9F8580D97811B0B",
+      "attributes": {
+        "id": "53",
+        "name": "ID_0A3E06BE65084F66B9F8580D97811B0B"
+      },
+      "relationId": "rId51",
+      "imagePart": "xl/media/image51.png",
+      "size": [
+        758,
+        392
+      ],
+      "doctorId": "doctor-9dc24b2f98",
+      "photo": "assets/doctors/doctor-9dc24b2f98.png",
+      "imageSha256": "857b9e43b88b2141b7b5bc353e60194c94d041d14936ec77c84a63149be6fc09",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "张士兵",
+      "sheet": "Sheet1",
+      "row": 63,
+      "nameCell": "A63",
+      "imageCell": "B63",
+      "formula": "_xlfn.DISPIMG(\"ID_65FC630A84DF494CB5A0EF4D3929DB5A\",1)",
+      "id": "ID_65FC630A84DF494CB5A0EF4D3929DB5A",
+      "attributes": {
+        "id": "54",
+        "name": "ID_65FC630A84DF494CB5A0EF4D3929DB5A"
+      },
+      "relationId": "rId52",
+      "imagePart": "xl/media/image52.png",
+      "size": [
+        788,
+        398
+      ],
+      "doctorId": "doctor-6fb2fb3da1",
+      "photo": "assets/doctors/doctor-6fb2fb3da1.png",
+      "imageSha256": "7f095d3abba044087f171ff95c2be9d3e696886cad59532be80be0ab73a98966",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "副主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "朱正艳",
+      "sheet": "Sheet1",
+      "row": 64,
+      "nameCell": "A64",
+      "imageCell": "B64",
+      "formula": "_xlfn.DISPIMG(\"ID_11ADA11BEE264856846935B0C65925E4\",1)",
+      "id": "ID_11ADA11BEE264856846935B0C65925E4",
+      "attributes": {
+        "id": "55",
+        "name": "ID_11ADA11BEE264856846935B0C65925E4"
+      },
+      "relationId": "rId53",
+      "imagePart": "xl/media/image53.png",
+      "size": [
+        782,
+        388
+      ],
+      "doctorId": "doctor-51431269b5",
+      "photo": "assets/doctors/doctor-51431269b5.png",
+      "imageSha256": "d8440733f496adb1061539eb94d6e459e6daf7ff65248f37cc89299f0d777814",
+      "profileSourceFile": "surgery_doctors.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "displayDepartment": "心脏大血管外科",
+      "hasDetailedBiography": true
+    },
+    {
+      "name": "唐海沁",
+      "sheet": "Sheet1",
+      "row": 65,
+      "nameCell": "A65",
+      "imageCell": "B65",
+      "formula": "_xlfn.DISPIMG(\"ID_0E2F9A1AADBF4EA18644B660E195E3E8\",1)",
+      "id": "ID_0E2F9A1AADBF4EA18644B660E195E3E8",
+      "attributes": {
+        "id": "56",
+        "name": "ID_0E2F9A1AADBF4EA18644B660E195E3E8"
+      },
+      "relationId": "rId54",
+      "imagePart": "xl/media/image54.png",
+      "size": [
+        786,
+        412
+      ],
+      "doctorId": "doctor-f2a3bd6c4e",
+      "photo": "assets/doctors/doctor-f2a3bd6c4e.png",
+      "imageSha256": "fe8540628fe1a1e0b1f1164d0e0c31260ea524058c5afdb30db058cbc4df7183",
+      "profileSourceFile": "internal_medicine.json",
+      "profileExactNameMatch": true,
+      "officialNameMatch": true,
+      "officialTitle": "主任医师",
+      "officialClinics": [
+        "心脏康复中心门诊(安贞)"
+      ],
+      "displayDepartment": "心脏康复中心",
+      "hasDetailedBiography": true
+    }
+  ],
+  "photoFraming": {
+    "updatedAt": "2026-09-16",
+    "method": "原图左上头像色彩连通区域像素分析，逐张元数据映射；灰色背景及较远半身肖像目测校正；54 人联系表逐格视觉检查。",
+    "frameUnits": "original-image pixels",
+    "cssUsage": "方形 overflow:hidden 容器；按 photoFrame.width 缩放原图，并将原图左上偏移至 -x,-y；null 使用 object-fit:cover。",
+    "landscapeFrames": 52,
+    "portraitNullFrames": 2,
+    "manuallyTightenedHalfBodyPortraits": [
+      "胡泽平",
+      "刘敏",
+      "王昌会",
+      "伍梦佐",
+      "高晓天",
+      "韦小勇",
+      "朱正艳",
+      "梁有峰"
+    ],
+    "contactSheet": "tmp/referral-assets/doctor-avatar-contact-sheet.png",
+    "contactSheetDimensions": [
+      1620,
+      1250
+    ],
+    "checks": {
+      "allDoctorsHavePhotoFrameKey": true,
+      "allLandscapeFramesValid": true,
+      "twoPortraitsRemainNull": true,
+      "allOriginalImageBytesUnchanged": true,
+      "allOtherDoctorFieldsUnchanged": true,
+      "contactSheetAtMost1800PixelsWide": true
+    },
+    "frames": [
+      {
+        "name": "曹海学",
+        "photo": "assets/doctors/doctor-bfbc6333a9.png",
+        "photoFrame": null,
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "陈斌",
+        "photo": "assets/doctors/doctor-0fc643d4b5.png",
+        "photoFrame": {
+          "x": 61,
+          "y": 40,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 776,
+          "imageHeight": 400
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "陈大年",
+        "photo": "assets/doctors/doctor-3d1e002263.png",
+        "photoFrame": {
+          "x": 53,
+          "y": 42,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 774,
+          "imageHeight": 414
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "陈刚",
+        "photo": "assets/doctors/doctor-532738a7c7.png",
+        "photoFrame": {
+          "x": 61,
+          "y": 46,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 776,
+          "imageHeight": 426
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "陈洁霞",
+        "photo": "assets/doctors/doctor-dfc5deb0c1.png",
+        "photoFrame": {
+          "x": 57,
+          "y": 36,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 774,
+          "imageHeight": 410
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "陈旭华",
+        "photo": "assets/doctors/doctor-5bce2c6be0.png",
+        "photoFrame": {
+          "x": 55,
+          "y": 36,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 768,
+          "imageHeight": 402
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "宫孟琦",
+        "photo": "assets/doctors/doctor-91d6bd3979.png",
+        "photoFrame": {
+          "x": 59,
+          "y": 37,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 778,
+          "imageHeight": 396
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "郭杰",
+        "photo": "assets/doctors/doctor-3d4bccbfa7.png",
+        "photoFrame": {
+          "x": 57,
+          "y": 32,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 774,
+          "imageHeight": 388
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "胡泽平",
+        "photo": "assets/doctors/doctor-77566cdaa5.png",
+        "photoFrame": {
+          "x": 82,
+          "y": 45,
+          "width": 75,
+          "height": 75,
+          "imageWidth": 774,
+          "imageHeight": 408
+        },
+        "reviewNote": "原圆形头像为较远半身照；只缩小 CSS 取景窗口至面部与肩部，原始图片未修改。"
+      },
+      {
+        "name": "黄颖",
+        "photo": "assets/doctors/doctor-a94dabdbaa.png",
+        "photoFrame": {
+          "x": 61,
+          "y": 30,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 776,
+          "imageHeight": 404
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "解杨婧",
+        "photo": "assets/doctors/doctor-8cd7d29313.png",
+        "photoFrame": {
+          "x": 57,
+          "y": 44,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 772,
+          "imageHeight": 416
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "柯道正",
+        "photo": "assets/doctors/doctor-fd489030ef.png",
+        "photoFrame": {
+          "x": 67,
+          "y": 46,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 794,
+          "imageHeight": 432
+        },
+        "reviewNote": "灰色头像背景；原图目测核对圆形头像边界，含面部及肩部。"
+      },
+      {
+        "name": "梁有峰",
+        "photo": "assets/doctors/doctor-ba54ccd1be.png",
+        "photoFrame": {
+          "x": 65,
+          "y": 26,
+          "width": 94,
+          "height": 94,
+          "imageWidth": 762,
+          "imageHeight": 372
+        },
+        "reviewNote": "原圆形头像为较远半身照；只缩小 CSS 取景窗口至面部与肩部，原始图片未修改。"
+      },
+      {
+        "name": "刘和俊",
+        "photo": "assets/doctors/doctor-f5c2b3bcb4.png",
+        "photoFrame": {
+          "x": 47,
+          "y": 36,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 772,
+          "imageHeight": 396
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "刘敏",
+        "photo": "assets/doctors/doctor-a2d9decb06.png",
+        "photoFrame": {
+          "x": 75,
+          "y": 43,
+          "width": 76,
+          "height": 76,
+          "imageWidth": 768,
+          "imageHeight": 400
+        },
+        "reviewNote": "原圆形头像为较远半身照；只缩小 CSS 取景窗口至面部与肩部，原始图片未修改。"
+      },
+      {
+        "name": "卢振华",
+        "photo": "assets/doctors/doctor-c54d410219.png",
+        "photoFrame": {
+          "x": 63,
+          "y": 40,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 792,
+          "imageHeight": 412
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "骆志刚",
+        "photo": "assets/doctors/doctor-c726c00985.png",
+        "photoFrame": {
+          "x": 59,
+          "y": 33,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 782,
+          "imageHeight": 390
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "马东宇",
+        "photo": "assets/doctors/doctor-273bbb06bc.png",
+        "photoFrame": {
+          "x": 59,
+          "y": 28,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 786,
+          "imageHeight": 408
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "宋兵",
+        "photo": "assets/doctors/doctor-94e4f25b82.png",
+        "photoFrame": {
+          "x": 47,
+          "y": 18,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 762,
+          "imageHeight": 378
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "王邦宁",
+        "photo": "assets/doctors/doctor-2c130a4313.png",
+        "photoFrame": {
+          "x": 59,
+          "y": 30,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 774,
+          "imageHeight": 404
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "王昌会",
+        "photo": "assets/doctors/doctor-61136e19fd.png",
+        "photoFrame": {
+          "x": 84,
+          "y": 34,
+          "width": 76,
+          "height": 76,
+          "imageWidth": 772,
+          "imageHeight": 410
+        },
+        "reviewNote": "原圆形头像为较远半身照；只缩小 CSS 取景窗口至面部与肩部，原始图片未修改。"
+      },
+      {
+        "name": "王春苗",
+        "photo": "assets/doctors/doctor-e0da2f079b.png",
+        "photoFrame": {
+          "x": 57,
+          "y": 24,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 780,
+          "imageHeight": 392
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "王建龙",
+        "photo": "assets/doctors/doctor-fcfa17e82a.png",
+        "photoFrame": null,
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "伍梦佐",
+        "photo": "assets/doctors/doctor-3168c44dcf.png",
+        "photoFrame": {
+          "x": 86,
+          "y": 31,
+          "width": 72,
+          "height": 72,
+          "imageWidth": 766,
+          "imageHeight": 392
+        },
+        "reviewNote": "原圆形头像为较远半身照；只缩小 CSS 取景窗口至面部与肩部，原始图片未修改。"
+      },
+      {
+        "name": "谢峻",
+        "photo": "assets/doctors/doctor-b435af25ff.png",
+        "photoFrame": {
+          "x": 57,
+          "y": 30,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 780,
+          "imageHeight": 390
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "邢亦明",
+        "photo": "assets/doctors/doctor-15d535d804.png",
+        "photoFrame": {
+          "x": 71,
+          "y": 39,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 790,
+          "imageHeight": 396
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "许锋",
+        "photo": "assets/doctors/doctor-085cd489a7.png",
+        "photoFrame": {
+          "x": 51,
+          "y": 24,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 774,
+          "imageHeight": 388
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "杨宇",
+        "photo": "assets/doctors/doctor-00bf9c6dba.png",
+        "photoFrame": {
+          "x": 59,
+          "y": 25,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 780,
+          "imageHeight": 408
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "喻荣辉",
+        "photo": "assets/doctors/doctor-7965aa5c5a.png",
+        "photoFrame": {
+          "x": 53,
+          "y": 28,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 768,
+          "imageHeight": 388
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "张勇",
+        "photo": "assets/doctors/doctor-de156ba09c.png",
+        "photoFrame": {
+          "x": 57,
+          "y": 30,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 774,
+          "imageHeight": 404
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "赵韧",
+        "photo": "assets/doctors/doctor-d402515b22.png",
+        "photoFrame": {
+          "x": 47,
+          "y": 28,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 766,
+          "imageHeight": 400
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "郑林林",
+        "photo": "assets/doctors/doctor-6e2128a807.png",
+        "photoFrame": {
+          "x": 47,
+          "y": 32,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 770,
+          "imageHeight": 404
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "周碧蓉",
+        "photo": "assets/doctors/doctor-9537cb83ae.png",
+        "photoFrame": {
+          "x": 65,
+          "y": 39,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 794,
+          "imageHeight": 424
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "车轰",
+        "photo": "assets/doctors/doctor-1bbb7a34db.png",
+        "photoFrame": {
+          "x": 61,
+          "y": 48,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 782,
+          "imageHeight": 422
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "冯俊波",
+        "photo": "assets/doctors/doctor-f895a0574e.png",
+        "photoFrame": {
+          "x": 57,
+          "y": 26,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 780,
+          "imageHeight": 414
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "高晓天",
+        "photo": "assets/doctors/doctor-35cf3277ca.png",
+        "photoFrame": {
+          "x": 75,
+          "y": 32,
+          "width": 75,
+          "height": 75,
+          "imageWidth": 762,
+          "imageHeight": 404
+        },
+        "reviewNote": "原圆形头像为较远半身照；只缩小 CSS 取景窗口至面部与肩部，原始图片未修改。"
+      },
+      {
+        "name": "葛圣林",
+        "photo": "assets/doctors/doctor-bda4677a78.png",
+        "photoFrame": {
+          "x": 51,
+          "y": 30,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 770,
+          "imageHeight": 404
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "龚文辉",
+        "photo": "assets/doctors/doctor-a53982c6b2.png",
+        "photoFrame": {
+          "x": 61,
+          "y": 26,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 782,
+          "imageHeight": 414
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "郭志祥",
+        "photo": "assets/doctors/doctor-3082bb1e6c.png",
+        "photoFrame": {
+          "x": 37,
+          "y": 24,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 746,
+          "imageHeight": 394
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "何维来",
+        "photo": "assets/doctors/doctor-85de5e8704.png",
+        "photoFrame": {
+          "x": 63,
+          "y": 28,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 784,
+          "imageHeight": 398
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "胡运涛",
+        "photo": "assets/doctors/doctor-4fc36ae68a.png",
+        "photoFrame": {
+          "x": 51,
+          "y": 19,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 766,
+          "imageHeight": 300
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "李宁",
+        "photo": "assets/doctors/doctor-4a6956ec96.png",
+        "photoFrame": {
+          "x": 51,
+          "y": 23,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 768,
+          "imageHeight": 394
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "李伟",
+        "photo": "assets/doctors/doctor-5ed4d58e5d.png",
+        "photoFrame": {
+          "x": 55,
+          "y": 32,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 772,
+          "imageHeight": 408
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "李晓锋",
+        "photo": "assets/doctors/doctor-d566194fd3.png",
+        "photoFrame": {
+          "x": 47,
+          "y": 34,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 766,
+          "imageHeight": 396
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "刘状",
+        "photo": "assets/doctors/doctor-4dbe99e8ca.png",
+        "photoFrame": {
+          "x": 37,
+          "y": 39,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 750,
+          "imageHeight": 404
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "时应路",
+        "photo": "assets/doctors/doctor-54658c0d84.png",
+        "photoFrame": {
+          "x": 59,
+          "y": 38,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 776,
+          "imageHeight": 396
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "王保存",
+        "photo": "assets/doctors/doctor-5244cbb5db.png",
+        "photoFrame": {
+          "x": 55,
+          "y": 30,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 780,
+          "imageHeight": 392
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "韦小勇",
+        "photo": "assets/doctors/doctor-e38db45e4a.png",
+        "photoFrame": {
+          "x": 67,
+          "y": 31,
+          "width": 76,
+          "height": 76,
+          "imageWidth": 760,
+          "imageHeight": 396
+        },
+        "reviewNote": "原圆形头像为较远半身照；只缩小 CSS 取景窗口至面部与肩部，原始图片未修改。"
+      },
+      {
+        "name": "吴章敏",
+        "photo": "assets/doctors/doctor-a173ea6fd0.png",
+        "photoFrame": {
+          "x": 49,
+          "y": 22,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 768,
+          "imageHeight": 398
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "许金国",
+        "photo": "assets/doctors/doctor-a00e18b9b2.png",
+        "photoFrame": {
+          "x": 57,
+          "y": 28,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 776,
+          "imageHeight": 414
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "张成鑫",
+        "photo": "assets/doctors/doctor-9dc24b2f98.png",
+        "photoFrame": {
+          "x": 45,
+          "y": 24,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 758,
+          "imageHeight": 392
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "张士兵",
+        "photo": "assets/doctors/doctor-6fb2fb3da1.png",
+        "photoFrame": {
+          "x": 65,
+          "y": 22,
+          "width": 123,
+          "height": 123,
+          "imageWidth": 788,
+          "imageHeight": 398
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      },
+      {
+        "name": "朱正艳",
+        "photo": "assets/doctors/doctor-51431269b5.png",
+        "photoFrame": {
+          "x": 88,
+          "y": 24,
+          "width": 78,
+          "height": 78,
+          "imageWidth": 782,
+          "imageHeight": 388
+        },
+        "reviewNote": "原圆形头像为较远半身照；只缩小 CSS 取景窗口至面部与肩部，原始图片未修改。"
+      },
+      {
+        "name": "唐海沁",
+        "photo": "assets/doctors/doctor-f2a3bd6c4e.png",
+        "photoFrame": {
+          "x": 51,
+          "y": 34,
+          "width": 122,
+          "height": 122,
+          "imageWidth": 786,
+          "imageHeight": 412
+        },
+        "reviewNote": "像素边界检测及联系表目测核对。"
+      }
+    ]
+  }
+}

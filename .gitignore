@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+node_modules
+dist/
+qa/
+demo-screenshots/
+*.zip
+/*.html
+!/index.html
+启动演示.*
+*.pem
+*.key
+*.sock
+*.log
+.DS_Store

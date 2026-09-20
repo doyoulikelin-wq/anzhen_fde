@@ -1,0 +1,3567 @@
+[
+  {
+    "id": "doctor-bfbc6333a9",
+    "name": "曹海学",
+    "title": "副主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-bfbc6333a9.png",
+    "bio": "硕士研究生。高血压、冠心病、心衰及心律失常诊疗；冠状动脉介入和心脏起搏器植入。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "起搏器治疗",
+      "冠脉介入"
+    ],
+    "education": "硕士研究生。",
+    "sourceUrls": [
+      "https://www.ahsfdxrmyy.com/content/detail/685badaf2b56e073678b456d.html",
+      "https://www.haodf.com/doctor/280873.html",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "曹海学",
+        "department": "心血管内科",
+        "professional_title": "副主任医师",
+        "academic_title": "",
+        "position": "",
+        "education_training": "硕士研究生。",
+        "clinical_interests": "高血压、冠心病、心衰及心律失常诊疗；冠状动脉介入和心脏起搏器植入。",
+        "research_academic": "安徽省第一届 CTO 俱乐部常委、中国医药教育协会胸痛委员会委员；平台记国家/省级期刊论文 10 余篇。",
+        "relationship": "官方安贞门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方小程序心血管内科门诊（安贞）按医生名册实机核实，见 live_clinics.json。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "CEX05",
+          "CEX06",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.ahsfdxrmyy.com/content/detail/685badaf2b56e073678b456d.html",
+          "https://www.haodf.com/doctor/280873.html",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "2025-06-25",
+          "未标明",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "2025 官网称从事心内临床、教学、科研 20 余年；学历为硕士研究生，不能理解为硕士研究生导师。未把肥东周一门诊移作安贞排班。"
+      }
+    },
+    "photoFrame": null
+  },
+  {
+    "id": "doctor-0fc643d4b5",
+    "name": "陈斌",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-0fc643d4b5.png",
+    "bio": "1987年7月安徽医科大学医学系毕业；心律失常介入培训导师。高血压、冠心病、心肌病、心衰和心律失常；PCI、永久起搏器、室上速射频消融及先心病介入。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "心肌病",
+      "导管消融",
+      "起搏器治疗"
+    ],
+    "education": "1987年7月安徽医科大学医学系毕业；心律失常介入培训导师",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://health.baidu.com/doctordec/dochome/s5jnav33qog4t340tuf0",
+      "https://www.haodf.com/doctor/34506.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "陈斌",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "教授（好大夫）；副教授（百度简介），待核；硕士生导师",
+        "position": "心内科四病区主任（平台简介）",
+        "education_training": "1987年7月安徽医科大学医学系毕业；心律失常介入培训导师",
+        "clinical_interests": "高血压、冠心病、心肌病、心衰和心律失常；PCI、永久起搏器、室上速射频消融及先心病介入。",
+        "research_academic": "中国医师协会代谢性心血管疾病专委会委员、安徽省心脏康复联盟常委等（平台简介）；曾获省科技成果奖。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM28",
+          "IM29"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://health.baidu.com/doctordec/dochome/s5jnav33qog4t340tuf0",
+          "https://www.haodf.com/doctor/34506.html"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "未标明",
+          "未标明"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "学术职称出现教授/副教授差异，未自行裁定；临床职称官方为主任医师。"
+      }
+    },
+    "photoFrame": {
+      "x": 61,
+      "y": 40,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 776,
+      "imageHeight": 400
+    }
+  },
+  {
+    "id": "doctor-3d1e002263",
+    "name": "陈大年",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-3d1e002263.png",
+    "bio": "高血压、冠心病、瓣膜病、心衰及心律失常；心脏起搏和导管射频消融。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "导管消融",
+      "起搏器治疗",
+      "瓣膜病"
+    ],
+    "education": "",
+    "sourceUrls": [
+      "https://www.haodf.com/doctor/34507.html",
+      "https://www.ayfy.com/info/1178/25195.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "陈大年",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "副教授（医生平台）",
+        "position": "平台旧简介：心内一病区副主任；当前行政任职未核实。",
+        "education_training": "",
+        "clinical_interests": "高血压、冠心病、瓣膜病、心衰及心律失常；心脏起搏和导管射频消融。",
+        "research_academic": "主持教育厅课题 2 项，参与省科技攻关 1 项，获安徽省科技进步三等奖 1 项，论文 20 余篇（平台口径）。2024-07 参与全国绿色导管室培训授课及手术演示。",
+        "relationship": "官方安贞门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方小程序心血管内科门诊（安贞）按医生名册实机核实，见 live_clinics.json。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "CEX07",
+          "CEX09",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.haodf.com/doctor/34507.html",
+          "https://www.ayfy.com/info/1178/25195.htm",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "未标明",
+          "2024-07-18",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "临床职称由今日小程序及 2024 官网主任医师交叉核实。"
+      }
+    },
+    "photoFrame": {
+      "x": 53,
+      "y": 42,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 774,
+      "imageHeight": 414
+    }
+  },
+  {
+    "id": "doctor-532738a7c7",
+    "name": "陈刚",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-532738a7c7.png",
+    "bio": "医学硕士。冠心病PCI、肥厚型心肌病化学消融、先心病封堵；起搏及快速心律失常消融；心血管疑难危重症。",
+    "expertise": [
+      "冠心病",
+      "心律失常",
+      "心肌病",
+      "先天性心脏病",
+      "冠脉介入"
+    ],
+    "education": "医学硕士",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://www.ayfy.com/info/1861/28503.htm",
+      "https://wy.guahao.com/expert/9689209f-c720-11e1-913c-5cf9dd2e7135000?hospDeptId=b5c13a9a-263f-4db2-88f3-9c7ad478a820000&hospitalId=c0d3a004-12bc-4033-a555-222b117615fa000"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "陈刚",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "讲师（平台目录，未独立核实）",
+        "position": "未检得额外行政任职",
+        "education_training": "医学硕士",
+        "clinical_interests": "冠心病PCI、肥厚型心肌病化学消融、先心病封堵；起搏及快速心律失常消融；心血管疑难危重症。",
+        "research_academic": "平台记载安徽省中医药学会心血管介入委员会常委，参与临床研究及器械验证。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM14",
+          "IM36"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://www.ayfy.com/info/1861/28503.htm",
+          "https://wy.guahao.com/expert/9689209f-c720-11e1-913c-5cf9dd2e7135000?hospDeptId=b5c13a9a-263f-4db2-88f3-9c7ad478a820000&hospitalId=c0d3a004-12bc-4033-a555-222b117615fa000"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "2026-03-19",
+          "未标明"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "2026官网心肌病团队及今日小程序均为主任医师，替代平台旧副主任医师。"
+      }
+    },
+    "photoFrame": {
+      "x": 61,
+      "y": 46,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 776,
+      "imageHeight": 426
+    }
+  },
+  {
+    "id": "doctor-dfc5deb0c1",
+    "name": "陈洁霞",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-dfc5deb0c1.png",
+    "bio": "医学博士（2021 官网）。中老年心血管病、多病共存及全科未分化症状；高血压、冠心病、糖尿病、痛风、心律失常、血脂异常、心衰和心肌病。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "心肌病",
+      "老年心血管病"
+    ],
+    "education": "医学博士（2021 官网）。",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1321/13774.htm",
+      "https://www.ayfy.com/info/1271/11761.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "陈洁霞",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "副教授；硕士生导师",
+        "position": "",
+        "education_training": "医学博士（2021 官网）。",
+        "clinical_interests": "中老年心血管病、多病共存及全科未分化症状；高血压、冠心病、糖尿病、痛风、心律失常、血脂异常、心衰和心肌病。",
+        "research_academic": "2025 官网列论文 20 余篇、参与/主持国家及省厅课题多项；安徽省医学会全科分会和省全科质控中心副主委，省康复医学会心血管专委会副主委，海峡两岸全科分会常委、中国女医师协会健康管理常委等。获安徽十佳带教老师、安医优秀教师、安医一附最美医生。",
+        "relationship": "官方安贞门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方小程序心血管内科门诊（安贞）按医生名册实机核实，见 live_clinics.json。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "CEX10",
+          "CEX11",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.ayfy.com/info/1321/13774.htm",
+          "https://www.ayfy.com/info/1271/11761.htm",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "2025-08-04",
+          "2021-03-01",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "专业介绍按 2025 全科页；2021 全科医疗副主任为旧职务，未认定当前行政任职。2025 简介称心内近 30 年、全科近 10 年。"
+      }
+    },
+    "photoFrame": {
+      "x": 57,
+      "y": 36,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 774,
+      "imageHeight": 410
+    }
+  },
+  {
+    "id": "doctor-5bce2c6be0",
+    "name": "陈旭华",
+    "title": "副主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-5bce2c6be0.png",
+    "bio": "难治性高血压、冠心病、心衰、心律失常及多种结构性心脏病；冠脉造影/支架、起搏器、射频消融与先心病封堵。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "导管消融",
+      "起搏器治疗",
+      "先天性心脏病"
+    ],
+    "education": "",
+    "sourceUrls": [
+      "https://www.haodf.com/doctor/274924.html",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "陈旭华",
+        "department": "心血管内科",
+        "professional_title": "副主任医师",
+        "academic_title": "",
+        "position": "",
+        "education_training": "",
+        "clinical_interests": "难治性高血压、冠心病、心衰、心律失常及多种结构性心脏病；冠脉造影/支架、起搏器、射频消融与先心病封堵。",
+        "research_academic": "平台记“近 3 年”核心期刊论文 2 篇，因简介无日期，不能换算为当前近三年。",
+        "relationship": "官方安贞门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方小程序心血管内科门诊（安贞）按医生名册实机核实，见 live_clinics.json。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "CEX04",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.haodf.com/doctor/274924.html",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "未标明",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "安医大一附院心内医生，与北京阜外医院同名陈旭华分开。"
+      }
+    },
+    "photoFrame": {
+      "x": 55,
+      "y": 36,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 768,
+      "imageHeight": 402
+    }
+  },
+  {
+    "id": "doctor-91d6bd3979",
+    "name": "宫孟琦",
+    "title": "主治医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-91d6bd3979.png",
+    "bio": "天津医科大学毕业，医学博士。冠心病及危险因素、心肌炎、心律失常、房颤、心衰和心电/体检异常评估；冠脉介入及功能学评价，心血管健康教育。",
+    "expertise": [
+      "冠心病",
+      "心律失常",
+      "心力衰竭",
+      "房颤",
+      "冠脉介入"
+    ],
+    "education": "天津医科大学毕业，医学博士。",
+    "sourceUrls": [
+      "https://www.haodf.com/doctor/9032389717.html",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "宫孟琦",
+        "department": "心血管内科",
+        "professional_title": "主治医师",
+        "academic_title": "",
+        "position": "",
+        "education_training": "天津医科大学毕业，医学博士。",
+        "clinical_interests": "冠心病及危险因素、心肌炎、心律失常、房颤、心衰和心电/体检异常评估；冠脉介入及功能学评价，心血管健康教育。",
+        "research_academic": "发表 SCI 论文多篇（医生个人平台口径）。",
+        "relationship": "官方安贞门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方小程序心血管内科门诊（安贞）按医生名册实机核实，见 live_clinics.json。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "CEX14",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.haodf.com/doctor/9032389717.html",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "未标明",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "医生个人平台页明确安医大一附院心血管内科；主页开通日不能当作简介更新日。"
+      }
+    },
+    "photoFrame": {
+      "x": 59,
+      "y": 37,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 778,
+      "imageHeight": 396
+    }
+  },
+  {
+    "id": "doctor-3d4bccbfa7",
+    "name": "郭杰",
+    "title": "副主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-3d4bccbfa7.png",
+    "bio": "心脏介入培训导师；学历未核实。房颤、房扑、房速、室上速、室早、室速导管消融；缓慢心律失常起搏器植入及心衰综合治疗。",
+    "expertise": [
+      "心律失常",
+      "心力衰竭",
+      "房颤",
+      "导管消融",
+      "起搏器治疗"
+    ],
+    "education": "心脏介入培训导师；学历未核实",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://health.baidu.com/doctordec/dochome/lp3tdq33qog4t33crta0"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "郭杰",
+        "department": "心血管内科",
+        "professional_title": "副主任医师",
+        "academic_title": "未检得",
+        "position": "未检得额外行政任职",
+        "education_training": "心脏介入培训导师；学历未核实",
+        "clinical_interests": "房颤、房扑、房速、室上速、室早、室速导管消融；缓慢心律失常起搏器植入及心衰综合治疗。",
+        "research_academic": "公开简介记载具备射频消融、起搏器、冠脉及先心病介入四类资质。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM24"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://health.baidu.com/doctordec/dochome/lp3tdq33qog4t33crta0"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "未标明"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "职业简介主要为平台来源；职称与院区由官方小程序核实。"
+      }
+    },
+    "photoFrame": {
+      "x": 57,
+      "y": 32,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 774,
+      "imageHeight": 388
+    }
+  },
+  {
+    "id": "doctor-77566cdaa5",
+    "name": "胡泽平",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-77566cdaa5.png",
+    "bio": "博士、博士后；培养院校未核实。冠心病及高血压、心律失常、心衰等诊治；冠脉造影与支架、起搏器植入、先心病介入封堵。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "起搏器治疗",
+      "先天性心脏病",
+      "冠脉介入"
+    ],
+    "education": "博士、博士后；培养院校未核实",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://www.haodf.com/doctor/280901.html",
+      "https://www.aydxb.cn/upload/2025/06/23/20250623140409_934342.pdf"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "胡泽平",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "教授；博士生导师",
+        "position": "安医大一附院心内科副主任（平台简介）",
+        "education_training": "博士、博士后；培养院校未核实",
+        "clinical_interests": "冠心病及高血压、心律失常、心衰等诊治；冠脉造影与支架、起搏器植入、先心病介入封堵。",
+        "research_academic": "中国医师协会心血管内科分会青年委员等；平台简介记载主持省部级课题10余项、论文50余篇、参编专著5本。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM22",
+          "IM23"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://www.haodf.com/doctor/280901.html",
+          "https://www.aydxb.cn/upload/2025/06/23/20250623140409_934342.pdf"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "未标明",
+          "2025-06-04"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "学术职称由2025期刊作者信息交叉核实；不与清华大学同名研究者混同。"
+      }
+    },
+    "photoFrame": {
+      "x": 82,
+      "y": 45,
+      "width": 75,
+      "height": 75,
+      "imageWidth": 774,
+      "imageHeight": 408
+    }
+  },
+  {
+    "id": "doctor-a94dabdbaa",
+    "name": "黄颖",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-a94dabdbaa.png",
+    "bio": "医学博士；硕士研究生导师。房颤、房扑、房速、室速及室上速导管消融；缓慢心律失常起搏器植入，心衰 CRT 与 ICD 治疗。",
+    "expertise": [
+      "心律失常",
+      "心力衰竭",
+      "房颤",
+      "导管消融",
+      "起搏器治疗"
+    ],
+    "education": "医学博士；硕士研究生导师。",
+    "sourceUrls": [
+      "https://www.haodf.com/doctor/6964373160.html",
+      "https://www.ayfy.com/info/1178/25195.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "黄颖",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "硕士研究生导师（医生个人页）",
+        "position": "",
+        "education_training": "医学博士；硕士研究生导师。",
+        "clinical_interests": "房颤、房扑、房速、室速及室上速导管消融；缓慢心律失常起搏器植入，心衰 CRT 与 ICD 治疗。",
+        "research_academic": "主持完成安徽省自然科学基金项目，SCI 论文 10 篇（医生个人页口径）；2024-07 参与绿色导管室培训授课及手术演示。",
+        "relationship": "官方安贞门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方小程序心血管内科门诊（安贞）按医生名册实机核实，见 live_clinics.json。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "CEX08",
+          "CEX09",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.haodf.com/doctor/6964373160.html",
+          "https://www.ayfy.com/info/1178/25195.htm",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "未标明",
+          "2024-07-18",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "主任医师由小程序、本人页面和 2024 官网交叉核实；不混同同院检验专业黄颖。"
+      }
+    },
+    "photoFrame": {
+      "x": 61,
+      "y": 30,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 776,
+      "imageHeight": 404
+    }
+  },
+  {
+    "id": "doctor-8cd7d29313",
+    "name": "解杨婧",
+    "title": "副主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-8cd7d29313.png",
+    "bio": "美国威斯康星医学院联合培养博士；美国莫尔豪斯医学院高级访问学者（医生公开简介）。心律失常及电生理介入，房颤、早搏、室上速射频消融及起搏器植入；冠心病、高血压、心衰综合治疗。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "房颤",
+      "导管消融",
+      "起搏器治疗"
+    ],
+    "education": "美国威斯康星医学院联合培养博士；美国莫尔豪斯医学院高级访问学者（医生公开简介）",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://www.haodf.com/doctor/2428294614.html",
+      "https://yjsxy.ahmu.edu.cn/_upload/article/files/1d/a5/b683bc024e70a0c6dd48a70e6967/91af7d07-8540-44cd-b2e7-e60d141eb739.pdf"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "解杨婧",
+        "department": "心血管内科",
+        "professional_title": "副主任医师",
+        "academic_title": "副教授；硕士生导师",
+        "position": "未检得额外行政任职",
+        "education_training": "美国威斯康星医学院联合培养博士；美国莫尔豪斯医学院高级访问学者（医生公开简介）",
+        "clinical_interests": "心律失常及电生理介入，房颤、早搏、室上速射频消融及起搏器植入；冠心病、高血压、心衰综合治疗。",
+        "research_academic": "中国侨联特聘专家；安徽省心血管分会青年学组委员、心律学专委会委员；主持及参与国家、省级课题，发表SCI论文。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM37",
+          "IM38"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://www.haodf.com/doctor/2428294614.html",
+          "https://yjsxy.ahmu.edu.cn/_upload/article/files/1d/a5/b683bc024e70a0c6dd48a70e6967/91af7d07-8540-44cd-b2e7-e60d141eb739.pdf"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "未标明",
+          "未标明"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "硕导资格另有大学官方名单支持。"
+      }
+    },
+    "photoFrame": {
+      "x": 57,
+      "y": 44,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 772,
+      "imageHeight": 416
+    }
+  },
+  {
+    "id": "doctor-fd489030ef",
+    "name": "柯道正",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-fd489030ef.png",
+    "bio": "1995 年安徽医科大学临床医学专业毕业。高血压、冠心病、心律失常、心肌病、慢性心衰、血脂异常，尤其心血管病合并心理问题的双心诊治。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "心肌病",
+      "双心诊疗"
+    ],
+    "education": "1995 年安徽医科大学临床医学专业毕业。",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1271/11761.htm",
+      "https://www.ayfy.com/info/1203/27476.htm",
+      "https://www.ayfy.com/info/1203/27793.htm",
+      "https://www.ayfy.com/info/1178/28352.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "柯道正",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "",
+        "position": "2021 官网旧简介：老年心内科医疗副主任、全科教研室副主任；当前医院行政职务未核实。",
+        "education_training": "1995 年安徽医科大学临床医学专业毕业。",
+        "clinical_interests": "高血压、冠心病、心律失常、心肌病、慢性心衰、血脂异常，尤其心血管病合并心理问题的双心诊治。",
+        "research_academic": "2025 安徽省医学会心身医学分会第五届主任委员；2025 安徽省家庭健康研究会第四届理事长。主持/参与省厅课题，发表论文多篇；获“典赞 2025 科普安徽”十大基层与社会科普人物。",
+        "relationship": "官方安贞门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方小程序心血管内科门诊（安贞）按医生名册实机核实，见 live_clinics.json。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "CEX11",
+          "CEX18",
+          "CEX16",
+          "CEX22",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.ayfy.com/info/1271/11761.htm",
+          "https://www.ayfy.com/info/1203/27476.htm",
+          "https://www.ayfy.com/info/1203/27793.htm",
+          "https://www.ayfy.com/info/1178/28352.htm",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "2021-03-01",
+          "2025-08-12",
+          "2025-10-28",
+          "2026-03-02",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "社会任职采用 2025 官网更新，2021 副秘书长等旧任职不作为当前职务；获奖 2026-03 官网报道。"
+      }
+    },
+    "photoFrame": {
+      "x": 67,
+      "y": 46,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 794,
+      "imageHeight": 432
+    }
+  },
+  {
+    "id": "doctor-ba54ccd1be",
+    "name": "梁有峰",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-ba54ccd1be.png",
+    "bio": "医学博士。复杂冠脉病变PCI（CTO、钙化、分叉）；经导管主动脉瓣置换、卵圆孔未闭封堵；常见心血管病。",
+    "expertise": [
+      "复杂冠脉介入",
+      "主动脉疾病",
+      "冠脉介入"
+    ],
+    "education": "医学博士",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://wy.guahao.com/expert/43892ddb-0574-40a0-9344-078ed455ae5c000"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "梁有峰",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "硕士研究生导师",
+        "position": "未检得额外行政任职",
+        "education_training": "医学博士",
+        "clinical_interests": "复杂冠脉病变PCI（CTO、钙化、分叉）；经导管主动脉瓣置换、卵圆孔未闭封堵；常见心血管病。",
+        "research_academic": "安徽省高脂血症临床研究分会副主委、结构性心脏病分会常委等；主持省教育厅重大项目及卫健委重点项目，论文30余篇（平台）。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM40"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://wy.guahao.com/expert/43892ddb-0574-40a0-9344-078ed455ae5c000"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "未标明"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "专业及学术资料为平台补充，院区与临床职称为官方小程序证据。"
+      }
+    },
+    "photoFrame": {
+      "x": 65,
+      "y": 26,
+      "width": 94,
+      "height": 94,
+      "imageWidth": 762,
+      "imageHeight": 372
+    }
+  },
+  {
+    "id": "doctor-f5c2b3bcb4",
+    "name": "刘和俊",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-f5c2b3bcb4.png",
+    "bio": "1987 安徽医科大学医学本科；1999 安医大心血管硕士；2006 南京医科大学心血管博士；2000 南京医大一附院进修心导管诊疗。冠心病和先心病介入，高血压及心衰规范化治疗，心内电生理和心脏起搏。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心力衰竭",
+      "起搏器治疗",
+      "先天性心脏病",
+      "心电生理"
+    ],
+    "education": "1987 安徽医科大学医学本科；1999 安医大心血管硕士；2006 南京医科大学心血管博士；2000 南京医大一附院进修心导管诊疗。",
+    "sourceUrls": [
+      "https://www.haodf.com/doctor/34518.html",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "刘和俊",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "副教授；硕士生导师（医生平台）",
+        "position": "平台旧简介：安医大一附院心内科副主任；当前职务未核实。",
+        "education_training": "1987 安徽医科大学医学本科；1999 安医大心血管硕士；2006 南京医科大学心血管博士；2000 南京医大一附院进修心导管诊疗。",
+        "clinical_interests": "冠心病和先心病介入，高血压及心衰规范化治疗，心内电生理和心脏起搏。",
+        "research_academic": "冠心病抗氧化损伤、介入心脏病学及心肌病研究；平台旧简介列中华医学会安徽省心血管病学会委员、《中国实用内科杂志》编委。",
+        "relationship": "官方安贞门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方小程序心血管内科门诊（安贞）按医生名册实机核实，见 live_clinics.json。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "CEX20",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.haodf.com/doctor/34518.html",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "未标明",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "简介未标更新日；历史教育信息可保留，学会职务届次/时效待核。未复制平台“无并发症”等宣传性疗效陈述。"
+      }
+    },
+    "photoFrame": {
+      "x": 47,
+      "y": 36,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 772,
+      "imageHeight": 396
+    }
+  },
+  {
+    "id": "doctor-a2d9decb06",
+    "name": "刘敏",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-a2d9decb06.png",
+    "bio": "医学硕士。心肌病、心衰、心脏重症及疑难罕见心血管病；心衰精细管理、合并症处理，起搏器及心内电生理。",
+    "expertise": [
+      "心力衰竭",
+      "心肌病",
+      "起搏器治疗",
+      "心电生理"
+    ],
+    "education": "医学硕士",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://www.ayfy.com/info/1861/28503.htm"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "刘敏",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "副教授",
+        "position": "安医大一附院心肌病多学科特色诊疗中心导师",
+        "education_training": "医学硕士",
+        "clinical_interests": "心肌病、心衰、心脏重症及疑难罕见心血管病；心衰精细管理、合并症处理，起搏器及心内电生理。",
+        "research_academic": "中华医学会心血管分会心肌病学组委员；安徽省心脏重症专委会常委兼心衰学组组长等；论文20余篇、参编教材1部（2026官网）。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM14"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://www.ayfy.com/info/1861/28503.htm"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "2026-03-19"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "官网称中心导师，非中心主任；中心主任为王春苗。"
+      }
+    },
+    "photoFrame": {
+      "x": 75,
+      "y": 43,
+      "width": 76,
+      "height": 76,
+      "imageWidth": 768,
+      "imageHeight": 400
+    }
+  },
+  {
+    "id": "doctor-c54d410219",
+    "name": "卢振华",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-c54d410219.png",
+    "bio": "房颤脉冲电场消融、零射线房颤消融；属于公开临床报道证实方向。",
+    "expertise": [
+      "房颤",
+      "脉冲电场消融"
+    ],
+    "education": "",
+    "sourceUrls": [
+      "https://www.ahsfdxrmyy.com/content/detail/695dc2702b56e0ba1c8b456e.html",
+      "https://www.chizhouhospital.com/content/detail/6801b77e9517b5f6ba8b4567.html",
+      "https://www.ayfy.com/info/1178/28014.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "卢振华",
+        "department": "心血管内科/心电生理",
+        "professional_title": "主任医师",
+        "academic_title": "教授（医院临床报道称谓）",
+        "position": "北京安贞医院安徽医院心电生理专家",
+        "education_training": "",
+        "clinical_interests": "房颤脉冲电场消融、零射线房颤消融；属于公开临床报道证实方向。",
+        "research_academic": "",
+        "relationship": "安徽医院心电生理专家",
+        "relationship_evidence": "肥东县人民医院官网直接写明其为安徽医院心电生理专家；池州医院官方报道列安徽专家；安医一附院临床报道列其为喻荣辉团队。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM06",
+          "IM07",
+          "IM08",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.ahsfdxrmyy.com/content/detail/695dc2702b56e0ba1c8b456e.html",
+          "https://www.chizhouhospital.com/content/detail/6801b77e9517b5f6ba8b4567.html",
+          "https://www.ayfy.com/info/1178/28014.htm",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "2025-12-30",
+          "2025-04-18",
+          "2025-12-08",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "2026-09-14官方小程序明确主任医师；新闻中的主任称谓已获得临床职称交叉证据。"
+      }
+    },
+    "photoFrame": {
+      "x": 63,
+      "y": 40,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 792,
+      "imageHeight": 412
+    }
+  },
+  {
+    "id": "doctor-c726c00985",
+    "name": "骆志刚",
+    "title": "副主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-c726c00985.png",
+    "bio": "冠心病及先天性心脏病介入、快速心律失常射频消融、起搏器植入；高血压及心力衰竭诊疗。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "导管消融",
+      "起搏器治疗",
+      "先天性心脏病"
+    ],
+    "education": "",
+    "sourceUrls": [
+      "https://www.haodf.com/doctor/34521.html",
+      "https://www.ayfy.com/info/1203/20836.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "骆志刚",
+        "department": "心血管内科",
+        "professional_title": "副主任医师",
+        "academic_title": "副教授（医生平台）",
+        "position": "",
+        "education_training": "",
+        "clinical_interests": "冠心病及先天性心脏病介入、快速心律失常射频消融、起搏器植入；高血压及心力衰竭诊疗。",
+        "research_academic": "参与安徽省科技攻关项目 1 项、安徽省自然科学基金 1 项；论文数篇。平台列安徽省危重病专业委员会委员、全国冠脉介入沙龙会员。",
+        "relationship": "官方安贞门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方小程序心血管内科门诊（安贞）按医生名册实机核实，见 live_clinics.json。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "CEX01",
+          "CEX21",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.haodf.com/doctor/34521.html",
+          "https://www.ayfy.com/info/1203/20836.htm",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "未标明",
+          "2022-05-18",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "职称采用今日小程序副主任医师；2022-05-18 官网新闻称主任医师，存在来源冲突，未自行判定晋升/降职。平台学术任职未注明届次或更新时间。"
+      }
+    },
+    "photoFrame": {
+      "x": 59,
+      "y": 33,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 782,
+      "imageHeight": 390
+    }
+  },
+  {
+    "id": "doctor-273bbb06bc",
+    "name": "马东宇",
+    "title": "副主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-273bbb06bc.png",
+    "bio": "心血管内科常见病与心律失常介入方向（第三方）；官方可核实心电生理团队学术活动署名。",
+    "expertise": [
+      "心血管内科常见病（公开平台）",
+      "心律失常介入（公开平台）"
+    ],
+    "education": "",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://www.ayfy.com/info/1203/27230.htm",
+      "https://health.baidu.com/doctordec/hospital/1494481",
+      "https://www.aydxb.cn/show_journal.php?info_id=4993"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "马东宇",
+        "department": "心血管内科",
+        "professional_title": "副主任医师",
+        "academic_title": "未检得",
+        "position": "未检得额外行政任职",
+        "education_training": "未检得可靠公开教育/导师资料",
+        "clinical_interests": "心血管内科常见病与心律失常介入方向（第三方）；官方可核实心电生理团队学术活动署名。",
+        "research_academic": "2013 年第一署名发表高血压大鼠心肌纤维化研究；具体学会任职本次未核实。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM02",
+          "IM15",
+          "IM45"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://www.ayfy.com/info/1203/27230.htm",
+          "https://health.baidu.com/doctordec/hospital/1494481",
+          "https://www.aydxb.cn/show_journal.php?info_id=4993"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "2025-07-11",
+          "未标明",
+          "2013-10"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "第三方列主治医师，今日官方小程序列副主任医师，采用后者；平台详细手术专长尚待个人官方简介核对。"
+      }
+    },
+    "photoFrame": {
+      "x": 59,
+      "y": 28,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 786,
+      "imageHeight": 408
+    }
+  },
+  {
+    "id": "doctor-94e4f25b82",
+    "name": "宋兵",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-94e4f25b82.png",
+    "bio": "博士。冠脉支架、先心病介入封堵、单/双腔起搏器；高血压、冠心病、心衰、心肌病及心律失常诊疗。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "心肌病",
+      "起搏器治疗",
+      "先天性心脏病"
+    ],
+    "education": "博士。",
+    "sourceUrls": [
+      "https://www.haodf.com/doctor/280925.html",
+      "https://www.ayfy.com/info/1203/27793.htm",
+      "https://health.baidu.com/doctordec/dochome/vohbhqj3qog4t35jvja0",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "宋兵",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "副教授（好大夫科室页）",
+        "position": "",
+        "education_training": "博士。",
+        "clinical_interests": "冠脉支架、先心病介入封堵、单/双腔起搏器；高血压、冠心病、心衰、心肌病及心律失常诊疗。",
+        "research_academic": "论文 15 余篇、SCI 2 篇；2013 中国医师协会房颤专项基金 1 项、2014 安徽高校自然科学重点 1 项，参与安徽自然基金 2 项（平台口径）。2025 当选安徽省家庭健康研究会常务理事。",
+        "relationship": "官方安贞门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方小程序心血管内科门诊（安贞）按医生名册实机核实，见 live_clinics.json。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "CEX15",
+          "CEX16",
+          "CEX23",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.haodf.com/doctor/280925.html",
+          "https://www.ayfy.com/info/1203/27793.htm",
+          "https://health.baidu.com/doctordec/dochome/vohbhqj3qog4t35jvja0",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "未标明",
+          "2025-10-28",
+          "未标明",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "同院有生殖医学同名宋兵，本记录仅心血管内科。旧好大夫为副主任，今日小程序及 2025 官网主任医师优先；论文与经费非当前实时累计。"
+      }
+    },
+    "photoFrame": {
+      "x": 47,
+      "y": 18,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 762,
+      "imageHeight": 378
+    }
+  },
+  {
+    "id": "doctor-2c130a4313",
+    "name": "王邦宁",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-2c130a4313.png",
+    "bio": "曾列2011年度临床医学博士专业学位研究生导师；学历院校未核实。心内危重症、严重心律失常、心衰、高血压急症、冠心病；起搏器及快速心律失常射频消融。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "导管消融",
+      "起搏器治疗"
+    ],
+    "education": "曾列2011年度临床医学博士专业学位研究生导师；学历院校未核实",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://www.haodf.com/doctor/34526.html",
+      "https://www.ayfy.com/info/1200/1052.htm"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "王邦宁",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "教授；临床医学博士专业学位导师（历史官方资格）",
+        "position": "心内科病区主任、干部保健办主任（平台历史简介，现任待核）",
+        "education_training": "曾列2011年度临床医学博士专业学位研究生导师；学历院校未核实",
+        "clinical_interests": "心内危重症、严重心律失常、心衰、高血压急症、冠心病；起搏器及快速心律失常射频消融。",
+        "research_academic": "平台记载曾任安徽省心电生理和起搏分会主委、中华医学会相关分会委员；心脏起搏与电生理等期刊编委；主持省厅课题、曾获省级科技奖。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM26",
+          "IM27"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://www.haodf.com/doctor/34526.html",
+          "https://www.ayfy.com/info/1200/1052.htm"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "未标明",
+          "2010-08-18"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "平台任职未标更新时间，历史资格不推断当前招生资格。"
+      }
+    },
+    "photoFrame": {
+      "x": 59,
+      "y": 30,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 774,
+      "imageHeight": 404
+    }
+  },
+  {
+    "id": "doctor-61136e19fd",
+    "name": "王昌会",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-61136e19fd.png",
+    "bio": "医学博士。心房颤动、房扑、房速、室上速、室早及室速射频消融，缓慢性心律失常起搏；常见心血管病诊治。",
+    "expertise": [
+      "心律失常",
+      "房颤",
+      "导管消融"
+    ],
+    "education": "医学博士",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://www.ayfy.com/info/1188/19675.htm",
+      "https://health.baidu.com/doctordec/jianjie/l9jb9t33qog4t36kq0jg"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "王昌会",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "副教授；硕士研究生导师",
+        "position": "心血管内科医疗副主任（2021官网与平台简介）",
+        "education_training": "医学博士",
+        "clinical_interests": "心房颤动、房扑、房速、室上速、室早及室速射频消融，缓慢性心律失常起搏；常见心血管病诊治。",
+        "research_academic": "中国医师协会心血管分会青委等；安徽省心血管病医师分会委员兼秘书；省教学成果奖、全国青年教师教学竞赛二等奖；多项基金研究。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM32",
+          "IM33"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://www.ayfy.com/info/1188/19675.htm",
+          "https://health.baidu.com/doctordec/jianjie/l9jb9t33qog4t36kq0jg"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "2021-10-22",
+          "未标明"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "专业经历可参考；2021旧高新/绩溪路出诊时间未作为安徽院区排班。"
+      }
+    },
+    "photoFrame": {
+      "x": 84,
+      "y": 34,
+      "width": 76,
+      "height": 76,
+      "imageWidth": 772,
+      "imageHeight": 410
+    }
+  },
+  {
+    "id": "doctor-e0da2f079b",
+    "name": "王春苗",
+    "title": "副主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-e0da2f079b.png",
+    "bio": "攻读心血管药理学博士（2026-03官网），未视为已获博士。各类心肌病综合诊疗；心衰和高血压分层与个体化治疗；心律失常、冠心病药物及综合治疗。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "心肌病"
+    ],
+    "education": "攻读心血管药理学博士（2026-03官网），未视为已获博士",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://www.ayfy.com/info/1861/28503.htm"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "王春苗",
+        "department": "心血管内科",
+        "professional_title": "副主任医师",
+        "academic_title": "未检得",
+        "position": "安医大一附院心肌病多学科特色诊疗中心主任",
+        "education_training": "攻读心血管药理学博士（2026-03官网），未视为已获博士",
+        "clinical_interests": "各类心肌病综合诊疗；心衰和高血压分层与个体化治疗；心律失常、冠心病药物及综合治疗。",
+        "research_academic": "中国医师协会心血管分会青年工作组委员、安徽省心衰专委会青委、安徽省心脏康复中心联盟委员；多篇SCI论文。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM14"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://www.ayfy.com/info/1861/28503.htm"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "2026-03-19"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "在读学位与已获学位明确区分。"
+      }
+    },
+    "photoFrame": {
+      "x": 57,
+      "y": 24,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 780,
+      "imageHeight": 392
+    }
+  },
+  {
+    "id": "doctor-fcfa17e82a",
+    "name": "王建龙",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-fcfa17e82a.png",
+    "bio": "医学博士（百度健康）。复杂冠心病介入治疗、冠心病综合防治（百度健康）。",
+    "expertise": [
+      "复杂冠脉介入",
+      "冠心病"
+    ],
+    "education": "医学博士（百度健康）",
+    "sourceUrls": [
+      "https://ah.anhuinews.com/kjyww/202603/t20260330_9185558.html",
+      "https://health.baidu.com/doctordec/dochome/tivdpto8599g0271bae0",
+      "https://www.nccmrc.cn/article-detail-copy-copy-copy-copy/NMrD6voW",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)",
+        "心血管内科特需门诊(安贞)"
+      ],
+      "record": {
+        "name": "王建龙",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "",
+        "position": "北京安贞医院老年心血管病中心医生；安徽派驻专家",
+        "education_training": "医学博士（百度健康）",
+        "clinical_interests": "复杂冠心病介入治疗、冠心病综合防治（百度健康）。",
+        "research_academic": "主编冠状动脉介入相关专著；临床研究、专利及科普学术任职见补充平台，未视为官方现状。",
+        "relationship": "北京派驻专家",
+        "relationship_evidence": "2026-03-30中安在线开诊报道明确其属于心内科派驻专家团队。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM05",
+          "IM12",
+          "IM13",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://ah.anhuinews.com/kjyww/202603/t20260330_9185558.html",
+          "https://health.baidu.com/doctordec/dochome/tivdpto8599g0271bae0",
+          "https://www.nccmrc.cn/article-detail-copy-copy-copy-copy/NMrD6voW",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "2026-03-30",
+          "未标明",
+          "未标明",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "既往公开来源职称不同；2026-09-14官方小程序显示主任医师，采用官方当期值。"
+      }
+    },
+    "photoFrame": null
+  },
+  {
+    "id": "doctor-3168c44dcf",
+    "name": "伍梦佐",
+    "title": "副主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-3168c44dcf.png",
+    "bio": "医学硕士。复杂房颤及其他快速心律失常导管消融，绿色电生理；起搏器、除颤器植入及随访；心律失常疑难病例。",
+    "expertise": [
+      "心律失常",
+      "房颤",
+      "导管消融",
+      "起搏器治疗",
+      "心电生理"
+    ],
+    "education": "医学硕士",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://www.yihu.com/doctor/ah/72542F4CC0A64C638B8F698772D3ADD5.shtml",
+      "https://www.ayfy.com/info/1203/29408.htm"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "伍梦佐",
+        "department": "心血管内科",
+        "professional_title": "副主任医师",
+        "academic_title": "未检得",
+        "position": "安徽省心血管病质控中心副主任（平台简介）",
+        "education_training": "医学硕士",
+        "clinical_interests": "复杂房颤及其他快速心律失常导管消融，绿色电生理；起搏器、除颤器植入及随访；心律失常疑难病例。",
+        "research_academic": "平台记载安徽省起搏电生理学会委员兼秘书、中国控烟协会心血管分会委员等。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM30",
+          "IM31"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://www.yihu.com/doctor/ah/72542F4CC0A64C638B8F698772D3ADD5.shtml",
+          "https://www.ayfy.com/info/1203/29408.htm"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "未标明",
+          "2026-07-29"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "2024培训新闻曾统称主任医师；2026-07-29官网与今日小程序均为副主任医师，采用后者。"
+      }
+    },
+    "photoFrame": {
+      "x": 86,
+      "y": 31,
+      "width": 72,
+      "height": 72,
+      "imageWidth": 766,
+      "imageHeight": 392
+    }
+  },
+  {
+    "id": "doctor-b435af25ff",
+    "name": "谢峻",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-b435af25ff.png",
+    "bio": "博士；毕业院校本次未从一手来源核实。心血管危重症、急性心肌梗死、复杂冠脉及心脏瓣膜介入。",
+    "expertise": [
+      "复杂冠脉介入",
+      "心肌梗死"
+    ],
+    "education": "博士；毕业院校本次未从一手来源核实",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://jk.anhuinews.com/jkah/202505/t20250516_8476285.html",
+      "https://rsc.ahmu.edu.cn/index/talentTeamInfo/145/01da38e52bc04f58b8dcaf31e78ea4b1.html",
+      "https://www.haodf.com/doctor/1053510455/xinxi-jieshao.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "谢峻",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "教授；博士生导师；列博士后导师风采",
+        "position": "安医大一附院科研处处长；心血管内科病区负责人（大学官网）",
+        "education_training": "博士；毕业院校本次未从一手来源核实",
+        "clinical_interests": "心血管危重症、急性心肌梗死、复杂冠脉及心脏瓣膜介入。",
+        "research_academic": "研究心肌再灌注后组织修复和微循环障碍；官网列主持课题和人才项目11项、SCI论文83篇、发明专利申请2项，获欧洲心脏病协会青年研究者及省部级奖项。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM20",
+          "IM41",
+          "IM42"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://jk.anhuinews.com/jkah/202505/t20250516_8476285.html",
+          "https://rsc.ahmu.edu.cn/index/talentTeamInfo/145/01da38e52bc04f58b8dcaf31e78ea4b1.html",
+          "https://www.haodf.com/doctor/1053510455/xinxi-jieshao.html"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "2025-05-16",
+          "未标明",
+          "未标明"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "论文和项目数量为未标日期官网快照，不代表实时计数；当前院区以官方小程序核实。"
+      }
+    },
+    "photoFrame": {
+      "x": 57,
+      "y": 30,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 780,
+      "imageHeight": 390
+    }
+  },
+  {
+    "id": "doctor-15d535d804",
+    "name": "邢亦明",
+    "title": "副主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-15d535d804.png",
+    "bio": "医学硕士（2024论文作者简介）。心血管内科；2026官网可核实参与房颤PFA术前病例筛查与评估，尚未取得完整个人专长介绍。",
+    "expertise": [],
+    "education": "医学硕士（2024论文作者简介）",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://www.ayfy.com/info/1203/29408.htm",
+      "https://tjqk.magtech.com.cn/hzkj_yxb/CN/abstract/abstract556.shtml"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "邢亦明",
+        "department": "心血管内科",
+        "professional_title": "副主任医师",
+        "academic_title": "未检得",
+        "position": "未检得额外行政任职",
+        "education_training": "医学硕士（2024论文作者简介）",
+        "clinical_interests": "心血管内科；2026官网可核实参与房颤PFA术前病例筛查与评估，尚未取得完整个人专长介绍。",
+        "research_academic": "第一作者研究青年急性心肌梗死冠脉病变严重程度的血液指标关联。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM31",
+          "IM39"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://www.ayfy.com/info/1203/29408.htm",
+          "https://tjqk.magtech.com.cn/hzkj_yxb/CN/abstract/abstract556.shtml"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "2026-07-29",
+          "2024-02-17"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "只列已核实临床参与，不据单篇报道扩张为独立介入技术专长。"
+      }
+    },
+    "photoFrame": {
+      "x": 71,
+      "y": 39,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 790,
+      "imageHeight": 396
+    }
+  },
+  {
+    "id": "doctor-085cd489a7",
+    "name": "许锋",
+    "title": "副主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-085cd489a7.png",
+    "bio": "医学博士，师承吕树铮教授（第三方转载专业简介，非官网独立确认）。高危复杂冠心病及并发症的介入诊疗；使用 IVUS、OCT、FFR 等方法指导冠脉介入（医院临床报道与转载专业简介）。",
+    "expertise": [
+      "复杂冠脉介入",
+      "冠心病",
+      "冠脉介入"
+    ],
+    "education": "医学博士，师承吕树铮教授（第三方转载专业简介，非官网独立确认）。",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1183/28838.htm",
+      "https://ah.anhuinews.com/kjyww/202603/t20260330_9185558.html",
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://www.sohu.com/a/1026684655_121123705"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "许锋",
+        "department": "心血管内科",
+        "professional_title": "副主任医师",
+        "academic_title": "",
+        "position": "北京安贞医院心内科医生；安徽派驻专家",
+        "education_training": "医学博士，师承吕树铮教授（第三方转载专业简介，非官网独立确认）。",
+        "clinical_interests": "高危复杂冠心病及并发症的介入诊疗；使用 IVUS、OCT、FFR 等方法指导冠脉介入（医院临床报道与转载专业简介）。",
+        "research_academic": "第三方转载简介列核心期刊及 SCI 文章 20 余篇，未注明统计截止日期；具体学会任职未核实。",
+        "relationship": "北京派驻专家",
+        "relationship_evidence": "2026-03-30开诊报道明确派驻；2026-05-19安徽医院临床报道明确其副主任医师身份及手术。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM04",
+          "IM05",
+          "IM21",
+          "IM46"
+        ],
+        "source_urls": [
+          "https://www.ayfy.com/info/1183/28838.htm",
+          "https://ah.anhuinews.com/kjyww/202603/t20260330_9185558.html",
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://www.sohu.com/a/1026684655_121123705"
+        ],
+        "source_dates": [
+          "2026-05-19",
+          "2026-03-30",
+          "2026-09-14",
+          "2026-05-23"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "第三方旧页有主治医师、另有转载写主任医师；采用较新的安徽医院官方副主任医师表述。 学位、师承与论文数量采用 2026 年第三方转载专业简介，已标明来源层级；未混入北京医院同名许锋的履历。"
+      }
+    },
+    "photoFrame": {
+      "x": 51,
+      "y": 24,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 774,
+      "imageHeight": 388
+    }
+  },
+  {
+    "id": "doctor-00bf9c6dba",
+    "name": "杨宇",
+    "title": "主治医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-00bf9c6dba.png",
+    "bio": "暂无公开详细简介",
+    "expertise": [],
+    "education": "",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。暂无可用的公开详细简介。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "杨宇",
+        "department": "心血管内科",
+        "professional_title": "主治医师",
+        "academic_title": "",
+        "position": "",
+        "education_training": "",
+        "clinical_interests": "",
+        "research_academic": "",
+        "relationship": "官方安贞门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方小程序心血管内科门诊（安贞）按医生名册实机核实，见 live_clinics.json。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "官方名册和职称已核实；未找到可靠同人专业简介，不自行改为同院杨宇辉。"
+      }
+    },
+    "photoFrame": {
+      "x": 59,
+      "y": 25,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 780,
+      "imageHeight": 408
+    }
+  },
+  {
+    "id": "doctor-7965aa5c5a",
+    "name": "喻荣辉",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-7965aa5c5a.png",
+    "bio": "博士、博士后；心内科介入培训导师。心房颤动、房扑、室速等心律失常导管消融；无射线电生理介入。",
+    "expertise": [
+      "心律失常",
+      "房颤",
+      "导管消融",
+      "心电生理"
+    ],
+    "education": "博士、博士后；心内科介入培训导师",
+    "sourceUrls": [
+      "https://www.ayfy.com/yyjs/ldtd.htm",
+      "https://www.ayfy.com/info/1203/27230.htm",
+      "https://www.ayfy.com/info/1183/28838.htm",
+      "https://ah.anhuinews.com/kjyww/202603/t20260330_9185558.html",
+      "https://www.haodf.com/doctor/599083260/xinxi-jieshao.html",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)",
+        "心血管内科特需门诊(安贞)"
+      ],
+      "record": {
+        "name": "喻荣辉",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "教授；博士生导师（医生平台）",
+        "position": "安徽医院执行院长；安医大一附院副院长、心血管内科负责人",
+        "education_training": "博士、博士后；心内科介入培训导师",
+        "clinical_interests": "心房颤动、房扑、室速等心律失常导管消融；无射线电生理介入。",
+        "research_academic": "中国绿色电生理联盟学术委员会主席；发表心律失常相关研究（平台简介，具体数量未计入）。",
+        "relationship": "现任领导兼临床专家；北京派驻",
+        "relationship_evidence": "官网领导页列安徽医院执行院长；官网报道在当地实施房颤消融；省级开诊报道明确派驻。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM01",
+          "IM02",
+          "IM04",
+          "IM05",
+          "IM11",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.ayfy.com/yyjs/ldtd.htm",
+          "https://www.ayfy.com/info/1203/27230.htm",
+          "https://www.ayfy.com/info/1183/28838.htm",
+          "https://ah.anhuinews.com/kjyww/202603/t20260330_9185558.html",
+          "https://www.haodf.com/doctor/599083260/xinxi-jieshao.html",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "未标明",
+          "2025-07-11",
+          "2026-05-19",
+          "2026-03-30",
+          "未标明",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "行政任职采用当前官网；专业职称和教育补充源为医生平台，其旧行政任职不采用。"
+      }
+    },
+    "photoFrame": {
+      "x": 53,
+      "y": 28,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 768,
+      "imageHeight": 388
+    }
+  },
+  {
+    "id": "doctor-de156ba09c",
+    "name": "张勇",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-de156ba09c.png",
+    "bio": "博士；2015年德国Kerckhoff-Klinik心脏中心研修。复杂冠脉介入、心脏起搏器植入、心肌梗死危重救治；高血压与心衰等综合诊疗。",
+    "expertise": [
+      "复杂冠脉介入",
+      "高血压",
+      "心力衰竭",
+      "起搏器治疗",
+      "心肌梗死",
+      "冠脉介入"
+    ],
+    "education": "博士；2015年德国Kerckhoff-Klinik心脏中心研修",
+    "sourceUrls": [
+      "https://www.ahsfdxrmyy.com/content/detail/69e2ee6b2b56e044328b4569.html",
+      "https://www.ayfy.com/info/1183/28838.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "张勇",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "教授；硕士生导师",
+        "position": "北京安贞安徽医院副院长",
+        "education_training": "博士；2015年德国Kerckhoff-Klinik心脏中心研修",
+        "clinical_interests": "复杂冠脉介入、心脏起搏器植入、心肌梗死危重救治；高血压与心衰等综合诊疗。",
+        "research_academic": "中国健科会心血管介入专委会常委；参编心脏康复书籍，主编《专家解读高血压》。",
+        "relationship": "医院现任副院长、临床专家",
+        "relationship_evidence": "肥东县人民医院官方简介明确安徽医院副院长；安徽医院官网报道其参与当地PCI手术。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM03",
+          "IM04",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.ahsfdxrmyy.com/content/detail/69e2ee6b2b56e044328b4569.html",
+          "https://www.ayfy.com/info/1183/28838.htm",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "2026-04-18",
+          "2026-05-19",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "来源中的每周六上午坐诊属于肥东县人民医院，不是安徽医院本院排班。"
+      }
+    },
+    "photoFrame": {
+      "x": 57,
+      "y": 30,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 774,
+      "imageHeight": 404
+    }
+  },
+  {
+    "id": "doctor-d402515b22",
+    "name": "赵韧",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-d402515b22.png",
+    "bio": "博士。房颤及复杂室性心律失常、心脏电生理；遗传性心肌病及高血压、冠心病、心肌炎、心衰。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "房颤",
+      "心肌病",
+      "心电生理"
+    ],
+    "education": "博士",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html",
+      "https://rsc.ahmu.edu.cn/index/talentTeamInfo/145/dff2fcce1df64b9487ca77946836fd09.html",
+      "https://www.haodf.com/doctor/5336205285/xinxi-jieshao.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "赵韧",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "教授；硕士生导师；列博士后导师风采",
+        "position": "未检得额外行政任职",
+        "education_training": "博士",
+        "clinical_interests": "房颤及复杂室性心律失常、心脏电生理；遗传性心肌病及高血压、冠心病、心肌炎、心衰。",
+        "research_academic": "大学官网：研究心血管病基础与临床转化，主持国家及省部级课题6项，高质量论文20余篇，副主译1部、参编2部专著及2部专家共识。",
+        "relationship": "官方安贞门诊医生名册",
+        "relationship_evidence": "2026-09-14官方微信小程序 > 安贞门诊 > 心血管内科门诊(安贞) > 按医生，完整名册可见此人。 今日官方安贞心血管内科门诊按医生名册再次核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "IM21",
+          "IM34",
+          "IM35"
+        ],
+        "source_urls": [
+          "https://y.dxy.cn/hospital/80/1062120.html",
+          "https://rsc.ahmu.edu.cn/index/talentTeamInfo/145/dff2fcce1df64b9487ca77946836fd09.html",
+          "https://www.haodf.com/doctor/5336205285/xinxi-jieshao.html"
+        ],
+        "source_dates": [
+          "2026-09-14",
+          "未标明",
+          "未标明"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "采用大学官网教授称谓；不混同北部战区总医院同名医生。"
+      }
+    },
+    "photoFrame": {
+      "x": 47,
+      "y": 28,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 766,
+      "imageHeight": 400
+    }
+  },
+  {
+    "id": "doctor-6e2128a807",
+    "name": "郑林林",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-6e2128a807.png",
+    "bio": "高血压、冠心病、心律失常、血脂异常及心衰；心电与心功能检查，尤其无创心脏电生理检查诊断。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "心电生理"
+    ],
+    "education": "",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1203/27476.htm",
+      "https://www.bohe.cn/hospital/32449/doctor/6685338.html",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "郑林林",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "副教授（医生平台）",
+        "position": "",
+        "education_training": "",
+        "clinical_interests": "高血压、冠心病、心律失常、血脂异常及心衰；心电与心功能检查，尤其无创心脏电生理检查诊断。",
+        "research_academic": "2025 当选安徽省医学会心身医学分会第五届委员会常务委员。",
+        "relationship": "官方安贞门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方小程序心血管内科门诊（安贞）按医生名册实机核实，见 live_clinics.json。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "CEX18",
+          "CEX19",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.ayfy.com/info/1203/27476.htm",
+          "https://www.bohe.cn/hospital/32449/doctor/6685338.html",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "2025-08-12",
+          "未标明",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "专业擅长补自平台；主任职称及 2025 社会任职有官方证据。旧长江路/绩溪路排班未纳入安贞表。"
+      }
+    },
+    "photoFrame": {
+      "x": 47,
+      "y": 32,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 770,
+      "imageHeight": 404
+    }
+  },
+  {
+    "id": "doctor-9537cb83ae",
+    "name": "周碧蓉",
+    "title": "主任医师",
+    "department": "心血管内科",
+    "photo": "assets/doctors/doctor-9537cb83ae.png",
+    "bio": "医学博士；美国 Mayo Clinic 高级访问学者（微医）。高血压、冠心病、心律失常、心肌病、血脂异常；急性心肌梗死与心力衰竭等危重症救治及心血管介入。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "心律失常",
+      "心力衰竭",
+      "心肌病",
+      "心肌梗死"
+    ],
+    "education": "医学博士；美国 Mayo Clinic 高级访问学者（微医）。",
+    "sourceUrls": [
+      "https://www.haodf.com/doctor/251031.html",
+      "https://wy.guahao.com/expert/9645a6d1-c720-11e1-913c-5cf9dd2e7135000",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心血管内科门诊(安贞)"
+      ],
+      "record": {
+        "name": "周碧蓉",
+        "department": "心血管内科",
+        "professional_title": "主任医师",
+        "academic_title": "教授；博士生导师（微医）；硕士生导师（好大夫）",
+        "position": "",
+        "education_training": "医学博士；美国 Mayo Clinic 高级访问学者（微医）。",
+        "clinical_interests": "高血压、冠心病、心律失常、心肌病、血脂异常；急性心肌梗死与心力衰竭等危重症救治及心血管介入。",
+        "research_academic": "动脉粥样硬化与血小板/免疫研究；主持国家自然科学基金及省级多项课题。微医列论文 30 余篇、SCI 7 篇；中国医师协会高血压专委会委员、安徽省医师协会高血压专委会主任委员、安徽省临床免疫学分会常委。",
+        "relationship": "官方安贞门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方小程序心血管内科门诊（安贞）按医生名册实机核实，见 live_clinics.json。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班由主代理另表核实",
+        "source_ids": [
+          "CEX02",
+          "CEX03",
+          "IM21"
+        ],
+        "source_urls": [
+          "https://www.haodf.com/doctor/251031.html",
+          "https://wy.guahao.com/expert/9645a6d1-c720-11e1-913c-5cf9dd2e7135000",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "未标明",
+          "未标明",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "两平台均未标更新日期；好大夫旧口径为论文 20 余篇、SCI 3 篇及硕导，微医口径为 30 余篇、SCI 7 篇及博导，保留来源差异，不声称当前完整数量。"
+      }
+    },
+    "photoFrame": {
+      "x": 65,
+      "y": 39,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 794,
+      "imageHeight": 424
+    }
+  },
+  {
+    "id": "doctor-1bbb7a34db",
+    "name": "车轰",
+    "title": "副主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-1bbb7a34db.png",
+    "bio": "医学博士（安医大；2019旧页）。小切口/胸腔镜先心病手术、经胸微创介入、超声引导经皮房缺/室缺/动脉导管未闭封堵。",
+    "expertise": [
+      "先天性心脏病",
+      "微创心脏手术"
+    ],
+    "education": "医学博士（安医大；2019旧页）",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://www.ayfy.com/fuwu/info/1183/4494.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "车轰",
+        "clinical_title": "副主任医师",
+        "academic_title": "",
+        "position": "先天性心脏病亚专科建设负责人",
+        "degree_and_mentorship": "医学博士（安医大；2019旧页）",
+        "expertise": "小切口/胸腔镜先心病手术、经胸微创介入、超声引导经皮房缺/室缺/动脉导管未闭封堵",
+        "research_directions": "结构性心脏病的外科微创治疗（2019旧页）",
+        "academic_roles": "国家心血管病专家委员会先心病专业委员会委员；安徽省小儿外科分会青年委员；安徽省微创医学会胸心外科委员、小儿外科常委",
+        "publications_projects": "主持安徽省自然科学基金1项；参与国家课题3项；论文10余篇",
+        "awards": "",
+        "career_training": "2008年中南大学湘雅医学院心胸外科本硕毕业；安医大博士；赴北京阜外、上海儿童医学中心交流",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01",
+          "SUR10"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm",
+          "https://www.ayfy.com/fuwu/info/1183/4494.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。 部分稳定学历/进修经历来自2019-04-01历史官网页，已注明；未据旧页覆盖新职称。"
+      }
+    },
+    "photoFrame": {
+      "x": 61,
+      "y": 48,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 782,
+      "imageHeight": 422
+    }
+  },
+  {
+    "id": "doctor-f895a0574e",
+    "name": "冯俊波",
+    "title": "主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-f895a0574e.png",
+    "bio": "医学博士。主动脉夹层/动脉瘤的外科及介入治疗；瓣膜修复与置换；冠心病外科。",
+    "expertise": [
+      "冠心病",
+      "瓣膜修复",
+      "瓣膜置换",
+      "主动脉疾病"
+    ],
+    "education": "医学博士",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://www.ayfy.com/fuwu/info/1183/4494.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "冯俊波",
+        "clinical_title": "主任医师",
+        "academic_title": "副教授",
+        "position": "心脏大血管外科病区副主任；主动脉疾病亚专业负责人",
+        "degree_and_mentorship": "医学博士",
+        "expertise": "主动脉夹层/动脉瘤的外科及介入治疗；瓣膜修复与置换；冠心病外科",
+        "research_directions": "主动脉疾病的外科与介入、心脏瓣膜病手术（2019旧页）",
+        "academic_roles": "国家心血管病专家委员会微创心血管外科专业委员会青年委员",
+        "publications_projects": "第一/通讯作者SCI 6篇、国内核心6篇；参编专著1部",
+        "awards": "",
+        "career_training": "临床近20年；完成省内首例孕妇A型夹层手术及医院首例胸腹主动脉瘤人工血管置换（官网记载）",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01",
+          "SUR10"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm",
+          "https://www.ayfy.com/fuwu/info/1183/4494.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。 部分稳定学历/进修经历来自2019-04-01历史官网页，已注明；未据旧页覆盖新职称。"
+      }
+    },
+    "photoFrame": {
+      "x": 57,
+      "y": 26,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 780,
+      "imageHeight": 414
+    }
+  },
+  {
+    "id": "doctor-35cf3277ca",
+    "name": "高晓天",
+    "title": "副主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-35cf3277ca.png",
+    "bio": "临床医学博士（2015）；广东医科大学硕士（2009）。主动脉瘤/夹层开放与杂交手术、局麻胸主动脉支架腔内隔绝、经股动脉主动脉窦瘤破裂封堵。",
+    "expertise": [
+      "主动脉疾病"
+    ],
+    "education": "临床医学博士（2015）；广东医科大学硕士（2009）",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://www.ayfy.com/fuwu/info/1183/4494.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "高晓天",
+        "clinical_title": "副主任医师",
+        "academic_title": "",
+        "position": "",
+        "degree_and_mentorship": "临床医学博士（2015）；广东医科大学硕士（2009）",
+        "expertise": "主动脉瘤/夹层开放与杂交手术、局麻胸主动脉支架腔内隔绝、经股动脉主动脉窦瘤破裂封堵",
+        "research_directions": "",
+        "academic_roles": "",
+        "publications_projects": "第一作者论文10余篇，其中SCI 3篇、北大核心2篇",
+        "awards": "",
+        "career_training": "2009—2017广东医科大学附属医院心胸外科；2017-10起安医大一附院心外（2019履历）；2012复旦中山、2014北京安贞进修",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01",
+          "SUR10"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm",
+          "https://www.ayfy.com/fuwu/info/1183/4494.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。 部分稳定学历/进修经历来自2019-04-01历史官网页，已注明；未据旧页覆盖新职称。"
+      }
+    },
+    "photoFrame": {
+      "x": 75,
+      "y": 32,
+      "width": 75,
+      "height": 75,
+      "imageWidth": 762,
+      "imageHeight": 404
+    }
+  },
+  {
+    "id": "doctor-bda4677a78",
+    "name": "葛圣林",
+    "title": "主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-bda4677a78.png",
+    "bio": "博士研究生导师（2019旧页，当前招生资格未核）。机器人/全腔镜/微创心脏手术；瓣膜修复与介入置换、先心病封堵、复杂主动脉杂交、心脏移植与人工心脏。",
+    "expertise": [
+      "瓣膜修复",
+      "瓣膜置换",
+      "先天性心脏病",
+      "主动脉疾病",
+      "微创心脏手术",
+      "心脏移植",
+      "人工心脏"
+    ],
+    "education": "博士研究生导师（2019旧页，当前招生资格未核）",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://www.ayfy.com/fuwu/info/1183/4494.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)",
+        "心脏大血管外科特需门诊(安贞)"
+      ],
+      "record": {
+        "name": "葛圣林",
+        "clinical_title": "主任医师",
+        "academic_title": "教授",
+        "position": "",
+        "degree_and_mentorship": "博士研究生导师（2019旧页，当前招生资格未核）",
+        "expertise": "机器人/全腔镜/微创心脏手术；瓣膜修复与介入置换、先心病封堵、复杂主动脉杂交、心脏移植与人工心脏",
+        "research_directions": "",
+        "academic_roles": "",
+        "publications_projects": "",
+        "awards": "江淮名医",
+        "career_training": "1987临床医学毕业留院；2014-08美国Minnesota大学心脏中心研修；2014-12香港达芬奇机器人培训；临床近40年为2025简介口径",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01",
+          "SUR10"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm",
+          "https://www.ayfy.com/fuwu/info/1183/4494.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。 部分稳定学历/进修经历来自2019-04-01历史官网页，已注明；未据旧页覆盖新职称。"
+      }
+    },
+    "photoFrame": {
+      "x": 51,
+      "y": 30,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 770,
+      "imageHeight": 404
+    }
+  },
+  {
+    "id": "doctor-a53982c6b2",
+    "name": "龚文辉",
+    "title": "副主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-a53982c6b2.png",
+    "bio": "医学博士；硕士研究生导师。冠心病、瓣膜病、先心病、主动脉疾病、肺栓塞；微创搭桥与瓣膜修复/置换。",
+    "expertise": [
+      "冠心病",
+      "冠脉搭桥",
+      "瓣膜修复",
+      "瓣膜置换",
+      "先天性心脏病",
+      "主动脉疾病",
+      "微创心脏手术"
+    ],
+    "education": "医学博士；硕士研究生导师",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://www.ayfy.com/fuwu/info/1183/4494.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "龚文辉",
+        "clinical_title": "副主任医师",
+        "academic_title": "",
+        "position": "",
+        "degree_and_mentorship": "医学博士；硕士研究生导师",
+        "expertise": "冠心病、瓣膜病、先心病、主动脉疾病、肺栓塞；微创搭桥与瓣膜修复/置换",
+        "research_directions": "冠心病外科治疗的基础与临床（2019旧页）",
+        "academic_roles": "安徽省医学会心脏大血管外科分会委员；安徽省全科医学会心脏大血管分会常委兼学术秘书；《临床与病理杂志》中青年编委；BMJ Case Report、J Thorac Dis、临床与病理、安徽医学、中国胸心血管外科临床杂志审稿专家",
+        "publications_projects": "主持省级科研2项、教学2项；第一作者SCI 10余篇、中文核心20余篇；近三年SCI 2篇、中文核心3篇（2025简介相对期间）",
+        "awards": "安徽省卫健委首届卫生健康骨干人才",
+        "career_training": "2005安医大临床毕业留院；2012阜外进修1年；2016上海交大医学院外科学博士，师从赵强",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01",
+          "SUR10"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm",
+          "https://www.ayfy.com/fuwu/info/1183/4494.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。 部分稳定学历/进修经历来自2019-04-01历史官网页，已注明；未据旧页覆盖新职称。"
+      }
+    },
+    "photoFrame": {
+      "x": 61,
+      "y": 26,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 782,
+      "imageHeight": 414
+    }
+  },
+  {
+    "id": "doctor-3082bb1e6c",
+    "name": "郭志祥",
+    "title": "主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-3082bb1e6c.png",
+    "bio": "医学博士（同济大学，师从刘中民；2019旧页）；硕士研究生导师（2025）。主动脉瘤/夹层开放及介入、冠脉搭桥、瓣膜置换/成形、房颤迷宫术、先心病、肺栓塞取栓。",
+    "expertise": [
+      "房颤",
+      "冠脉搭桥",
+      "瓣膜置换",
+      "先天性心脏病",
+      "主动脉疾病",
+      "肺栓塞"
+    ],
+    "education": "医学博士（同济大学，师从刘中民；2019旧页）；硕士研究生导师（2025）",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://www.ayfy.com/fuwu/info/1183/4494.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "郭志祥",
+        "clinical_title": "主任医师",
+        "academic_title": "副教授",
+        "position": "",
+        "degree_and_mentorship": "医学博士（同济大学，师从刘中民；2019旧页）；硕士研究生导师（2025）",
+        "expertise": "主动脉瘤/夹层开放及介入、冠脉搭桥、瓣膜置换/成形、房颤迷宫术、先心病、肺栓塞取栓",
+        "research_directions": "终末期心脏病、重症心脏瓣膜病诊疗（2019旧页）",
+        "academic_roles": "安徽省医学会心脏大血管外科分会常委；国家微创心血管外科专业委员会委员",
+        "publications_projects": "参与国家基金多项；主持省校基金多项；第一/通讯作者论文20余篇，其中SCI 10篇；主编论著多部；实用新型专利1项",
+        "awards": "",
+        "career_training": "年主刀200余台（2025简介口径）",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01",
+          "SUR10"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm",
+          "https://www.ayfy.com/fuwu/info/1183/4494.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。 部分稳定学历/进修经历来自2019-04-01历史官网页，已注明；未据旧页覆盖新职称。"
+      }
+    },
+    "photoFrame": {
+      "x": 37,
+      "y": 24,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 746,
+      "imageHeight": 394
+    }
+  },
+  {
+    "id": "doctor-85de5e8704",
+    "name": "何维来",
+    "title": "主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-85de5e8704.png",
+    "bio": "临床医学博士；硕士研究生导师。体外循环/不停跳微创搭桥、搭桥联合换瓣、复杂先心病、主动脉置换、复杂与再次瓣膜手术；先心病封堵及胸腔镜心脏手术。",
+    "expertise": [
+      "冠脉搭桥",
+      "瓣膜置换",
+      "先天性心脏病",
+      "主动脉疾病",
+      "微创心脏手术"
+    ],
+    "education": "临床医学博士；硕士研究生导师",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "何维来",
+        "clinical_title": "主任医师",
+        "academic_title": "副教授",
+        "position": "心脏大血管外科科教副主任",
+        "degree_and_mentorship": "临床医学博士；硕士研究生导师",
+        "expertise": "体外循环/不停跳微创搭桥、搭桥联合换瓣、复杂先心病、主动脉置换、复杂与再次瓣膜手术；先心病封堵及胸腔镜心脏手术",
+        "research_directions": "",
+        "academic_roles": "安徽省微创医学会胸心外科专业委员会委员",
+        "publications_projects": "主持或参与省厅级科研6项；论文近30篇，其中SCI 4篇",
+        "awards": "",
+        "career_training": "胸心血管外科近30年；较早在省内开展先心病封堵和胸腔镜心脏微创手术",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。"
+      }
+    },
+    "photoFrame": {
+      "x": 63,
+      "y": 28,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 784,
+      "imageHeight": 398
+    }
+  },
+  {
+    "id": "doctor-4fc36ae68a",
+    "name": "胡运涛",
+    "title": "副主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-4fc36ae68a.png",
+    "bio": "医学博士。主动脉根部Bentall/Wheat/David手术、主动脉瓣修复、A型夹层全弓置换加支架；瓣膜及搭桥联合/再次/微创手术；先心病封堵、TAVR、TEVAR/EVAR。",
+    "expertise": [
+      "冠脉搭桥",
+      "先天性心脏病",
+      "主动脉疾病",
+      "微创心脏手术"
+    ],
+    "education": "医学博士",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://www.ayfy.com/fuwu/info/1183/4494.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "胡运涛",
+        "clinical_title": "副主任医师",
+        "academic_title": "",
+        "position": "",
+        "degree_and_mentorship": "医学博士",
+        "expertise": "主动脉根部Bentall/Wheat/David手术、主动脉瓣修复、A型夹层全弓置换加支架；瓣膜及搭桥联合/再次/微创手术；先心病封堵、TAVR、TEVAR/EVAR",
+        "research_directions": "",
+        "academic_roles": "",
+        "publications_projects": "",
+        "awards": "",
+        "career_training": "2011安医大临床七年制本硕毕业留院；首都医科大学博士，师从孙立忠（2019旧页）",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01",
+          "SUR10"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm",
+          "https://www.ayfy.com/fuwu/info/1183/4494.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。 部分稳定学历/进修经历来自2019-04-01历史官网页，已注明；未据旧页覆盖新职称。"
+      }
+    },
+    "photoFrame": {
+      "x": 51,
+      "y": 19,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 766,
+      "imageHeight": 300
+    }
+  },
+  {
+    "id": "doctor-4a6956ec96",
+    "name": "李宁",
+    "title": "主治医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-4a6956ec96.png",
+    "bio": "医学硕士；博士在读。先心病、瓣膜病、冠心病、房颤和主动脉病外科；小切口、胸腔镜微创。",
+    "expertise": [
+      "冠心病",
+      "房颤",
+      "先天性心脏病",
+      "主动脉疾病",
+      "微创心脏手术",
+      "瓣膜病"
+    ],
+    "education": "医学硕士；博士在读",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "李宁",
+        "clinical_title": "主治医师",
+        "academic_title": "",
+        "position": "",
+        "degree_and_mentorship": "医学硕士；博士在读",
+        "expertise": "先心病、瓣膜病、冠心病、房颤和主动脉病外科；小切口、胸腔镜微创",
+        "research_directions": "",
+        "academic_roles": "",
+        "publications_projects": "核心论文数篇",
+        "awards": "",
+        "career_training": "2016安医大胸心外科硕士；2023上海达芬奇机器人心脏手术培训",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。"
+      }
+    },
+    "photoFrame": {
+      "x": 51,
+      "y": 23,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 768,
+      "imageHeight": 394
+    }
+  },
+  {
+    "id": "doctor-5ed4d58e5d",
+    "name": "李伟",
+    "title": "主治医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-5ed4d58e5d.png",
+    "bio": "医学硕士；博士在读。不停跳搭桥、微创瓣膜修复/置换、房颤消融、人工心脏及围术期管理。",
+    "expertise": [
+      "房颤",
+      "冠脉搭桥",
+      "瓣膜修复",
+      "瓣膜置换",
+      "微创心脏手术",
+      "人工心脏"
+    ],
+    "education": "医学硕士；博士在读",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "李伟",
+        "clinical_title": "主治医师",
+        "academic_title": "",
+        "position": "",
+        "degree_and_mentorship": "医学硕士；博士在读",
+        "expertise": "不停跳搭桥、微创瓣膜修复/置换、房颤消融、人工心脏及围术期管理",
+        "research_directions": "",
+        "academic_roles": "",
+        "publications_projects": "第一作者SCI及核心论文7篇",
+        "awards": "2020心外青年医师技能大赛西区二等奖；2024第三届亚太血管吻合挑战赛中国总决赛优秀选手",
+        "career_training": "临床8年；2021阜外学习心衰外科及移植；2024北京安贞学习冠脉微创",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。"
+      }
+    },
+    "photoFrame": {
+      "x": 55,
+      "y": 32,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 772,
+      "imageHeight": 408
+    }
+  },
+  {
+    "id": "doctor-d566194fd3",
+    "name": "李晓锋",
+    "title": "副主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-d566194fd3.png",
+    "bio": "医学博士。先心病微创手术（右腋下/正中小切口）、胎儿先心病评估、妊娠指导、产后一体化治疗及随访。",
+    "expertise": [
+      "先天性心脏病",
+      "微创心脏手术"
+    ],
+    "education": "医学博士",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "李晓锋",
+        "clinical_title": "副主任医师",
+        "academic_title": "",
+        "position": "",
+        "degree_and_mentorship": "医学博士",
+        "expertise": "先心病微创手术（右腋下/正中小切口）、胎儿先心病评估、妊娠指导、产后一体化治疗及随访",
+        "research_directions": "",
+        "academic_roles": "中国健康管理协会医疗服务机构质量管理分会第一届理事",
+        "publications_projects": "",
+        "awards": "北京市优秀科普专家",
+        "career_training": "",
+        "department": "心脏大血管外科（小儿/先心病）",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "共享科室名册；2025-12-17安徽医院派驻讲座报道供稿署名“心脏大血管外科 李晓锋”，未直接明确本人安徽医院现岗。",
+        "affiliation_source_ids": [
+          "SUR04"
+        ],
+        "profile_source_ids": [
+          "SUR01"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。"
+      }
+    },
+    "photoFrame": {
+      "x": 47,
+      "y": 34,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 766,
+      "imageHeight": 396
+    }
+  },
+  {
+    "id": "doctor-4dbe99e8ca",
+    "name": "刘状",
+    "title": "副主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-4dbe99e8ca.png",
+    "bio": "医学博士。先心病微创封堵、瓣膜修复/置换、搭桥与杂交、房颤迷宫、大血管疾病及心脏移植、肥厚梗阻性心肌病与心脏肿瘤微创手术。",
+    "expertise": [
+      "房颤",
+      "心肌病",
+      "冠脉搭桥",
+      "瓣膜修复",
+      "瓣膜置换",
+      "先天性心脏病",
+      "微创心脏手术"
+    ],
+    "education": "医学博士",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "刘状",
+        "clinical_title": "副主任医师",
+        "academic_title": "校聘副教授",
+        "position": "",
+        "degree_and_mentorship": "医学博士",
+        "expertise": "先心病微创封堵、瓣膜修复/置换、搭桥与杂交、房颤迷宫、大血管疾病及心脏移植、肥厚梗阻性心肌病与心脏肿瘤微创手术",
+        "research_directions": "",
+        "academic_roles": "",
+        "publications_projects": "主持新技术项目2项；参与厅级课题1项；第一/通讯作者SCI及中文核心近10篇",
+        "awards": "省部级三等奖1项",
+        "career_training": "临床10余年",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。"
+      }
+    },
+    "photoFrame": {
+      "x": 37,
+      "y": 39,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 750,
+      "imageHeight": 404
+    }
+  },
+  {
+    "id": "doctor-54658c0d84",
+    "name": "时应路",
+    "title": "副主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-54658c0d84.png",
+    "bio": "临床医学硕士；博士在读。瓣膜置换/成形、房颤迷宫、搭桥、先心病微创；主动脉开放/介入、肺栓塞取栓与心脏肿瘤。",
+    "expertise": [
+      "房颤",
+      "冠脉搭桥",
+      "瓣膜置换",
+      "先天性心脏病",
+      "主动脉疾病",
+      "微创心脏手术",
+      "肺栓塞"
+    ],
+    "education": "临床医学硕士；博士在读",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "时应路",
+        "clinical_title": "副主任医师",
+        "academic_title": "",
+        "position": "",
+        "degree_and_mentorship": "临床医学硕士；博士在读",
+        "expertise": "瓣膜置换/成形、房颤迷宫、搭桥、先心病微创；主动脉开放/介入、肺栓塞取栓与心脏肿瘤",
+        "research_directions": "",
+        "academic_roles": "安徽省微创医学会胸心外科专业委员会委员",
+        "publications_projects": "核心期刊论文数篇",
+        "awards": "",
+        "career_training": "2013年安医大硕士；2021-11至2022-05阜外进修",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。"
+      }
+    },
+    "photoFrame": {
+      "x": 59,
+      "y": 38,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 776,
+      "imageHeight": 396
+    }
+  },
+  {
+    "id": "doctor-5244cbb5db",
+    "name": "王保存",
+    "title": "主治医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-5244cbb5db.png",
+    "bio": "先心病、瓣膜病、冠心病、大血管病、房颤综合外科治疗；先心病微创封堵与体外循环手术。",
+    "expertise": [
+      "冠心病",
+      "房颤",
+      "先天性心脏病",
+      "微创心脏手术",
+      "瓣膜病"
+    ],
+    "education": "",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "王保存",
+        "clinical_title": "主治医师",
+        "academic_title": "",
+        "position": "",
+        "degree_and_mentorship": "",
+        "expertise": "先心病、瓣膜病、冠心病、大血管病、房颤综合外科治疗；先心病微创封堵与体外循环手术",
+        "research_directions": "",
+        "academic_roles": "安徽省全科医学会心脏大血管外科分会委员",
+        "publications_projects": "参与课题多项；核心论文数篇",
+        "awards": "",
+        "career_training": "临床10余年",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。"
+      }
+    },
+    "photoFrame": {
+      "x": 55,
+      "y": 30,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 780,
+      "imageHeight": 392
+    }
+  },
+  {
+    "id": "doctor-e38db45e4a",
+    "name": "韦小勇",
+    "title": "副主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-e38db45e4a.png",
+    "bio": "医学硕士；2001安医大临床本科；2008安医大心胸外科硕士。先心病封堵、胸腹主动脉支架腔内隔绝、瓣膜成形/置换、冠脉搭桥。",
+    "expertise": [
+      "冠脉搭桥",
+      "瓣膜修复",
+      "瓣膜置换",
+      "先天性心脏病",
+      "主动脉疾病"
+    ],
+    "education": "医学硕士；2001安医大临床本科；2008安医大心胸外科硕士",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://www.ayfy.com/fuwu/info/1183/4494.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "韦小勇",
+        "clinical_title": "副主任医师",
+        "academic_title": "",
+        "position": "",
+        "degree_and_mentorship": "医学硕士；2001安医大临床本科；2008安医大心胸外科硕士",
+        "expertise": "先心病封堵、胸腹主动脉支架腔内隔绝、瓣膜成形/置换、冠脉搭桥",
+        "research_directions": "",
+        "academic_roles": "",
+        "publications_projects": "第一作者北大核心论文10余篇",
+        "awards": "",
+        "career_training": "北京阜外、山东大学齐鲁医院培训；独立完成心脏大血管手术数百例",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01",
+          "SUR10"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm",
+          "https://www.ayfy.com/fuwu/info/1183/4494.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。 部分稳定学历/进修经历来自2019-04-01历史官网页，已注明；未据旧页覆盖新职称。"
+      }
+    },
+    "photoFrame": {
+      "x": 67,
+      "y": 31,
+      "width": 76,
+      "height": 76,
+      "imageWidth": 760,
+      "imageHeight": 396
+    }
+  },
+  {
+    "id": "doctor-a173ea6fd0",
+    "name": "吴章敏",
+    "title": "主治医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-a173ea6fd0.png",
+    "bio": "暂无公开详细简介",
+    "expertise": [],
+    "education": "",
+    "sourceUrls": [
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。暂无可用的公开详细简介。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {}
+    },
+    "photoFrame": {
+      "x": 49,
+      "y": 22,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 768,
+      "imageHeight": 398
+    }
+  },
+  {
+    "id": "doctor-a00e18b9b2",
+    "name": "许金国",
+    "title": "副主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-a00e18b9b2.png",
+    "bio": "医学博士。二尖瓣修复、危重瓣膜病手术、胸腔镜瓣膜术、搭桥、主动脉夹层手术。",
+    "expertise": [
+      "冠脉搭桥",
+      "瓣膜修复",
+      "主动脉疾病",
+      "微创心脏手术",
+      "瓣膜病"
+    ],
+    "education": "医学博士",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://www.ayfy.com/fuwu/info/1183/4494.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "许金国",
+        "clinical_title": "副主任医师",
+        "academic_title": "",
+        "position": "",
+        "degree_and_mentorship": "医学博士",
+        "expertise": "二尖瓣修复、危重瓣膜病手术、胸腔镜瓣膜术、搭桥、主动脉夹层手术",
+        "research_directions": "",
+        "academic_roles": "中国研究型医院心脏瓣膜学会青年委员会常委；安徽省医学会心脏大血管外科委员；中国民族医药学会外科学分会理事；首医心外科学系青年委员；《中华胸心血管外科杂志》青年编委；《安徽医药》审稿人",
+        "publications_projects": "主持省校课题5项；第一/通讯作者（含共同）SCI 6篇，其中IF>10论文2篇；中文核心数篇",
+        "awards": "2024年AAVHD中国论坛风湿性二尖瓣修复比赛一等奖",
+        "career_training": "2012安医大七年制本硕毕业；2012-08至2014-07上海市第一人民医院外科住培；2017香港达芬奇机器人培训（2019旧页）",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01",
+          "SUR10"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm",
+          "https://www.ayfy.com/fuwu/info/1183/4494.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。 部分稳定学历/进修经历来自2019-04-01历史官网页，已注明；未据旧页覆盖新职称。"
+      }
+    },
+    "photoFrame": {
+      "x": 57,
+      "y": 28,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 776,
+      "imageHeight": 414
+    }
+  },
+  {
+    "id": "doctor-9dc24b2f98",
+    "name": "张成鑫",
+    "title": "主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-9dc24b2f98.png",
+    "bio": "医学博士；硕士研究生导师。冠脉搭桥、瓣膜修复/置换、先心病、主动脉疾病、肺栓塞；微创心脏手术、人工心脏与心脏移植。",
+    "expertise": [
+      "冠脉搭桥",
+      "瓣膜修复",
+      "瓣膜置换",
+      "先天性心脏病",
+      "主动脉疾病",
+      "微创心脏手术",
+      "心脏移植"
+    ],
+    "education": "医学博士；硕士研究生导师",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "张成鑫",
+        "clinical_title": "主任医师",
+        "academic_title": "副教授",
+        "position": "安徽医院学术副院长；心脏大血管外科主任（2026报道）；2025名册列科室副主任主持工作",
+        "degree_and_mentorship": "医学博士；硕士研究生导师",
+        "expertise": "冠脉搭桥、瓣膜修复/置换、先心病、主动脉疾病、肺栓塞；微创心脏手术、人工心脏与心脏移植",
+        "research_directions": "",
+        "academic_roles": "安徽省医学会心脏大血管外科分会候任主委；AAVHD青委会副主委；ISMICS委员；国家微创心血管外科委员会委员；中华医学会器官移植分会心脏移植学组委员；中国医师协会心血管外科分会微创学组委员；中国研究型医院瓣膜专业委员会委员；安徽省医师协会器官移植分会常委；《中华胸心血管外科杂志》编委",
+        "publications_projects": "",
+        "awards": "",
+        "career_training": "",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "官方明确安徽医院任职/派驻",
+        "anhui_affiliation_evidence": "2026-04-30官方报道明确为安徽医院学术副院长；2026-05-25与06-08官方报道为心脏大血管外科主任并带队在新院区开展诊疗。",
+        "affiliation_source_ids": [
+          "SUR03",
+          "SUR02",
+          "SUR08"
+        ],
+        "profile_source_ids": [
+          "SUR01"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。"
+      }
+    },
+    "photoFrame": {
+      "x": 45,
+      "y": 24,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 758,
+      "imageHeight": 392
+    }
+  },
+  {
+    "id": "doctor-6fb2fb3da1",
+    "name": "张士兵",
+    "title": "副主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-6fb2fb3da1.png",
+    "bio": "硕士（2019旧页）。先心病、风湿性瓣膜病、冠心病及大血管疾病外科治疗。",
+    "expertise": [
+      "冠心病",
+      "先天性心脏病",
+      "瓣膜病"
+    ],
+    "education": "硕士（2019旧页）",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://www.ayfy.com/fuwu/info/1183/4494.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "张士兵",
+        "clinical_title": "副主任医师",
+        "academic_title": "",
+        "position": "心脏大血管外科二病区副主任（高新院区）",
+        "degree_and_mentorship": "硕士（2019旧页）",
+        "expertise": "先心病、风湿性瓣膜病、冠心病及大血管疾病外科治疗",
+        "research_directions": "",
+        "academic_roles": "中华医学会安徽省胸心血管外科学分会青年委员",
+        "publications_projects": "论文数篇",
+        "awards": "",
+        "career_training": "2012年赴美国Texas Heart Institute/St. Luke’s Episcopal Hospital访学",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "科室整体搬迁关联",
+        "anhui_affiliation_evidence": "2025专家页明确任高新院区二病区副主任；2026-05-25西区心外病区整体迁入安徽医院。属病区关联推断，未取得个人现岗或门诊名单。",
+        "affiliation_source_ids": [
+          "SUR01",
+          "SUR02"
+        ],
+        "profile_source_ids": [
+          "SUR01",
+          "SUR10"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm",
+          "https://www.ayfy.com/fuwu/info/1183/4494.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。 部分稳定学历/进修经历来自2019-04-01历史官网页，已注明；未据旧页覆盖新职称。"
+      }
+    },
+    "photoFrame": {
+      "x": 65,
+      "y": 22,
+      "width": 123,
+      "height": 123,
+      "imageWidth": 788,
+      "imageHeight": 398
+    }
+  },
+  {
+    "id": "doctor-51431269b5",
+    "name": "朱正艳",
+    "title": "主任医师",
+    "department": "心脏大血管外科",
+    "photo": "assets/doctors/doctor-51431269b5.png",
+    "bio": "先心病、瓣膜病、冠心病、主动脉夹层/瘤、心包和心脏肿瘤外科。",
+    "expertise": [
+      "冠心病",
+      "先天性心脏病",
+      "主动脉疾病",
+      "瓣膜病",
+      "心脏肿瘤"
+    ],
+    "education": "",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1245/13349.htm",
+      "https://www.ayfy.com/fuwu/info/1183/4494.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏大血管外科门诊(安贞)"
+      ],
+      "record": {
+        "name": "朱正艳",
+        "clinical_title": "主任医师",
+        "academic_title": "副教授",
+        "position": "",
+        "degree_and_mentorship": "",
+        "expertise": "先心病、瓣膜病、冠心病、主动脉夹层/瘤、心包和心脏肿瘤外科",
+        "research_directions": "",
+        "academic_roles": "安徽省医学会心脏大血管外科分会常委；安徽省医师协会心血管外科分会常委；中国医师协会心脏重症专家委员会安徽工作委员会常委",
+        "publications_projects": "主持完成省自然基金1项、厅级课题1项；参与省课题2项；核心论文20余篇",
+        "awards": "安徽省政府特殊津贴",
+        "career_training": "曾在北京阜外外科研修1年；2010-05至08德国卡尔斯鲁厄心外医院研修（2019旧页）；20余年及累计主刀2000余例为2025简介口径",
+        "department": "心脏大血管外科",
+        "person_type": "医师",
+        "affiliation_level": "仅共享科室待核",
+        "anhui_affiliation_evidence": "仅见安医大一附院共享科室名册；未找到本人当前安徽医院任职或安贞门诊证据。西区病区搬迁事实不能自动证明共享名册全员迁入。",
+        "affiliation_source_ids": [],
+        "profile_source_ids": [
+          "SUR01",
+          "SUR10"
+        ],
+        "profile_urls": [
+          "https://www.ayfy.com/info/1245/13349.htm",
+          "https://www.ayfy.com/fuwu/info/1183/4494.htm"
+        ],
+        "profile_date": "2025-09-26",
+        "accessed_date": "2026-09-14",
+        "schedule_status": "未获取到安贞门诊当期可核实排班",
+        "schedule": [],
+        "photo_url": "",
+        "notes": "工作年限、论文数、职称与学历为2025-09-26官网页面口径；页面发布时间不等于逐人更新日期。空白字段表示所读来源未公开或未能核实。 部分稳定学历/进修经历来自2019-04-01历史官网页，已注明；未据旧页覆盖新职称。"
+      }
+    },
+    "photoFrame": {
+      "x": 88,
+      "y": 24,
+      "width": 78,
+      "height": 78,
+      "imageWidth": 782,
+      "imageHeight": 388
+    }
+  },
+  {
+    "id": "doctor-f2a3bd6c4e",
+    "name": "唐海沁",
+    "title": "主任医师",
+    "department": "心脏康复中心",
+    "photo": "assets/doctors/doctor-f2a3bd6c4e.png",
+    "bio": "博士研究生导师；毕业院校及本人学位本次未核实。高血压、冠心病及老年心血管疾病诊治。",
+    "expertise": [
+      "冠心病",
+      "高血压",
+      "老年心血管病"
+    ],
+    "education": "博士研究生导师；毕业院校及本人学位本次未核实。",
+    "sourceUrls": [
+      "https://www.ayfy.com/info/1271/11761.htm",
+      "https://y.dxy.cn/hospital/80/1062120.html"
+    ],
+    "sourceNote": "照片来自用户表格《安贞医院-姓名-照片.xlsx》，按图片单元格与同行姓名精确关联；职称及简介采用 2026-09-14 核实资料。原图为横向资料图片，包含头像及文字，保留原样。",
+    "profile": {
+      "verifiedAt": "2026-09-14",
+      "officialClinics": [
+        "心脏康复中心门诊(安贞)"
+      ],
+      "record": {
+        "name": "唐海沁",
+        "department": "心脏康复中心",
+        "professional_title": "主任医师",
+        "academic_title": "教授；博士研究生导师；江淮名医",
+        "position": "",
+        "education_training": "博士研究生导师；毕业院校及本人学位本次未核实。",
+        "clinical_interests": "高血压、冠心病及老年心血管疾病诊治。",
+        "research_academic": "政府特殊津贴享受者；2021 年官网列中国高血压联盟理事、中国康复医学会心血管病专委会委员、安徽省康复医学会心血管病专委会主委等。",
+        "relationship": "官方安贞心脏康复中心门诊名册医生",
+        "relationship_evidence": "2026-09-14 官方微信小程序心脏康复中心门诊(安贞)按医生名册实机核实。",
+        "inclusion_status": "安徽门诊归属已核实",
+        "schedule_status": "具体当期排班见官方小程序核实的独立排班表",
+        "source_ids": [
+          "IM43",
+          "IM44"
+        ],
+        "source_urls": [
+          "https://www.ayfy.com/info/1271/11761.htm",
+          "https://y.dxy.cn/hospital/80/1062120.html"
+        ],
+        "source_dates": [
+          "2021-03-01",
+          "2026-09-14"
+        ],
+        "verification_date": "2026-09-14",
+        "verification_notes": "当前门诊名册、主任医师和教授由官方小程序确认；专业及学术任职来自 2021 年官网，学会任职未核实当前届次。"
+      }
+    },
+    "photoFrame": {
+      "x": 51,
+      "y": 34,
+      "width": 122,
+      "height": 122,
+      "imageWidth": 786,
+      "imageHeight": 412
+    }
+  }
+]

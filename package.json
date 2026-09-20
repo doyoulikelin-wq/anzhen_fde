@@ -1,0 +1,19 @@
+{
+  "name": "anzhen-referral-workspace",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "description": "安贞医联医疗协同服务：双向转诊、连续照护与患者导诊",
+  "engines": { "node": ">=22.0.0" },
+  "scripts": {
+    "start": "node server.mjs",
+    "service:install": "node scripts/local-service.mjs install",
+    "service:status": "node scripts/local-service.mjs status",
+    "service:restart": "node scripts/local-service.mjs restart",
+    "service:stop": "node scripts/local-service.mjs stop",
+    "test": "node --test matching.test.mjs api.test.mjs config.test.mjs record-store.test.mjs care-ai.test.mjs downward.test.mjs guidance.test.mjs",
+    "check:kimi": "node scripts/check-kimi.mjs",
+    "build:offline": "node build-offline.mjs",
+    "pack:demo": "node scripts/package.mjs"
+  }
+}

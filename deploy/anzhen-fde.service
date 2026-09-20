@@ -1,0 +1,35 @@
+[Unit]
+Description=Anzhen referral and care workspace
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=anzhen
+Group=anzhen
+WorkingDirectory=/opt/anzhen-fde/current
+Environment=NODE_ENV=production
+EnvironmentFile=/etc/anzhen-fde/app.env
+ExecStart=/usr/bin/node /opt/anzhen-fde/current/server.mjs
+Restart=always
+RestartSec=5
+TimeoutStopSec=15
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+CapabilityBoundingSet=
+AmbientCapabilities=
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=anzhen-fde
+
+[Install]
+WantedBy=multi-user.target

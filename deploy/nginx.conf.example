@@ -1,0 +1,25 @@
+# Install as a NEW site after inspecting existing listeners and server_name entries.
+# This file must be included from the nginx http {} context.
+server {
+    listen 80;
+    server_name 8.147.71.90;
+
+    client_max_body_size 6m;
+    client_body_timeout 30s;
+
+    location / {
+        proxy_pass http://127.0.0.1:4173;
+        proxy_http_version 1.1;
+        # Keep the original authority and Origin for the app's allowlist checks.
+        proxy_set_header Host $http_host;
+        proxy_set_header Origin $http_origin;
+        proxy_set_header X-Forwarded-Host $http_host;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        proxy_set_header Connection "";
+        proxy_connect_timeout 5s;
+        proxy_send_timeout 200s;
+        proxy_read_timeout 200s;
+        proxy_buffering off;
+    }
+}
