@@ -43,6 +43,7 @@ export function createWorkspaceValidator(doctors,seed=createDownwardSeed()){
       if(a.status!=='pending')check(text(a.reviewer,100)&&text(a.note,2000)&&moment(a.at));
       if(a.at!==undefined)check(moment(a.at));
     }else check(['pending','accepted'].includes(r.status));
+    // Accept historical optional metadata without requiring it in current referrals.
     if(r.insurance!==undefined){check(object(r.insurance));for(const key of ['type','settlement','materialStatus'])check(text(r.insurance[key],100,true));check(text(r.insurance.note,2000,true));}
     if(r.attachments!==undefined){check(Array.isArray(r.attachments)&&r.attachments.length<=10&&unique(r.attachments));for(const a of r.attachments)check(attachmentId(a.id)&&text(a.name,180)&&!/[\x00-\x1f\x7f/\\]/.test(a.name)&&['image/png','image/jpeg','image/webp','application/pdf','application/dicom'].includes(a.type)&&Number.isSafeInteger(a.size)&&a.size>0&&a.size<=ATTACHMENT_FILE_LIMIT&&moment(a.uploadedAt)&&a.url===`/api/attachments/${a.id}`);}
     if(r.notifications!==undefined){check(Array.isArray(r.notifications)&&r.notifications.length<=100&&unique(r.notifications));for(const n of r.notifications){check(id(n.id)&&['in_app','sms','wechat'].includes(n.channel)&&text(n.title,300)&&text(n.recipient,400)&&moment(n.createdAt));check(n.channel==='in_app'?['unread','read'].includes(n.status):n.status==='not_configured');if(n.status==='read')check(moment(n.readAt));if(n.readAt!==undefined)check(moment(n.readAt));}}

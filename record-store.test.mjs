@@ -126,5 +126,9 @@ test('failed storage writes and invalid stored JSON never report saved results',
 });
 
 test('different patient identities and supplemental draft contents are never silently deduplicated',()=>{
- const a=record();for(const change of [r=>r.snapshot.patient.name='另一位患者',r=>r.inputSource={sourceSystem:'嘉和',sourcePatientId:'CASE2'},r=>r.attachments=[{id:'newfile'}],r=>r.insurance={type:'自费'}]){const b=copy(a);change(b);assert.equal(sameReferral(a,b),false);}
+ const a=record();for(const change of [r=>r.snapshot.patient.name='另一位患者',r=>r.inputSource={sourceSystem:'嘉和',sourcePatientId:'CASE2'},r=>r.attachments=[{id:'newfile'}]]){const b=copy(a);change(b);assert.equal(sameReferral(a,b),false);}
+});
+
+test('retired optional metadata does not create a duplicate of the same referral',()=>{
+ const current=record(),legacy=copy(current);legacy.insurance={type:'legacy',settlement:'',materialStatus:'',note:''};assert.equal(sameReferral(current,legacy),true);assert.equal(sameReferral(legacy,current),true);
 });

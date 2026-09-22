@@ -38,7 +38,6 @@ export function sameReferral(left, right) {
     left.snapshot.sourceDoctor.trim() === right.snapshot.sourceDoctor.trim() &&
     ['name','sex','age'].every(key=>(left.snapshot.patient[key]??null)===(right.snapshot.patient[key]??null)) &&
     ['sourceSystem','sourcePatientId'].every(key=>(left.inputSource?.[key]||'')===(right.inputSource?.[key]||'')) &&
-    ['type','settlement','materialStatus','note'].every(key=>(left.insurance?.[key]||'')===(right.insurance?.[key]||'')) &&
     JSON.stringify((left.attachments||[]).map(a=>a.id).sort())===JSON.stringify((right.attachments||[]).map(a=>a.id).sort());
 }
 

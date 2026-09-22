@@ -4,9 +4,8 @@ import {createApprovalWorkspace} from './approval-ui.mjs';
 import {referralNotifications} from './referral-workflow.mjs';
 import {escapeHtml} from './shared-ui.mjs';
 
-const insurance={type:'职工医保',settlement:'待医保办核实',materialStatus:'待补充',note:'需补充出院小结'};
 const attachment={id:'791ab191-8b3a-44f4-87b0-a9795177c5bc',name:'检查报告.pdf',type:'application/pdf',size:25,uploadedAt:'2026-09-22T08:00:00.000Z',url:'/api/attachments/791ab191-8b3a-44f4-87b0-a9795177c5bc'};
-const record=()=>{const r={id:'AZ-APPROVAL-1',status:'review',doctor:{id:'doctor-a',name:'接诊医生',department:'心血管内科'},snapshot:{patient:{name:'王先生',sex:'男',age:66},sourceHospital:'协作医院',sourceDoctor:'发起医生',text:'冠心病治疗后需进一步进行诊疗评估。',urgent:false},date:'2026-10-01',session:'上午',time:'08:00–12:00',approval:{status:'pending',reviewer:'',note:''},insurance:{...insurance},attachments:[{...attachment}],inputSource:{sourceSystem:'东华',sourcePatientId:'SOURCE-001'},createdAt:'2026-09-22T08:00:00.000Z',events:[{label:'申请已提交',at:'2026-09-22T08:00:00.000Z'}]};r.notifications=referralNotifications(r,'review',r.createdAt);return r;};
+const record=()=>{const r={id:'AZ-APPROVAL-1',status:'review',doctor:{id:'doctor-a',name:'接诊医生',department:'心血管内科'},snapshot:{patient:{name:'王先生',sex:'男',age:66},sourceHospital:'协作医院',sourceDoctor:'发起医生',text:'冠心病治疗后需进一步进行诊疗评估。',urgent:false},date:'2026-10-01',session:'上午',time:'08:00–12:00',approval:{status:'pending',reviewer:'',note:''},attachments:[{...attachment}],inputSource:{sourceSystem:'东华',sourcePatientId:'SOURCE-001'},createdAt:'2026-09-22T08:00:00.000Z',events:[{label:'申请已提交',at:'2026-09-22T08:00:00.000Z'}]};r.notifications=referralNotifications(r,'review',r.createdAt);return r;};
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
 
 class Node {
@@ -32,12 +31,12 @@ function harness(t,{rows=[record()],api=()=>assert.fail('No upload initiated')}=
   return {workspace,root,messages,delegated,stats,get rows(){return records;},get form(){return form;},get modalHTML(){return modalHTML;},open(){workspace.openRecord(records[0].id);},submit(values){form.values=values;return form.onsubmit({preventDefault(){},target:form});},attachmentNode(){return [...nodes.get('#supplement-attachments').nodes.values()].find(node=>node.events.has('change'));},hold(){let resolve;gate=new Promise(done=>resolve=done);return resolve;},fail(message='服务器暂时不可用'){failure=message;},remote(mutator){mutator(records);},messageButton(id){return root.querySelectorAll('[data-message-id]').find(button=>button.dataset.messageId===id);}};
 }
 
-const reviewValues={...insurance,'insurance-note':insurance.note,checked:'on',reviewer:'医务处审核人',decision:'return','review-note':'请补充出院小结并核对医保材料'};
+const reviewValues={checked:'on',reviewer:'医务处审核人',decision:'return','review-note':'请补充出院小结并核对交接材料'};
 
 test('医务审核退回→补充→重提保持申请编号、原附件和审核历史',async t=>{
-  const h=harness(t);h.open();assert.match(h.modalHTML,/SOURCE-001/);assert.match(h.modalHTML,/检查报告\.pdf/);
+  const h=harness(t);h.open();assert.match(h.modalHTML,/SOURCE-001/);assert.match(h.modalHTML,/检查报告\.pdf/);assert.doesNotMatch(h.modalHTML,/医保|insurance-/);
   await h.submit(reviewValues);assert.equal(h.rows[0].status,'returned');assert.equal(h.rows[0].events.length,2);assert.equal(h.stats.closed,1);
-  h.open();assert.match(h.modalHTML,/补充转诊资料/);await h.submit({...insurance,'insurance-note':'已补充，医保办待复核',text:'冠心病治疗后需诊疗评估；已补充出院小结。'});
+  h.open();assert.match(h.modalHTML,/补充转诊资料/);assert.doesNotMatch(h.modalHTML,/医保|insurance-/);await h.submit({text:'冠心病治疗后需诊疗评估；已补充出院小结。'});
   assert.equal(h.rows[0].id,'AZ-APPROVAL-1');assert.equal(h.rows[0].status,'review');assert.equal(h.rows[0].approval.status,'pending');assert.equal(h.rows[0].events.length,3);assert.equal(h.rows[0].attachments[0].id,attachment.id);assert.match(h.rows[0].snapshot.text,/已补充/);assert.equal(h.rows[0].notifications.filter(n=>n.channel==='in_app'&&n.status==='unread').length,1);
 });
 
@@ -55,8 +54,8 @@ test('未确认核对不写入，另一协作页面先审核后阻止旧表单�
 });
 
 test('通过审核生成接诊站内消息，短信微信仅保留待接入状态',async t=>{
-  const h=harness(t);h.open();await h.submit({...reviewValues,decision:'approve','review-note':'转诊资料已复核，医保备案待院方核验'});
-  assert.equal(h.rows[0].status,'pending');assert.equal(h.workspace.count(),0);assert.equal(h.workspace.unreadCount(),1);
+  const h=harness(t);h.open();await h.submit({...reviewValues,decision:'approve','review-note':'转诊资料已复核，接收安排待院方确认'});
+  assert.equal(h.rows[0].status,'pending');assert.equal(Object.hasOwn(h.rows[0],'insurance'),false);assert.equal(h.workspace.count(),0);assert.equal(h.workspace.unreadCount(),1);
   h.workspace.renderNotifications(h.root);assert.match(h.root.innerHTML,/通道待接入 · 未发送/);assert.match(h.root.innerHTML,/接诊医生/);
   const notice=h.rows[0].notifications.find(item=>item.channel==='in_app'&&item.status==='unread');await h.messageButton(notice.id).onclick();
   assert.equal(h.workspace.unreadCount(),0);assert.deepEqual(h.delegated,['AZ-APPROVAL-1']);assert.ok(h.rows[0].notifications.filter(n=>n.channel!=='in_app').every(n=>n.status==='not_configured'));
@@ -71,7 +70,7 @@ test('全部已读只更新站内消息；保存失败不伪造已读状态',asy
 test('补充保存等待中打开另一患者，不串入对方附件或关闭新表单',async t=>{
   const first=record(),second=record();
   first.status=second.status='returned';first.approval.status=second.approval.status='returned';second.id='AZ-APPROVAL-2';second.snapshot.patient.name='陈女士';second.attachments=[{...attachment,id:'95ac47d0-0152-4793-afc2-0bbe6ef7b894',url:'/api/attachments/95ac47d0-0152-4793-afc2-0bbe6ef7b894',name:'另一患者.pdf'}];
-  const h=harness(t,{rows:[first,second]});h.open();const resolve=h.hold(),task=h.submit({...insurance,'insurance-note':'补充完成',text:'首位患者的诊疗资料已补充完成。'});
+  const h=harness(t,{rows:[first,second]});h.open();const resolve=h.hold(),task=h.submit({text:'首位患者的诊疗资料已补充完成。'});
   h.workspace.openRecord(second.id);const secondForm=h.form;secondForm.values.text='另一患者仍在编辑的内容';resolve();await task;
   assert.equal(h.rows[0].attachments[0].id,first.attachments[0].id);assert.equal(h.rows[1].status,'returned');assert.equal(secondForm.isConnected,true);assert.equal(secondForm.values.text,'另一患者仍在编辑的内容');
 });
@@ -87,5 +86,12 @@ test('关闭补充窗口清理上传监听，迟到上传结果不进入重开�
   const task=uploadRoot.events.get('change')({target:{matches:selector=>selector==='[data-attachment-input]',value:'file',files:[{name:'补充.pdf',type:'application/pdf',size:5,arrayBuffer:async()=>new TextEncoder().encode('%PDF-').buffer}]}});await flush();
   h.workspace.onModalClose();h.form.isConnected=false;assert.equal(uploadRoot.events.has('change'),false);h.open();
   resolveUpload({...attachment,id:'ee861fcc-3d87-4a62-b8d3-8fcda7af7805',url:'/api/attachments/ee861fcc-3d87-4a62-b8d3-8fcda7af7805',name:'补充.pdf',size:5});await task;
-  await h.submit({...insurance,'insurance-note':'复核完成',text:'病例已核对，准备重新提交审核。'});assert.equal(h.rows[0].attachments.length,1);assert.equal(h.rows[0].attachments[0].id,attachment.id);
+  await h.submit({text:'病例已核对，准备重新提交审核。'});assert.equal(h.rows[0].attachments.length,1);assert.equal(h.rows[0].attachments[0].id,attachment.id);
+});
+
+test('历史附加字段不展示也不阻碍审核，保存时原样保留',async t=>{
+ const row=record();row.insurance={type:'legacy-type',settlement:'legacy-status',materialStatus:'legacy-materials',note:'historical note'};
+ const h=harness(t,{rows:[row]});h.open();assert.doesNotMatch(h.modalHTML,/legacy-|historical note|insurance-/);
+ await h.submit({...reviewValues,decision:'approve','review-note':'转诊信息与交接资料已复核'});
+ assert.equal(h.rows[0].status,'pending');assert.deepEqual(h.rows[0].insurance,row.insurance);
 });
