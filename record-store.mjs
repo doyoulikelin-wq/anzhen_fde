@@ -8,7 +8,7 @@ export function parseRecords(raw) {
     text(record?.snapshot?.text) && text(record?.snapshot?.patient?.name) && text(record?.snapshot?.sourceHospital) && text(record?.snapshot?.sourceDoctor) &&
     /^\d{4}-\d{2}-\d{2}$/.test(record?.date) && text(record?.session) && text(record?.time) && Number.isFinite(Date.parse(record?.createdAt)) &&
     Array.isArray(record?.events) && record.events.every(event => text(event?.label) && Number.isFinite(Date.parse(event?.at))) &&
-    ['pending', 'accepted'].includes(record.status)) : [];
+    ['review', 'returned', 'pending', 'accepted'].includes(record.status)) : [];
 }
 
 function revision(record) {
@@ -21,7 +21,7 @@ export function mergeRecords(...groups) {
   for (const record of groups.flat()) {
     const previous = merged.get(record.id);
     if (!previous) { merged.set(record.id, record); continue; }
-    const winner = previous.status !== record.status
+    const winner = previous.status !== record.status && (previous.status === 'accepted' || record.status === 'accepted')
       ? (record.status === 'accepted' ? record : previous)
       : (revision(record) >= revision(previous) ? record : previous);
     const events = [...new Map([...previous.events, ...record.events].map(event => [JSON.stringify([event.at, event.label]), event])).values()]
@@ -35,7 +35,11 @@ export function sameReferral(left, right) {
   return left.doctor.id === right.doctor.id && left.snapshot.text === right.snapshot.text &&
     left.date === right.date && left.slotId === right.slotId &&
     left.snapshot.sourceHospital.trim() === right.snapshot.sourceHospital.trim() &&
-    left.snapshot.sourceDoctor.trim() === right.snapshot.sourceDoctor.trim();
+    left.snapshot.sourceDoctor.trim() === right.snapshot.sourceDoctor.trim() &&
+    ['name','sex','age'].every(key=>(left.snapshot.patient[key]??null)===(right.snapshot.patient[key]??null)) &&
+    ['sourceSystem','sourcePatientId'].every(key=>(left.inputSource?.[key]||'')===(right.inputSource?.[key]||'')) &&
+    ['type','settlement','materialStatus','note'].every(key=>(left.insurance?.[key]||'')===(right.insurance?.[key]||'')) &&
+    JSON.stringify((left.attachments||[]).map(a=>a.id).sort())===JSON.stringify((right.attachments||[]).map(a=>a.id).sort());
 }
 
 function randomRecordUuid() {

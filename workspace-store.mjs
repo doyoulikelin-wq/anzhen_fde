@@ -3,6 +3,7 @@ import path from 'node:path';
 import {randomUUID} from 'node:crypto';
 import {AppError} from './llm.mjs';
 import {createDownwardSeed} from './downward.mjs';
+import {attachmentId,ATTACHMENT_FILE_LIMIT} from './attachment-store.mjs';
 
 export const WORKSPACE_BODY_LIMIT=2*1024*1024;
 const copy=value=>structuredClone(value);
@@ -22,29 +23,40 @@ const byId=(items)=>items.sort((a,b)=>a.id.localeCompare(b.id));
 
 export function createWorkspaceValidator(doctors,seed=createDownwardSeed()){
   const roster=new Map(doctors.filter(d=>d.photo).map(d=>[d.id,d]));
-  const patients=new Map(seed.patients.map(p=>[p.id,p]));
+  const seedPatients=new Map(seed.patients.map(p=>[p.id,p]));
   function record(r){
     check(object(r)&&id(r.id)&&object(r.doctor)&&roster.has(r.doctor.id));
     const d=roster.get(r.doctor.id);check(r.doctor.name===d.name&&r.doctor.department===d.department);
     check(object(r.snapshot)&&text(r.snapshot.text,10000)&&object(r.snapshot.patient)&&text(r.snapshot.patient.name,100)&&text(r.snapshot.sourceHospital,200)&&text(r.snapshot.sourceDoctor,100));
     const p=r.snapshot.patient;
     check((p.age==null||Number.isFinite(p.age)&&p.age>=0&&p.age<=150)&&(p.sex==null||['男','女','未知',''].includes(p.sex)));
-    check(day(r.date)&&text(r.slotId,160)&&text(r.session,100)&&text(r.time,100)&&moment(r.createdAt)&&['pending','accepted'].includes(r.status));
-    check(Array.isArray(r.events)&&r.events.length>0&&r.events.length<=200&&r.events.every(e=>object(e)&&text(e.label,1000)&&moment(e.at)));
+    check(day(r.date)&&text(r.slotId,160)&&text(r.session,100)&&text(r.time,100)&&moment(r.createdAt)&&['review','returned','pending','accepted'].includes(r.status));
+    check(Array.isArray(r.events)&&r.events.length>0&&r.events.length<=200&&r.events.every(e=>object(e)&&text(e.label,3000)&&moment(e.at)));
     for(const key of ['category','provider','model'])if(r.snapshot[key]!==undefined)check(text(r.snapshot[key],200,true));
     if(r.snapshot.score!==undefined)check(Number.isFinite(r.snapshot.score)&&r.snapshot.score>=0&&r.snapshot.score<=100);
     if(r.snapshot.urgent!==undefined)check(typeof r.snapshot.urgent==='boolean');
     if(r.snapshot.reasons!==undefined)check(strings(r.snapshot.reasons));
     if(r.status==='accepted')check(moment(r.acceptedAt)&&text(r.acceptedDepartment,100)&&text(r.acceptedLocation,200));
+    if(r.approval!==undefined){
+      const a=r.approval;check(object(a)&&['pending','approved','returned'].includes(a.status)&&text(a.reviewer,100,true)&&text(a.note,2000,true));
+      check((r.status==='review'&&a.status==='pending')||(r.status==='returned'&&a.status==='returned')||(['pending','accepted'].includes(r.status)&&a.status==='approved'));
+      if(a.status!=='pending')check(text(a.reviewer,100)&&text(a.note,2000)&&moment(a.at));
+      if(a.at!==undefined)check(moment(a.at));
+    }else check(['pending','accepted'].includes(r.status));
+    if(r.insurance!==undefined){check(object(r.insurance));for(const key of ['type','settlement','materialStatus'])check(text(r.insurance[key],100,true));check(text(r.insurance.note,2000,true));}
+    if(r.attachments!==undefined){check(Array.isArray(r.attachments)&&r.attachments.length<=10&&unique(r.attachments));for(const a of r.attachments)check(attachmentId(a.id)&&text(a.name,180)&&!/[\x00-\x1f\x7f/\\]/.test(a.name)&&['image/png','image/jpeg','image/webp','application/pdf','application/dicom'].includes(a.type)&&Number.isSafeInteger(a.size)&&a.size>0&&a.size<=ATTACHMENT_FILE_LIMIT&&moment(a.uploadedAt)&&a.url===`/api/attachments/${a.id}`);}
+    if(r.notifications!==undefined){check(Array.isArray(r.notifications)&&r.notifications.length<=100&&unique(r.notifications));for(const n of r.notifications){check(id(n.id)&&['in_app','sms','wechat'].includes(n.channel)&&text(n.title,300)&&text(n.recipient,400)&&moment(n.createdAt));check(n.channel==='in_app'?['unread','read'].includes(n.status):n.status==='not_configured');if(n.status==='read')check(moment(n.readAt));if(n.readAt!==undefined)check(moment(n.readAt));}}
     return r;
   }
   function records(value){check(Array.isArray(value)&&value.length<=500&&unique(value));value.forEach(record);return value;}
   function downward(value){
-    check(object(value)&&value.version===1&&Array.isArray(value.patients)&&value.patients.length===patients.size&&unique(value.patients)&&Array.isArray(value.plans)&&value.plans.length<=500&&unique(value.plans)&&Array.isArray(value.alerts)&&value.alerts.length<=500&&unique(value.alerts));
+    check(object(value)&&value.version===1&&Array.isArray(value.patients)&&value.patients.length>=seedPatients.size&&value.patients.length<=500&&unique(value.patients)&&Array.isArray(value.plans)&&value.plans.length<=500&&unique(value.plans)&&Array.isArray(value.alerts)&&value.alerts.length<=500&&unique(value.alerts));
+    const patients=new Map(value.patients.map(p=>[p.id,p]));check([...seedPatients.keys()].every(id=>patients.has(id)));
     for(const p of value.patients){
-      const known=patients.get(p?.id);check(known&&p.name===known.name&&p.sex===known.sex&&p.age===known.age);
+      check(id(p.id)&&(seedPatients.has(p.id)||/^patient-[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/.test(p.id))&&text(p.name,100)&&['男','女','未知'].includes(p.sex)&&Number.isFinite(p.age)&&p.age>=0&&p.age<=150);
       for(const key of ['diagnosis','stage','service','upperDoctor','caseSummary','goal'])check(text(p[key],4000));
-      check(Array.isArray(p.measurements)&&p.measurements.length>0&&p.measurements.length<=1000&&unique(p.measurements));
+      if(p.handoff!==undefined)check(text(p.handoff,4000,true));for(const key of ['createdAt','updatedAt'])if(p[key]!==undefined)check(moment(p[key]));
+      check(Array.isArray(p.measurements)&&p.measurements.length<=1000&&unique(p.measurements));
       for(const m of p.measurements){check(object(m)&&id(m.id)&&moment(m.date)&&text(m.symptoms,1000,true)&&text(m.source,100));for(const [k,min,max]of [['sbp',40,300],['dbp',20,200],['heartRate',20,250],['spo2',40,100],['weight',10,300]])check(Number.isFinite(m[k])&&m[k]>=min&&m[k]<=max);check(m.dbp<m.sbp);}
     }
     for(const p of value.plans){
@@ -69,19 +81,19 @@ export function createWorkspaceValidator(doctors,seed=createDownwardSeed()){
 }
 
 function mergeEntries(left,right,choose){const result=new Map(left.map(x=>[x.id,x]));for(const entry of right){const previous=result.get(entry.id);result.set(entry.id,previous?choose(previous,entry):entry);}return byId([...result.values()]);}
-function mergeRecords(left,right){return mergeEntries(left,right,(a,b)=>{
-  const winner=a.status!==b.status?(a.status==='accepted'?a:b):latest(a,b,['createdAt','acceptedAt']);
-  const events=[...new Map([...a.events,...b.events].map(e=>[canonical(e),e])).values()].sort((a,b)=>a.at.localeCompare(b.at)||a.label.localeCompare(b.label));
-  return {...winner,events};
+function mergeRecords(left,right,isImport){return mergeEntries(left,right,(a,b)=>{
+  const winner=(a.approval||b.approval)?(isImport?a:b):a.status!==b.status?(a.status==='accepted'?a:b):latest(a,b,['createdAt','acceptedAt']);
+  const events=isImport&&a.approval?a.events:[...new Map([...a.events,...b.events].map(e=>[canonical(e),e])).values()].sort((a,b)=>a.at.localeCompare(b.at)||a.label.localeCompare(b.label));
+  const notifications=mergeEntries(a.notifications||[],isImport&&a.approval?[]:b.notifications||[],(old,next)=>old.status==='read'?old:next);
+  return {...winner,events,...(a.notifications||b.notifications?{notifications}:{})};
 }).sort((a,b)=>b.createdAt.localeCompare(a.createdAt)||a.id.localeCompare(b.id));}
 function mergeDownward(left,right,isImport){
   const measurementIds=new Map();
-  const patients=left.patients.map(p=>{
-    const other=right.patients.find(x=>x.id===p.id);
+  const patients=mergeEntries(left.patients,right.patients,(p,other)=>{
     const entries=new Map(p.measurements.map(m=>[m.id,m]));
     for(let m of other.measurements){const originalId=m.id,old=entries.get(m.id);if(old&&old.date!==m.date){m={...m,id:`${m.id}--${m.date.replace(/\D/g,'')}`};}measurementIds.set(`${p.id}:${originalId}`,m.id);const existing=entries.get(m.id);entries.set(m.id,existing?latest(existing,m,['date']):m);}
-    return {...p,measurements:[...entries.values()].sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id))};
-  });
+    return {...(isImport?p:other),measurements:[...entries.values()].sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id))};
+  }).sort((a,b)=>{const index=id=>{const i=left.patients.findIndex(p=>p.id===id);return i<0?Number.MAX_SAFE_INTEGER:i;};return index(a.id)-index(b.id)||a.id.localeCompare(b.id);});
   const planRank={pending:0,arranged:1,monitoring:2};
   // A current-revision plan edit intentionally requests a fresh lower-hospital
   // arrangement. Only legacy imports protect against stale pending copies.
@@ -95,7 +107,7 @@ function contains(previous,next){const ids=new Set(next.map(x=>x.id));check(prev
 
 // One writer queue per running server. A write is acknowledged only after the
 // temporary file has been flushed and atomically renamed over the primary file.
-export async function createWorkspaceStore({dataDir,doctors,fsImpl=fs,seed=createDownwardSeed()}={}){
+export async function createWorkspaceStore({dataDir,doctors,fsImpl=fs,seed=createDownwardSeed(),verifyAttachment}={}){
   const validate=createWorkspaceValidator(doctors,seed);
   const primary=path.join(dataDir,'workspace.json'),backup=path.join(dataDir,'workspace.backup.json');
   let state,queue=Promise.resolve();
@@ -121,11 +133,27 @@ export async function createWorkspaceStore({dataDir,doctors,fsImpl=fs,seed=creat
     if(!isImport){check(Number.isSafeInteger(body.revision)&&body.revision>=0);if(body.revision!==state.revision)throw new AppError(409,'WORKSPACE_CONFLICT','共享记录已由其他人更新，请刷新后重试。');}
     if(Object.hasOwn(body,'records'))validate.records(body.records);
     if(Object.hasOwn(body,'downward'))validate.downward(body.downward);
+    if(isImport&&body.records)body={...body,records:body.records.map(r=>{
+      if(state.records.some(x=>x.id===r.id)||r.approval)return r;
+      const at=new Date().toISOString();
+      return {...r,status:'review',approval:{status:'pending',reviewer:'',note:'历史浏览器记录已迁入，需重新完成院内审核。'},events:[...r.events,{label:r.status==='accepted'?'历史接收记录已迁入，保留原信息并转入院内补审核':'历史申请已迁入，等待院内审核',at}],notifications:[...(r.notifications||[]),{id:`NOTICE-${randomUUID()}`,channel:'in_app',status:'unread',createdAt:at,title:'历史转诊记录待院内审核',recipient:'医务处 / 院内负责人'}]};
+    })};
+    if(body.records)for(const r of body.records){
+      const previous=state.records.find(x=>x.id===r.id);
+      if(!previous)check(r.status==='review'&&r.approval?.status==='pending');
+      else if(previous.approval&&!isImport){
+        check(r.approval);
+        const transitions={review:['review','returned','pending'],returned:['returned','review'],pending:['pending','accepted'],accepted:['accepted']};
+        check(transitions[previous.status].includes(r.status));
+        if(previous.approval.status==='approved')check(canonical(previous.approval)===canonical(r.approval));
+      }else if(!previous.approval&&!isImport&&r.approval)check(r.status==='review'&&r.approval.status==='pending');
+      if(verifyAttachment)for(const attachment of r.attachments||[])await verifyAttachment(attachment);
+    }
     if(!isImport){
       if(body.records)contains(state.records,body.records);
-      if(body.downward){contains(state.downward.plans,body.downward.plans);contains(state.downward.alerts,body.downward.alerts);for(const p of state.downward.patients)contains(p.measurements,body.downward.patients.find(x=>x.id===p.id).measurements);}
+      if(body.downward){contains(state.downward.patients,body.downward.patients);contains(state.downward.plans,body.downward.plans);contains(state.downward.alerts,body.downward.alerts);for(const p of state.downward.patients)contains(p.measurements,body.downward.patients.find(x=>x.id===p.id).measurements);}
     }
-    const next={revision:state.revision,records:body.records?mergeRecords(state.records,body.records):state.records,downward:body.downward?mergeDownward(state.downward,body.downward,isImport):state.downward};
+    const next={revision:state.revision,records:body.records?mergeRecords(state.records,body.records,isImport):state.records,downward:body.downward?mergeDownward(state.downward,body.downward,isImport):state.downward};
     if(canonical(next)===canonical(state))return copy(state);
     next.revision++;validate.snapshot(next);
     try{await atomic(backup,state);await atomic(primary,next);}catch{throw unavailable();}

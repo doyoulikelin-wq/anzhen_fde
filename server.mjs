@@ -6,10 +6,11 @@ import {loadConfig} from './config.mjs';
 import {createLlmService,AppError} from './llm.mjs';
 import {createCareAiService,RECORD_EXTRACT_BODY_LIMIT} from './care-ai.mjs';
 import {createWorkspaceStore,WORKSPACE_BODY_LIMIT} from './workspace-store.mjs';
+import {createAttachmentStore,ATTACHMENT_BODY_LIMIT} from './attachment-store.mjs';
 export const root=path.dirname(fileURLToPath(import.meta.url));
 const mime={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml','.ico':'image/x-icon'};
 const publicFiles=new Set(['/index.html','/styles.css','/app.mjs','/matching.mjs','/record-store.mjs','/data/doctors.json','/shared-ui.mjs','/portal.mjs','/portal.css','/downward.mjs','/downward.css','/guidance.mjs','/guidance.css']);
-publicFiles.add('/shared-client.mjs');
+for(const file of ['shared-client.mjs','schedule-policy.mjs','referral-workflow.mjs','approval-ui.mjs','data-intake.mjs','attachments.mjs','data-intake.css'])publicFiles.add('/'+file);
 function send(res,status,value) {res.writeHead(status,{'Content-Type':'application/json; charset=utf-8'});res.end(JSON.stringify(value));}
 async function readJson(req,limit=98304) {
   if (!/^application\/json(?:;|$)/i.test(req.headers['content-type'] || '')) throw new AppError(415,'JSON_REQUIRED','请求需要 JSON 格式。');
@@ -18,11 +19,13 @@ async function readJson(req,limit=98304) {
   try {const value=JSON.parse(Buffer.concat(chunks).toString('utf8'));if(!value || typeof value!=='object' || Array.isArray(value))throw Error();return value;}
   catch {throw new AppError(400,'INVALID_JSON','请求不是有效的 JSON 对象。');}
 }
-export async function createAppServer({config,fetchImpl=fetch,workspaceStore,dataDir}={}) {
+export async function createAppServer({config,fetchImpl=fetch,workspaceStore,dataDir,attachmentStore}={}) {
   config ||= await loadConfig(root);
   const publicOrigin=config.publicOrigin?new URL(config.publicOrigin):null;
   const doctors=JSON.parse(await fs.readFile(path.join(root,'data/doctors.json'),'utf8'));
-  workspaceStore ||= await createWorkspaceStore({dataDir:dataDir||config.dataDir||path.join(root,'var'),doctors});
+  const privateDataDir=dataDir||config.dataDir||path.join(root,'var');
+  let attachmentPromise;const attachments=()=>attachmentStore||(attachmentPromise ||= createAttachmentStore({dataDir:privateDataDir}));
+  workspaceStore ||= await createWorkspaceStore({dataDir:privateDataDir,doctors,verifyAttachment:async value=>(await attachments()).verify(value)});
   const service=createLlmService({config,doctors,fetchImpl});
   const careService=createCareAiService({config,fetchImpl});
   const routes={'/api/match':service.match,'/api/chat':service.chat,'/api/record-extract':careService.extractRecord,'/api/alert-summary':careService.summarizeAlert};
@@ -39,6 +42,16 @@ export async function createAppServer({config,fetchImpl=fetch,workspaceStore,dat
       const url=new URL(req.url,expectedOrigin);
       if (url.pathname==='/api/health' && req.method==='GET') return send(res,200,{service:'anzhen-referral-workspace',status:'ok'});
       if (url.pathname==='/api/config' && req.method==='GET') return send(res,200,{configured:Boolean(config.apiKey),provider:'kimi',model:config.model,maxCaseLength:5000});
+      if(url.pathname==='/api/attachments'){
+        if(req.method!=='POST')throw new AppError(405,'METHOD_NOT_ALLOWED','请使用 POST。');
+        return send(res,201,await (await attachments()).upload(await readJson(req,ATTACHMENT_BODY_LIMIT)));
+      }
+      if(url.pathname.startsWith('/api/attachments/')){
+        if(!['GET','HEAD'].includes(req.method))throw new AppError(405,'METHOD_NOT_ALLOWED','请使用 GET。');
+        const {metadata,bytes}=await (await attachments()).download(url.pathname.slice('/api/attachments/'.length));
+        res.writeHead(200,{'Content-Type':metadata.type,'Content-Length':metadata.size,'Content-Disposition':`attachment; filename="attachment${path.extname(metadata.name).toLowerCase()}"; filename*=UTF-8''${encodeURIComponent(metadata.name).replace(/['()*]/g,char=>`%${char.charCodeAt(0).toString(16).toUpperCase()}`)}`});
+        res.end(req.method==='HEAD'?undefined:bytes);return;
+      }
       if (url.pathname==='/api/workspace') {
         if(req.method!=='GET')throw new AppError(405,'METHOD_NOT_ALLOWED','请使用 GET。');
         return send(res,200,await workspaceStore.read());

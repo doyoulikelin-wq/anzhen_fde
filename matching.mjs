@@ -293,16 +293,17 @@ function localDate(date) {
 }
 
 /** Seven future local calendar days of synthetic slots; no live schedule reads. */
-export function buildSchedule(doctorId, baseDate = new Date()) {
+export function buildSchedule(doctorId, baseDate = new Date(), {includeToday=false} = {}) {
   if ((typeof doctorId !== 'string' && typeof doctorId !== 'number') || !String(doctorId).trim()) throw new TypeError('doctorId is required');
   if (!(baseDate instanceof Date) || !Number.isFinite(baseDate.getTime())) throw new TypeError('baseDate must be a valid Date');
   const result = [];
-  for (let offset = 1; offset <= 7; offset++) {
+  for (let offset = includeToday ? 0 : 1; offset < (includeToday ? 7 : 8); offset++) {
     const day = new Date(baseDate.getFullYear(), baseDate.getMonth(), baseDate.getDate() + offset, 12);
     const date = localDate(day);
     const slots = [['am', '上午', '09:00–11:30'], ['pm', '下午', '14:00–16:30']].map(([key, session, time]) => ({
       id: `demo-${hash(doctorId).toString(16)}-${date}-${key}`,
       session, time, remaining: hash(`${doctorId}|${date}|${key}`) % 7,
+      ...(includeToday?{elapsed:new Date(`${date}T${key==='am'?'11:30':'16:30'}`).getTime()<=baseDate.getTime()}:{}),
     }));
     result.push({ date, weekday: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'][day.getDay()], monthDay: `${day.getMonth() + 1}月${day.getDate()}日`, slots });
   }
@@ -312,5 +313,6 @@ export function buildSchedule(doctorId, baseDate = new Date()) {
     if (available >= 3) break;
     if (slot.remaining === 0) { slot.remaining = 3; available++; }
   }
+  if(includeToday)for(const day of result)for(const slot of day.slots)if(slot.elapsed)slot.remaining=0;
   return result;
 }

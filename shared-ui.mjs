@@ -1,10 +1,6 @@
-import {buildSchedule} from './matching.mjs';
-
-export function escapeHtml(value='') {
-  return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-}
-
-export function renderWorkingSchedule(doctorId) {
-  const days=buildSchedule(doctorId);
-  return `<section class="working-schedule" aria-label="医生工作时间"><div class="working-schedule-heading"><h3>工作时间</h3><span>近 7 日</span></div><div class="working-schedule-scroll"><table><caption>医生近七日工作时间与接诊意向</caption><thead><tr><th scope="col">日期</th><th scope="col">上午</th><th scope="col">下午</th></tr></thead><tbody>${days.map(day=>`<tr><th scope="row"><strong>${escapeHtml(day.monthDay)}</strong><small>${escapeHtml(day.weekday)}</small></th>${day.slots.map(slot=>`<td><span>${escapeHtml(slot.time)}</span><small class="${slot.remaining>0?'shift-open':'shift-check'}">${slot.remaining>0?'可登记意向':'需联系确认'}</small></td>`).join('')}</tr>`).join('')}</tbody></table></div><p class="working-schedule-note">工作时间为预设安排，实际出诊与接诊请以院方确认为准。</p></section>`;
+import {currentSchedule} from './schedule-policy.mjs';
+export function escapeHtml(value='') {return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+export function renderWorkingSchedule(doctorId,{selectable=false,selectedSlotId='',records=[],now=new Date()}={}) {
+  const days=currentSchedule(doctorId,now,records);
+  return `<section class="working-schedule" aria-label="医生工作时间"><div class="working-schedule-heading"><h3>${selectable?'选择工作时间':'工作时间'}</h3><span>近 7 日 · 含今天</span></div><div class="working-schedule-scroll"><table><caption>医生近七日工作时间与接诊意向</caption><thead><tr><th scope="col">日期</th><th scope="col">上午</th><th scope="col">下午</th></tr></thead><tbody>${days.map(day=>`<tr><th scope="row"><strong>${escapeHtml(day.monthDay)}</strong><small>${escapeHtml(day.weekday)}</small></th>${day.slots.map(slot=>{const available=slot.remaining>0&&!slot.elapsed,label=slot.elapsed?'已过时段':available?'可登记意向':'需联系确认';const content=`<span>${escapeHtml(slot.time)}</span><small class="${available?'shift-open':'shift-check'}">${label}</small>${!slot.elapsed?`<small>参考余量 ${slot.remaining} · 已登记意向 ${slot.intents}</small>`:''}`;return `<td>${selectable?`<button class="working-slot ${slot.id===selectedSlotId?'selected':''}" data-work-slot="${escapeHtml(slot.id)}" data-work-date="${day.date}" aria-label="选择${day.monthDay}${slot.session} ${slot.time} ${label}" aria-pressed="${slot.id===selectedSlotId}" ${!available?'disabled':''}>${content}</button>`:content}</td>`;}).join('')}</tr>`).join('')}</tbody></table></div><p class="working-schedule-note">工作时间与余量为预设参考，尚未连接院方挂号系统；已登记意向为本平台记录，不占用实际号源。</p></section>`;
 }

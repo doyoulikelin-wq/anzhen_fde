@@ -98,7 +98,7 @@ function makePlist(binary,port,release){
 async function prepareRelease(){
   const release=path.join(support,'releases',`${new Date().toISOString().replaceAll(':','-')}-${randomUUID().slice(0,8)}`);
   await fs.mkdir(release,{recursive:true,mode:0o700});
-  const files=['index.html','styles.css','portal.css','downward.css','guidance.css','app.mjs','portal.mjs','downward.mjs','guidance.mjs','shared-ui.mjs','shared-client.mjs','care-ai.mjs','matching.mjs','record-store.mjs','workspace-store.mjs','server.mjs','config.mjs','llm.mjs','package.json','data/doctors.json'];
+  const files=['index.html','styles.css','portal.css','downward.css','guidance.css','app.mjs','portal.mjs','downward.mjs','guidance.mjs','shared-ui.mjs','shared-client.mjs','care-ai.mjs','matching.mjs','record-store.mjs','workspace-store.mjs','server.mjs','config.mjs','llm.mjs','schedule-policy.mjs','referral-workflow.mjs','approval-ui.mjs','data-intake.mjs','attachments.mjs','attachment-store.mjs','data-intake.css','package.json','data/doctors.json'];
   try{
     for(const file of files){const destination=path.join(release,file);await fs.mkdir(path.dirname(destination),{recursive:true});await fs.copyFile(path.join(root,file),destination);}
     await fs.cp(path.join(root,'assets/doctors'),path.join(release,'assets/doctors'),{recursive:true});

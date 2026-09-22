@@ -53,7 +53,7 @@ if [[ -n "$port_listeners" ]]; then
   [[ -z "$other_pids" ]] || { printf '%s\n' 'Other processes also listen on port 4173; deployment stopped.' >&2; exit 1; }
 fi
 
-runtime_files=(package.json index.html styles.css portal.css downward.css guidance.css app.mjs matching.mjs record-store.mjs shared-client.mjs shared-ui.mjs portal.mjs downward.mjs guidance.mjs server.mjs config.mjs llm.mjs care-ai.mjs workspace-store.mjs data/doctors.json)
+runtime_files=(package.json index.html styles.css portal.css downward.css guidance.css app.mjs matching.mjs record-store.mjs shared-client.mjs shared-ui.mjs portal.mjs downward.mjs guidance.mjs server.mjs config.mjs llm.mjs care-ai.mjs workspace-store.mjs schedule-policy.mjs referral-workflow.mjs approval-ui.mjs data-intake.mjs attachments.mjs attachment-store.mjs data-intake.css data/doctors.json)
 for relative in "${runtime_files[@]}" deploy/anzhen-fde.service deploy/app.env.example; do
   [[ -f "$source_dir/$relative" && ! -L "$source_dir/$relative" ]] || { printf 'Missing or linked source file: %s\n' "$relative" >&2; exit 1; }
 done

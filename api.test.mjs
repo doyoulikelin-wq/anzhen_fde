@@ -113,7 +113,7 @@ test('release symlink starts the server while importing it has no startup side e
   let port;
   try {
     await fs.mkdir(path.join(release, 'data'), { recursive: true });
-    for (const file of ['server.mjs', 'config.mjs', 'llm.mjs', 'care-ai.mjs', 'matching.mjs', 'downward.mjs', 'workspace-store.mjs', 'data/doctors.json']) {
+    for (const file of ['server.mjs', 'config.mjs', 'llm.mjs', 'care-ai.mjs', 'matching.mjs', 'downward.mjs', 'workspace-store.mjs', 'attachment-store.mjs', 'data/doctors.json']) {
       await fs.copyFile(new URL(file, import.meta.url), path.join(release, file));
     }
     await fs.symlink(release, current, 'dir');

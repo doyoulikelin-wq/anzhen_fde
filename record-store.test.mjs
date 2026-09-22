@@ -124,3 +124,7 @@ test('failed storage writes and invalid stored JSON never report saved results',
   await assert.rejects(updateRecords({ getItem: () => '{broken', setItem: () => { wrote = true; } }, () => local, latest => ({ records: latest }), null));
   assert.equal(wrote, false);
 });
+
+test('different patient identities and supplemental draft contents are never silently deduplicated',()=>{
+ const a=record();for(const change of [r=>r.snapshot.patient.name='另一位患者',r=>r.inputSource={sourceSystem:'嘉和',sourcePatientId:'CASE2'},r=>r.attachments=[{id:'newfile'}],r=>r.insurance={type:'自费'}]){const b=copy(a);change(b);assert.equal(sameReferral(a,b),false);}
+});
