@@ -1,0 +1,892 @@
+{
+  "schemaVersion": 1,
+  "collectedAt": "2026-10-15",
+  "hospital": {
+    "id": "hefei-first",
+    "name": "合肥市第一人民医院",
+    "officialWebsite": "https://www.hfyy.cn/",
+    "aliases": [
+      "安徽医科大学第三附属医院"
+    ],
+    "campuses": [
+      {
+        "id": "main",
+        "name": "本部院区",
+        "department": "心内科",
+        "departmentUrl": "https://www.hfyy.cn/col75/508",
+        "address": "合肥市庐阳区淮河路390号",
+        "apiColumnId": 61,
+        "apiDepartmentId": 508,
+        "publicProfileEntries": 8
+      },
+      {
+        "id": "binhu",
+        "name": "滨湖院区",
+        "department": "心内科",
+        "departmentUrl": "https://www.hfyy.cn/col142/553",
+        "address": "合肥市包河区长沙路3200号",
+        "apiColumnId": 146,
+        "apiDepartmentId": 553,
+        "publicProfileEntries": 10
+      },
+      {
+        "id": "xinqiao",
+        "name": "新桥院区",
+        "department": "心血管内科",
+        "departmentUrl": "https://www.hfyy.cn/col132/975",
+        "address": "雄安路与分水岭路交口",
+        "apiColumnId": 136,
+        "apiDepartmentId": 975,
+        "publicProfileEntries": 1
+      }
+    ]
+  },
+  "scope": "官网本部、滨湖、新桥三个院区心内科/心血管内科的公开专家列表；按医生去重。",
+  "coverage": {
+    "publicProfileEntries": 19,
+    "uniqueDoctors": 18,
+    "withVerifiedOfficialPhotos": 18,
+    "completeStaffRoster": false
+  },
+  "limitations": [
+    "公开专家介绍不等同于全体在岗医生名册；未收录仅第三方平台列示且本次无法官网核实的医生。",
+    "部分个人页面更新时间较早，任职、职称和院区安排可能变化，使用前应向医院核实。",
+    "页面中的门诊时间仅作为官网静态参考存档，不代表当前实时排班或可预约号源。",
+    "将本院配置为本应用下转候选单位属于产品配置，不代表实际行政上下级关系、签约合作或已开通接诊服务。"
+  ],
+  "retrieval": {
+    "method": "读取官网科室页面及其公开专家列表接口；逐一核对个人页面姓名及相同照片链接，并下载原图验证。",
+    "endpoint": "https://www.hfyy.cn/search/listVideo?siteId=undefined&columnId=undefined&subId=undefined&pageNumber=0&pageSize=100",
+    "httpMethod": "POST",
+    "bodyFields": [
+      "columnId",
+      "infoId"
+    ],
+    "departmentSourceUrls": [
+      "https://www.hfyy.cn/col75/508",
+      "https://www.hfyy.cn/col142/553",
+      "https://www.hfyy.cn/col132/975"
+    ]
+  },
+  "doctors": [
+    {
+      "id": "hf-first-446",
+      "name": "张晓红",
+      "hospital": "合肥市第一人民医院",
+      "title": "主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "本部院区",
+      "campuses": [
+        "本部院区"
+      ],
+      "bio": "心血管内科行政主任、硕士生导师，长期从事心血管疾病诊疗。主要方向包括心脏危重症、冠脉介入和心脏起搏。",
+      "expertise": [
+        "高血压",
+        "心律失常",
+        "心力衰竭",
+        "心脏危重症",
+        "冠心病介入",
+        "心脏起搏"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-446.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2021-10/col61/1634798630536.jpg",
+      "photoVerified": true,
+      "photoSha256": "2b884d3ab5c5447be3b800e71ab52a5f3bd87acbb2759a2b298b14788852a15c",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col61/446"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col75/508"
+      ],
+      "sourceUpdatedAt": "2024-10-14 16:51:20",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "本部院区",
+          "text": "门诊时间及地点：周一全天，周五上午，综合楼门诊2楼心血管科专家门诊",
+          "sourceUrl": "https://www.hfyy.cn/cn/col61/446",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2024-10-14 16:51:20"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-9891",
+      "name": "汪永生",
+      "hospital": "合肥市第一人民医院",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "本部院区",
+      "campuses": [
+        "本部院区"
+      ],
+      "bio": "临床医学博士、本部心血管内科副主任，开展冠脉介入和相关腔内影像检查，处理心血管常见病与急危重症。",
+      "expertise": [
+        "急性心肌梗死介入",
+        "冠状动脉支架",
+        "药物球囊",
+        "血管内超声",
+        "冠状动脉旋磨"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-9891.png",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2024-10/col61/1728896211626.png",
+      "photoVerified": true,
+      "photoSha256": "f7d3979ef95aa756eca0f149b989c859267a29929393ad7f70b1b4055a97ff60",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col61/9891"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col75/508"
+      ],
+      "sourceUpdatedAt": "2024-10-14 16:57:32",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "本部院区",
+          "text": "门诊时间及地点：周二上、下午，周四上午，本部院区门诊2楼心血管内科门诊。",
+          "sourceUrl": "https://www.hfyy.cn/cn/col61/9891",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2024-10-14 16:57:32"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-444",
+      "name": "施有为",
+      "hospital": "合肥市第一人民医院",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "本部院区",
+      "campuses": [
+        "本部院区"
+      ],
+      "bio": "长期从事内科临床工作，诊治高血压、冠心病、瓣膜病和心肌病等心血管疾病。",
+      "expertise": [
+        "高血压",
+        "冠心病",
+        "心脏瓣膜病",
+        "心肌病",
+        "心力衰竭",
+        "心律失常"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-444.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2021-10/col61/1634787792985.jpg",
+      "photoVerified": true,
+      "photoSha256": "f1c1402b92c7539edf1a599b6889bb1dee8e47a7fa634858627febbef1191be4",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col61/444"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col75/508"
+      ],
+      "sourceUpdatedAt": "2021-10-21 11:44:48",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "本部院区",
+          "text": "门诊时间：周五上午",
+          "sourceUrl": "https://www.hfyy.cn/cn/col61/444",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2021-10-21 11:44:48"
+        }
+      ],
+      "notes": [
+        "职称采用医院官网个人资料“副主任医师”；未采用第三方平台的不同职称。"
+      ]
+    },
+    {
+      "id": "hf-first-441",
+      "name": "李胜",
+      "hospital": "合肥市第一人民医院",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "本部院区",
+      "campuses": [
+        "本部院区"
+      ],
+      "bio": "从事心内科临床与科研，主要关注心脏危重症救治、介入治疗及心脏起搏和射频消融。",
+      "expertise": [
+        "心血管危重症",
+        "心脏介入",
+        "心脏起搏",
+        "射频消融"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-441.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2021-10/col61/1634787334780.jpg",
+      "photoVerified": true,
+      "photoSha256": "37095e62e6e91cf24b8466737cb0990deef250536dd885ac293162c75b0ece97",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col61/441"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col75/508"
+      ],
+      "sourceUpdatedAt": "2024-10-14 16:54:42",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "本部院区",
+          "text": "门诊时间及地点：周一上午、周五上午、周三下午 综合楼门诊2楼",
+          "sourceUrl": "https://www.hfyy.cn/cn/col61/441",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2024-10-14 16:54:42"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-437",
+      "name": "时义宝",
+      "hospital": "合肥市第一人民医院",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "本部院区、滨湖院区",
+      "campuses": [
+        "本部院区",
+        "滨湖院区"
+      ],
+      "bio": "医学硕士，长期从事心内科临床，曾参加阜外医院冠心病介入培训，开展冠心病及心衰等疾病诊疗。",
+      "expertise": [
+        "冠心病介入",
+        "心力衰竭",
+        "高血压",
+        "心肌病",
+        "心律失常",
+        "瓣膜病"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-9102.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2023-06/col146/1686534989350.jpg",
+      "photoVerified": true,
+      "photoSha256": "23c4716dd73ff11e795b0fc06b3d819d72f5b21bdffeccd3ae892232aaa2e94a",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col61/437",
+        "https://www.hfyy.cn/cn/col146/9102"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col75/508",
+        "https://www.hfyy.cn/col142/553"
+      ],
+      "sourceUpdatedAt": "2024-10-10 11:41:21",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "本部院区",
+          "text": "门诊时间：周三上午",
+          "sourceUrl": "https://www.hfyy.cn/cn/col61/437",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2021-10-21 09:36:12"
+        },
+        {
+          "campus": "滨湖院区",
+          "text": "门诊时间：周三上午",
+          "sourceUrl": "https://www.hfyy.cn/cn/col146/9102",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2024-10-10 11:41:21"
+        }
+      ],
+      "notes": [
+        "本部和滨湖科室公开列表均列有时义宝，简介及学术任职相符，按同一医生合并；当前实际执业院区及出诊安排需院方确认。"
+      ]
+    },
+    {
+      "id": "hf-first-443",
+      "name": "程鹏",
+      "hospital": "合肥市第一人民医院",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "本部院区",
+      "campuses": [
+        "本部院区"
+      ],
+      "bio": "长期从事心内科临床，曾参加先心病介入和起搏电生理培训，主要开展疑难病及危重症诊治。",
+      "expertise": [
+        "心脏危重症",
+        "心脏起搏",
+        "复杂心律失常",
+        "射频消融"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-443.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2021-10/col61/1634787725127.jpg",
+      "photoVerified": true,
+      "photoSha256": "3fc061353462f48a395c0eecc15df9daf3d2b830a07b5c41cae17f1636287955",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col61/443"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col75/508"
+      ],
+      "sourceUpdatedAt": "2024-10-14 16:52:02",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "本部院区",
+          "text": "门诊时间及地点：每周三、周四上午心血管专家门诊（本部院区综合楼二楼）",
+          "sourceUrl": "https://www.hfyy.cn/cn/col61/443",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2024-10-14 16:52:02"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-440",
+      "name": "李磊",
+      "hospital": "合肥市第一人民医院",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "本部院区",
+      "campuses": [
+        "本部院区"
+      ],
+      "bio": "长期从事心内科临床工作，诊治冠心病、心衰、高血压、心肌病、心律失常及瓣膜病。",
+      "expertise": [
+        "冠心病",
+        "心力衰竭",
+        "高血压",
+        "心肌病",
+        "心律失常",
+        "瓣膜病"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-440.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2021-10/col61/1634787193270.jpg",
+      "photoVerified": true,
+      "photoSha256": "b24ea82b60167bc37b8da852a72affe3c9367522d4ed544bcff94ada75a0e2b0",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col61/440"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col75/508"
+      ],
+      "sourceUpdatedAt": "2021-10-21 11:33:17",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "本部院区",
+          "text": "门诊时间：周三下午",
+          "sourceUrl": "https://www.hfyy.cn/cn/col61/440",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2021-10-21 11:33:17"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-9890",
+      "name": "郑建发",
+      "hospital": "合肥市第一人民医院",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "本部院区",
+      "campuses": [
+        "本部院区"
+      ],
+      "bio": "曾在阜外医院接受冠脉介入培训，主要开展复杂冠脉病变和急性心肌梗死介入诊疗。",
+      "expertise": [
+        "复杂冠脉介入",
+        "慢性闭塞病变",
+        "急性心肌梗死",
+        "血管内超声",
+        "冠状动脉旋磨"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-9890.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2024-10/col61/1728895990559.jpg",
+      "photoVerified": true,
+      "photoSha256": "b52e41722ba19491e60e4130a0bd71127cdec40772fb05f5fd7846ac7561f487",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col61/9890"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col75/508"
+      ],
+      "sourceUpdatedAt": "2024-10-14 16:53:47",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "本部院区",
+          "text": "门诊时间及地点：每周二、周三上午心血管专家门诊（本部院区综合楼二楼）",
+          "sourceUrl": "https://www.hfyy.cn/cn/col61/9890",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2024-10-14 16:53:47"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-445",
+      "name": "周跟东",
+      "hospital": "合肥市第一人民医院",
+      "title": "主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "滨湖院区",
+      "campuses": [
+        "滨湖院区"
+      ],
+      "bio": "教授、硕士生导师，官网列为南区心内科主任，主要方向为心血管介入及疑难危重症诊治。",
+      "expertise": [
+        "心血管介入",
+        "心脏疑难病",
+        "心脏危重症"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-445.png",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2021-10/col61/1634798541148.png",
+      "photoVerified": true,
+      "photoSha256": "1477a3df6f57f574e766f0133a86c83b0b3c24a7808067e82de599cb233031f6",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col146/445"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col142/553"
+      ],
+      "sourceUpdatedAt": "2024-10-10 11:38:55",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "滨湖院区",
+          "text": "门诊时间：滨湖院区 周一、周二上午；西区周三下午",
+          "sourceUrl": "https://www.hfyy.cn/cn/col146/445",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2024-10-10 11:38:55"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-9098",
+      "name": "付敏敏",
+      "hospital": "合肥市第一人民医院",
+      "title": "主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "滨湖院区",
+      "campuses": [
+        "滨湖院区"
+      ],
+      "bio": "滨湖院区CCU行政主任，长期从事心内科临床与教学，关注心脏重症和起搏器植入后的随访。",
+      "expertise": [
+        "心脏危重症",
+        "起搏器植入及随访",
+        "高血压",
+        "心力衰竭",
+        "妊娠高血压"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-9098.png",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2023-06/col146/1686532887624.png",
+      "photoVerified": true,
+      "photoSha256": "32ba87cc266a0a35e36aaa9f208655346f8c11d3d46cad8923b34b71ca43c927",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col146/9098"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col142/553"
+      ],
+      "sourceUpdatedAt": "2024-10-10 11:39:52",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "滨湖院区",
+          "text": "门诊时间：周一全天、周四上午",
+          "sourceUrl": "https://www.hfyy.cn/cn/col146/9098",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2024-10-10 11:39:52"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-9100",
+      "name": "徐少东",
+      "hospital": "合肥市第一人民医院",
+      "title": "主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "滨湖院区",
+      "campuses": [
+        "滨湖院区"
+      ],
+      "bio": "长期从事心内科临床，曾在阜外医院进修，主要方向为高血压药物治疗及复杂冠心病介入。",
+      "expertise": [
+        "高血压药物治疗",
+        "冠心病介入",
+        "复杂冠脉病变",
+        "心脏危重症"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-9100.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2023-06/col146/1686534828004.jpg",
+      "photoVerified": true,
+      "photoSha256": "8f9fa288aa5e3be2f5497ae49a6c582afb0c0b0e044849ecd7b133937df77636",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col146/9100"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col142/553"
+      ],
+      "sourceUpdatedAt": "2024-10-10 11:40:23",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "滨湖院区",
+          "text": "门诊时间：周二全天、周日上午",
+          "sourceUrl": "https://www.hfyy.cn/cn/col146/9100",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2024-10-10 11:40:23"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-9101",
+      "name": "孟影",
+      "hospital": "合肥市第一人民医院",
+      "title": "主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "滨湖院区",
+      "campuses": [
+        "滨湖院区"
+      ],
+      "bio": "医学博士、硕士生导师、心内科副主任，主要开展心脏起搏与电生理治疗，并诊治心血管急危重症。",
+      "expertise": [
+        "起搏器植入",
+        "心脏电生理",
+        "心律失常射频治疗",
+        "高血压",
+        "冠心病",
+        "急性心力衰竭"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-9101.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2026-02/col146/1772004419481.jpg",
+      "photoVerified": true,
+      "photoSha256": "e841ec52689263432876013ee56fce9027499e141131ee4b3561819c9508fc4e",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col146/9101"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col142/553"
+      ],
+      "sourceUpdatedAt": "2026-02-25 16:18:10",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "滨湖院区",
+          "text": "门诊时间：周五上午、周六上午",
+          "sourceUrl": "https://www.hfyy.cn/cn/col146/9101",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2026-02-25 16:18:10"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-9106",
+      "name": "刘闵育",
+      "hospital": "合肥市第一人民医院",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "滨湖院区",
+      "campuses": [
+        "滨湖院区"
+      ],
+      "bio": "医学硕士，诊治心内科常见病与心脏危重症，开展冠心病和Ⅲ型主动脉夹层介入治疗。",
+      "expertise": [
+        "冠心病介入",
+        "主动脉夹层介入",
+        "高血压",
+        "心力衰竭",
+        "心律失常",
+        "心脏危重症"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-9106.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2023-06/col146/1686535400305.jpg",
+      "photoVerified": true,
+      "photoSha256": "d5438d9385502ffe6f805de2201103ce20391a126627e2aee612c2d144e8cff9",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col146/9106"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col142/553"
+      ],
+      "sourceUpdatedAt": "2024-10-10 11:44:02",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "滨湖院区",
+          "text": "门诊时间：周六全天",
+          "sourceUrl": "https://www.hfyy.cn/cn/col146/9106",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2024-10-10 11:44:02"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-9105",
+      "name": "许晴鹤",
+      "hospital": "合肥市第一人民医院",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "滨湖院区",
+      "campuses": [
+        "滨湖院区"
+      ],
+      "bio": "安徽医科大学心血管专业硕士，主要诊治高血压、冠心病、心力衰竭和心律失常，开展冠脉介入。",
+      "expertise": [
+        "高血压",
+        "冠心病介入",
+        "心力衰竭",
+        "心律失常"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-9105.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2023-06/col146/1686535307609.jpg",
+      "photoVerified": true,
+      "photoSha256": "c44a0f6ae0da30d278c7570a076fa4a68cda4f4d56795760be30255753324b54",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col146/9105"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col142/553"
+      ],
+      "sourceUpdatedAt": "2024-10-10 11:43:26",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "滨湖院区",
+          "text": "门诊时间：周日全天",
+          "sourceUrl": "https://www.hfyy.cn/cn/col146/9105",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2024-10-10 11:43:26"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-9104",
+      "name": "高斐",
+      "hospital": "合肥市第一人民医院",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "滨湖院区",
+      "campuses": [
+        "滨湖院区"
+      ],
+      "bio": "医学硕士，长期在滨湖院区开展心内科诊疗，主要关注重症超声和心脏危重症管理。",
+      "expertise": [
+        "重症超声",
+        "心脏危重症管理",
+        "冠心病",
+        "高血压",
+        "瓣膜病",
+        "心力衰竭"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-9104.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2023-06/col146/1686535186212.jpg",
+      "photoVerified": true,
+      "photoSha256": "f5e3c39f1a20729235450c09f108ad71c69f77c2fc8c70219013a07bf251fc29",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col146/9104"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col142/553"
+      ],
+      "sourceUpdatedAt": "2026-02-25 17:09:32",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "滨湖院区",
+          "text": "门诊时间：周五全天",
+          "sourceUrl": "https://www.hfyy.cn/cn/col146/9104",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2026-02-25 17:09:32"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-9103",
+      "name": "汪兵",
+      "hospital": "合肥市第一人民医院",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "滨湖院区",
+      "campuses": [
+        "滨湖院区"
+      ],
+      "bio": "医学硕士，曾参加阜外医院冠心病介入培训，关注冠脉介入、顽固性高血压及心血管危重症诊治。",
+      "expertise": [
+        "冠心病介入",
+        "顽固性高血压",
+        "心力衰竭",
+        "复杂心律失常",
+        "心血管危重症"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-9103.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2023-06/col146/1686535103515.jpg",
+      "photoVerified": true,
+      "photoSha256": "2a55ff74b52cb28df3990bce58e5c900bc281dc43950933b011ec77d23c727db",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col146/9103"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col142/553"
+      ],
+      "sourceUpdatedAt": "2024-10-10 11:41:45",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "滨湖院区",
+          "text": "门诊时间：周四全天",
+          "sourceUrl": "https://www.hfyy.cn/cn/col146/9103",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2024-10-10 11:41:45"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-9099",
+      "name": "刘梅",
+      "hospital": "合肥市第一人民医院",
+      "title": "主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心内科"
+      ],
+      "campus": "滨湖院区",
+      "campuses": [
+        "滨湖院区"
+      ],
+      "bio": "医学硕士，长期从事临床与教学，主要方向为心律失常电生理检查、射频消融和心脏起搏器植入。",
+      "expertise": [
+        "心律失常",
+        "电生理检查",
+        "射频消融",
+        "心脏起搏器",
+        "心力衰竭"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-9099.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2023-06/col146/1686534692439.jpg",
+      "photoVerified": true,
+      "photoSha256": "2000f5ec0133203c318c8457bedb925ddf7264c176088a960a4ffefaf7b1a26e",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col146/9099"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col142/553"
+      ],
+      "sourceUpdatedAt": "2024-10-10 11:44:46",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": [
+        {
+          "campus": "滨湖院区",
+          "text": "门诊时间：滨湖院区周三全天；医联体五里墩社区门诊周四上午",
+          "sourceUrl": "https://www.hfyy.cn/cn/col146/9099",
+          "status": "static_reference_only",
+          "sourceUpdatedAt": "2024-10-10 11:44:46"
+        }
+      ]
+    },
+    {
+      "id": "hf-first-10122",
+      "name": "班向阳",
+      "hospital": "合肥市第一人民医院",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "officialDepartmentNames": [
+        "心血管内科"
+      ],
+      "campus": "新桥院区",
+      "campuses": [
+        "新桥院区"
+      ],
+      "bio": "新桥院区心内科主任、胸痛中心负责人及导管室主任，开展复杂冠脉、心脏起搏及电生理介入诊疗。",
+      "expertise": [
+        "复杂冠脉介入",
+        "慢性闭塞病变",
+        "射频消融",
+        "起搏器植入",
+        "先心病封堵"
+      ],
+      "photo": "assets/partners/hefei-first/hf-first-10122.jpg",
+      "photoUrl": "https://www.hfyy.cn/upload/cn/image/2025-02/col136/1739847438896.jpg",
+      "photoVerified": true,
+      "photoSha256": "ea3079f47a1b23dc95caee650610f25e4a06efb06d2b2245cd83e3268f489509",
+      "sourceUrls": [
+        "https://www.hfyy.cn/cn/col136/10122"
+      ],
+      "departmentUrls": [
+        "https://www.hfyy.cn/col132/975"
+      ],
+      "sourceUpdatedAt": "2025-02-18 10:57:22",
+      "sourceUpdatedAtNote": "官网公开科室数据接口中的更新时间，不代表在岗或排班确认时间。",
+      "collectedAt": "2026-10-15",
+      "sourceType": "hospital_official",
+      "publishedClinicTimes": []
+    }
+  ]
+}

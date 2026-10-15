@@ -1,0 +1,756 @@
+{
+  "schemaVersion": 1,
+  "collectedAt": "2026-10-15",
+  "hospital": {
+    "id": "hefei-second",
+    "name": "合肥市第二人民医院",
+    "aliases": [
+      "安徽医科大学附属合肥医院"
+    ],
+    "officialWebsite": "http://www.hfsey.com/",
+    "identitySourceUrl": "https://hlxy.ahmu.edu.cn/2025/0910/c11087a190962/page.htm",
+    "campuses": [
+      "和平路院区",
+      "广德路院区"
+    ],
+    "identityNote": "安徽医科大学护理学院2025年公开页面确认医院名称与两院区。本数据不包含安徽省第二人民医院。"
+  },
+  "scope": "公开资料核对的心血管内科医生；名单非全员名录，不代表当前在岗名册、真实合作关系、接收床位或实时排班。",
+  "officialAccess": {
+    "status": "unavailable",
+    "attempts": [
+      "Web读取 http://www.hfsey.com/ 与 https://www.hfsey.com/ 超时",
+      "本机请求HTTP返回403，HTTPS连接异常"
+    ],
+    "fallback": "以明确标注医院及姓名的公开医疗平台个人页为补充；张静另有合肥卫生公开报道核对及照片。"
+  },
+  "coverage": {
+    "includedDoctors": 23,
+    "withRealPortrait": 22,
+    "officialHospitalRosterVerified": false,
+    "notes": [
+      "百度健康科室页当前列出29人；本次读取首屏20人并补查张静、韩玉龙、许明生、孙桂兰等个人页。",
+      "卢冬雨个人页医院正文互相矛盾，暂未收录为可选医生；陈振飞只有默认头像，保留资料但应遵守现有无照片不展示规则。",
+      "未从旧平台历史名录推断医师仍在岗，未导入任何真实出诊时段。"
+    ]
+  },
+  "excludedOrUnresolved": [
+    {
+      "name": "卢冬雨",
+      "reason": "百度个人页顶部为合肥市第二人民医院，简介正文为蚌埠医学院第一附属医院。2024年论文出现市二院单位，但当前在岗身份与专长归属未能统一核对。",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/55m78027up3na3aektdg",
+        "https://lcxxgen.whuhzzs.com/data/article/lcxxg/preview/pdf/lcxxgbzz-40-1-78.pdf"
+      ]
+    },
+    {
+      "name": "徐达华",
+      "reason": "历史公开个人页仍在，但使用默认头像且本次未核对当前在岗状态；不作为可选医生新增。",
+      "sourceUrls": [
+        "https://m.youlai.cn/sg/yyk/docindex/134286/"
+      ]
+    },
+    {
+      "name": "鲍国萍",
+      "reason": "历史公开个人页仍在，但使用默认头像且本次未核对当前在岗状态；不作为可选医生新增。",
+      "sourceUrls": [
+        "https://m.youlai.cn/sg/yyk/docindex/134294/"
+      ]
+    },
+    {
+      "name": "牛文宣",
+      "reason": "历史公开个人页仍在，但使用默认头像且本次未核对当前在岗状态；不作为可选医生新增。",
+      "sourceUrls": [
+        "https://m.youlai.cn/sg/yyk/docindex/134295/"
+      ]
+    }
+  ],
+  "doctors": [
+    {
+      "id": "hefei-second-zhang-jing",
+      "name": "张静",
+      "title": "主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "广德路院区（2024年官方公开报道）",
+      "bio": "心血管专业主任医师、医学博士；公开报道介绍其在广德路院区心内科工作，专长涉及心脏危重症与心律失常诊疗。",
+      "expertise": [
+        "心血管危重症",
+        "心律失常",
+        "冠脉介入"
+      ],
+      "photo": "assets/partners/hefei-second/zhang-jing.png",
+      "photoUrl": "https://img.shop.zainanjing365.com/hefei/image/sq/2024-10/b2863248-cac2-4254-8ba8-3c19a8a1b8e8.",
+      "photoSourceLabel": "合肥卫生发布、合意平台转载的专家介绍",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "合肥卫生公开报道 / 百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://orientalhefei.zainanjing365.com/siteapp/gdmm/jsp?appscheme=&id=89568&method_name=shareJsp&service_name=gdmmArticle",
+        "https://health.baidu.com/doctordec/dochome/8g3rprj3qog4t368ip7g"
+      ],
+      "sourceUpdatedAt": "2024-10-14",
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-jiang-yongjin",
+      "name": "江永进",
+      "title": "主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "心血管内科主任医师，公开个人页列为科室副主任、CCU主任；诊疗方向包括冠心病、高血压和心衰。",
+      "expertise": [
+        "冠心病",
+        "高血压",
+        "心律失常",
+        "早搏",
+        "心力衰竭"
+      ],
+      "photo": "assets/partners/hefei-second/jiang-yongjin.jpg",
+      "photoUrl": "https://muzhi-public-pic.cdn.bcebos.com/100111766055",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/d16ff312075f196979d3"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-luo-chunmiao",
+      "name": "罗春苗",
+      "title": "主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心内科",
+      "campus": "院区待核实",
+      "bio": "医学博士、硕士生导师，长期从事心内科临床；公开资料列有冠心病、高血压及复杂心律失常等诊疗方向。",
+      "expertise": [
+        "冠心病",
+        "高血压",
+        "难治性心力衰竭",
+        "慢性心力衰竭",
+        "早搏",
+        "房室传导阻滞",
+        "心律失常",
+        "阵发性室上性心动过速"
+      ],
+      "photo": "assets/partners/hefei-second/luo-chunmiao.jpg",
+      "photoUrl": "https://muzhi-public-pic.cdn.bcebos.com/100114419448",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/3bd4796d73fc794d3f78"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-zhou-jiangrong",
+      "name": "周江荣",
+      "title": "主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "从事心内科临床，曾赴复旦大学附属中山医院心内科和心导管室进修；诊疗方向涉及冠脉疾病、心衰与高血压。",
+      "expertise": [
+        "冠心病",
+        "急性冠脉综合征",
+        "心力衰竭",
+        "心律失常",
+        "高血压"
+      ],
+      "photo": "assets/partners/hefei-second/zhou-jiangrong.jpg",
+      "photoUrl": "https://doctorbase.cdn.bcebos.com/doctor_clue_img/0326/ea8fe04489199ecb3e2e5a707b8ca1e6.png",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/62ff74801409622efdf5"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。",
+        "个人页顶部标主任医师，正文仍写副主任医师；当前保留页面顶部标注并记录冲突，需院方确认。"
+      ]
+    },
+    {
+      "id": "hefei-second-hou-linlin",
+      "name": "侯琳琳",
+      "title": "主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "医学博士，具备冠脉介入资质；重点诊疗方向包括冠心病、高血压，以及急慢性心衰防治。",
+      "expertise": [
+        "冠心病",
+        "高血压病",
+        "急慢性心力衰竭"
+      ],
+      "photo": "assets/partners/hefei-second/hou-linlin.jpg",
+      "photoUrl": "https://doctorbase.cdn.bcebos.com/doctor_clue_img/0326/543f370e1d8ad6c8a49bd8398313129e.png",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/96e8dcb0dd2b41f052c6"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-feng-jun",
+      "name": "冯俊",
+      "title": "主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "硕士生导师，公开资料介绍其具有冠脉介入和心律失常介入资质；从事心血管常见病及介入诊疗。",
+      "expertise": [
+        "高血压",
+        "急慢性心衰",
+        "冠心病",
+        "心律失常",
+        "心肌病",
+        "高血脂"
+      ],
+      "photo": "assets/partners/hefei-second/feng-jun.jpg",
+      "photoUrl": "https://doctorbase.cdn.bcebos.com/zc_img/5YWl5bqT5pWw5o2u56ysMuaJuTIwMjMwMTExX+WMu+eUn+W6k+mqjOecn+aVsOaNrjEyMTct5p2O6LaK/fd54a356229e74d653d740efbebb973f.jpeg",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/ctgtkp33qog4t37mk5bg",
+        "https://m.youlai.cn/sg/yyk/docindex/511010/"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-yang-linfei",
+      "name": "杨林飞",
+      "title": "主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "从事心血管介入诊疗，曾赴江苏省立医院进修冠脉和心律失常介入技术。",
+      "expertise": [
+        "心血管介入",
+        "冠心病",
+        "心律失常"
+      ],
+      "photo": "assets/partners/hefei-second/yang-linfei.jpg",
+      "photoUrl": "https://zhuanjia.cdn.bcebos.com/b1643047948508711688.png",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/d4i7nv33qog4t34sq26g"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。",
+        "个人页顶部标主任医师，正文仍写副主任医师；当前保留页面顶部标注并记录冲突，需院方确认。"
+      ]
+    },
+    {
+      "id": "hefei-second-chen-dong",
+      "name": "陈东",
+      "title": "副主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "公开医疗平台列为合肥市第二人民医院心血管内科副主任医师；所列诊疗方向以心律失常为主。",
+      "expertise": [
+        "心室颤动",
+        "阵发性室性心动过速",
+        "室性期前收缩",
+        "二度房室传导阻滞",
+        "窦房传导阻滞",
+        "窦性心动过缓",
+        "心房颤动",
+        "心室扑动与颤动"
+      ],
+      "photo": "assets/partners/hefei-second/chen-dong.jpg",
+      "photoUrl": "https://muzhi-public-pic.cdn.bcebos.com/100115403152",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/ns2n06nuac7001pn81o0"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-gao-chao",
+      "name": "高潮",
+      "title": "副主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "心血管专业副主任医师、副教授，曾进修心导管技术；公开资料列有起搏器植入和冠脉介入诊疗经验。",
+      "expertise": [
+        "冠心病介入",
+        "心脏起搏器植入"
+      ],
+      "photo": "assets/partners/hefei-second/gao-chao.jpg",
+      "photoUrl": "https://selfpage-gips.cdn.bcebos.com/de61cf8bd268dd85e2cad6a03af17f74.png@!img_w120_h120",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/o1307ir3qog4t324k5b0"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-zhang-jian",
+      "name": "张建",
+      "title": "副主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "长期从事心内科临床，公开资料介绍其开展冠脉和心律失常介入诊疗，并处理常见及危重心血管疾病。",
+      "expertise": [
+        "冠心病",
+        "心肌病",
+        "高血压",
+        "急慢性心力衰竭",
+        "心律失常"
+      ],
+      "photo": "assets/partners/hefei-second/zhang-jian.jpg",
+      "photoUrl": "https://doctorbase.cdn.bcebos.com/doctor_clue_img/0326/db9cc69baaae93d3c1aaf4d8af6ab42c.png",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/27eac637fdc7bd3eba1e"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-zhou-gaoliang",
+      "name": "周高亮",
+      "title": "副主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "公开医疗平台列为心血管内科副主任医师，诊疗方向包括冠心病、心律失常、心衰及高血压。",
+      "expertise": [
+        "冠心病",
+        "心律失常",
+        "心力衰竭",
+        "高血压"
+      ],
+      "photo": "assets/partners/hefei-second/zhou-gaoliang.jpg",
+      "photoUrl": "https://doctorbase.cdn.bcebos.com/std_beixuan/4d4e768b3c52896f834bbfc6e27bdf4c.png",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/17a9d4405e318adf60dc",
+        "https://www.haodf.com/doctor/6964390739/xinxi-jieshao.html"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-li-chao",
+      "name": "李超",
+      "title": "副主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "心血管内科副主任医师、硕士；公开资料列有心血管介入经验，涉及冠心病、心肌病、心衰与心律失常。",
+      "expertise": [
+        "冠心病",
+        "心脏瓣膜病",
+        "高血压",
+        "心力衰竭",
+        "心肌病",
+        "心律失常"
+      ],
+      "photo": "assets/partners/hefei-second/li-chao.jpg",
+      "photoUrl": "https://zhuanjia.cdn.bcebos.com/b1662135636862548847.png",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/ijv2lbj3qog4t32hh130"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-jin-xiaoqin",
+      "name": "金小芹",
+      "title": "副主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "从事心血管内科临床，曾赴江苏省人民医院进修；诊疗方向包括冠心病、高血压、心肌病和心衰。",
+      "expertise": [
+        "冠心病",
+        "高血压病",
+        "心肌病",
+        "心律失常",
+        "心力衰竭"
+      ],
+      "photo": "assets/partners/hefei-second/jin-xiaoqin.jpg",
+      "photoUrl": "https://doctorbase.cdn.bcebos.com/doctor_clue_img/0326/1be140b185133c238fe034ec570f0b27.png",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/ecf792a9cc80a9bf1f89"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-li-long",
+      "name": "李龙",
+      "title": "主治医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心内科",
+      "campus": "院区待核实",
+      "bio": "公开个人页列为心内科主治医师，教育经历为安徽医科大学；所列诊疗方向包括冠心病、瓣膜病和心律失常。",
+      "expertise": [
+        "冠心病",
+        "心脏瓣膜病",
+        "心律失常",
+        "心包炎",
+        "先天性心脏病",
+        "高脂血症",
+        "高血压",
+        "早搏"
+      ],
+      "photo": "assets/partners/hefei-second/li-long.jpg",
+      "photoUrl": "https://muzhi-public-pic.cdn.bcebos.com/100115234411",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/mm2f7gb3qog4t315j9f0"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-cao-shuai",
+      "name": "曹帅",
+      "title": "主治医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "公开医疗平台列为心血管内科主治医师；所列诊疗方向涉及心衰、瓣膜病与心律失常。",
+      "expertise": [
+        "心力衰竭",
+        "瓣膜疾病",
+        "心律失常"
+      ],
+      "photo": "assets/partners/hefei-second/cao-shuai.jpg",
+      "photoUrl": "https://muzhi-public-pic.cdn.bcebos.com/100115205975",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/8d00739ffb6f789966e5"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-gao-yu",
+      "name": "高玉",
+      "title": "主治医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心内科",
+      "campus": "院区待核实",
+      "bio": "公开医疗平台列为合肥市第二人民医院心内科主治医师；未公开独立的专长说明。",
+      "expertise": [],
+      "photo": "assets/partners/hefei-second/gao-yu.jpg",
+      "photoUrl": "https://doctorbase.cdn.bcebos.com/doctor_clue_img/0326/23d21ae89a4ad30899ee88ad78dd777a.png",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/29tog027up3nh0ihps9g"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-zhang-kezhi",
+      "name": "张科芝",
+      "title": "主治医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心内科",
+      "campus": "院区待核实",
+      "bio": "公开医疗平台列为合肥市第二人民医院心内科医生；个人页未提供独立的专长说明。",
+      "expertise": [],
+      "photo": "assets/partners/hefei-second/zhang-kezhi.jpg",
+      "photoUrl": "https://doctorbase.cdn.bcebos.com/doctor_clue_img/d519e6a2d46111f0911bfa2600039d34.jpg",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/kmjbe027up3na3bj6nm0",
+        "https://pzxx.cbpt.cnki.net/portal/journal/portal/client/paper/bccccd7f698d0ca493679fe3d83d89ab"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。",
+        "个人页仍标主治医师；检索到2024职称评审名单转载载为副主任医师，未取得官方原件，未自行改写职称。"
+      ]
+    },
+    {
+      "id": "hefei-second-wang-hanzhang",
+      "name": "王汉章",
+      "title": "主治医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "公开资料介绍其毕业于安徽医科大学，具有研究生学历；诊疗方向涉及冠心病、心衰、房颤等。",
+      "expertise": [
+        "冠心病",
+        "心力衰竭",
+        "心瓣膜病",
+        "心律失常",
+        "高血压"
+      ],
+      "photo": "assets/partners/hefei-second/wang-hanzhang.jpg",
+      "photoUrl": "https://doctorbase.cdn.bcebos.com/doctor_clue_img/4268a5f2d45511f0911bfa2600039d34.jpg",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/t5lhu027up3na38p25m0"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。",
+        "个人页顶部标主治医师，正文旧简介写住院医师，需院方确认。"
+      ]
+    },
+    {
+      "id": "hefei-second-zhou-wei",
+      "name": "周伟",
+      "title": "主治医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科二",
+      "campus": "院区待核实",
+      "bio": "公开医疗平台列为合肥市第二人民医院心血管内科二主治医师；未公开独立的专长说明。",
+      "expertise": [],
+      "photo": "assets/partners/hefei-second/zhou-wei.jpg",
+      "photoUrl": "https://doctorbase.cdn.bcebos.com/doctor_clue_img/0326/edb843372952834ed75a363673456e5f.png",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/73pms027up3nh0hm3oug"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-chen-zhenfei",
+      "name": "陈振飞",
+      "title": "主治医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "公开个人页介绍其从事心血管介入诊疗，涉及冠心病介入及多种心血管危重情况处理。",
+      "expertise": [
+        "冠心病介入",
+        "心绞痛",
+        "高血压",
+        "心律失常",
+        "心力衰竭"
+      ],
+      "photo": null,
+      "photoUrl": null,
+      "photoSourceLabel": null,
+      "photoReview": "默认插画，未收录",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/0374ffe986dfddd5dc5d"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。",
+        "个人页头像为通用医生插画，未作为真实照片收录。"
+      ]
+    },
+    {
+      "id": "hefei-second-han-yulong",
+      "name": "韩玉龙",
+      "title": "主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "曾赴北京阜外医院和以色列心脏中心研修；公开资料介绍其从事冠脉介入和心血管疑难危重疾病诊疗。",
+      "expertise": [
+        "心血管疾病",
+        "冠心病",
+        "心绞痛",
+        "心肌梗死",
+        "高血压病",
+        "心肌病",
+        "心律失常",
+        "心力衰竭"
+      ],
+      "photo": "assets/partners/hefei-second/han-yulong.jpg",
+      "photoUrl": "https://doctorbase.cdn.bcebos.com/std_beixuan/34702b71d1b60227f2cae3b84664c36b.png",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/728f6810c17952541954"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-xu-mingsheng",
+      "name": "许明生",
+      "title": "主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "从事心血管临床，专长涉及冠心病及心律失常介入，以及高血压、急慢性心衰和心血管危重症。",
+      "expertise": [
+        "心律失常",
+        "冠心病",
+        "高血压病",
+        "急性心力衰竭",
+        "慢性心力衰竭",
+        "心血管危重症"
+      ],
+      "photo": "assets/partners/hefei-second/xu-mingsheng.png",
+      "photoUrl": "https://doctorbase.cdn.bcebos.com/std_beixuan/5458da293a05d1487d814b628a204f57.png",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/563b1b8e2a623b5e35a6"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    },
+    {
+      "id": "hefei-second-sun-guilan",
+      "name": "孙桂兰",
+      "title": "副主任医师",
+      "hospital": "合肥市第二人民医院",
+      "department": "心血管内科",
+      "campus": "院区待核实",
+      "bio": "长期从事心血管内科医疗、教学与科研；公开资料介绍其具有冠心病、心肌病、心律失常与心衰等诊疗经验。",
+      "expertise": [
+        "冠心病",
+        "心绞痛",
+        "心肌梗死",
+        "高血压病",
+        "心肌病",
+        "心律失常",
+        "心力衰竭"
+      ],
+      "photo": "assets/partners/hefei-second/sun-guilan.jpg",
+      "photoUrl": "https://doctorbase.cdn.bcebos.com/doctor_clue_img/0326/93af3b85d6eea27b7717851b069068f0.png",
+      "photoSourceLabel": "百度健康医生个人页",
+      "photoReview": "与署名个人介绍页面对应的真人照片；已排除通用默认头像",
+      "sourceLabel": "百度健康公开资料",
+      "verification": "third_party",
+      "sourceUrls": [
+        "https://health.baidu.com/doctordec/dochome/3bd869f4770d0377e996"
+      ],
+      "sourceUpdatedAt": null,
+      "collectedAt": "2026-10-15",
+      "verificationNotes": [
+        "医院官网本次未能访问；第三方页面可能更新滞后，职称、在岗状态及出诊院区需院方核验。"
+      ]
+    }
+  ]
+}

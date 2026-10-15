@@ -53,7 +53,7 @@ if [[ -n "$port_listeners" ]]; then
   [[ -z "$other_pids" ]] || { printf '%s\n' 'Other processes also listen on port 4173; deployment stopped.' >&2; exit 1; }
 fi
 
-runtime_files=(package.json index.html styles.css portal.css downward.css guidance.css app.mjs matching.mjs record-store.mjs shared-client.mjs shared-ui.mjs portal.mjs downward.mjs guidance.mjs server.mjs config.mjs llm.mjs care-ai.mjs workspace-store.mjs schedule-policy.mjs referral-workflow.mjs approval-ui.mjs data-intake.mjs attachments.mjs attachment-store.mjs data-intake.css data/doctors.json)
+runtime_files=(partner-roster.mjs package.json index.html styles.css portal.css downward.css guidance.css app.mjs matching.mjs record-store.mjs shared-client.mjs shared-ui.mjs portal.mjs downward.mjs guidance.mjs server.mjs config.mjs llm.mjs care-ai.mjs workspace-store.mjs schedule-policy.mjs referral-workflow.mjs approval-ui.mjs data-intake.mjs attachments.mjs attachment-store.mjs data-intake.css data/doctors.json)
 for relative in "${runtime_files[@]}" deploy/anzhen-fde.service deploy/app.env.example; do
   [[ -f "$source_dir/$relative" && ! -L "$source_dir/$relative" ]] || { printf 'Missing or linked source file: %s\n' "$relative" >&2; exit 1; }
 done
@@ -97,6 +97,17 @@ photo_files=("$source_dir"/assets/doctors/doctor-*.png "$source_dir"/assets/doct
 for photo_file in "${photo_files[@]}"; do
   [[ -f "$photo_file" && ! -L "$photo_file" ]] || { printf '%s\n' 'Refusing a linked or invalid doctor photograph.' >&2; exit 1; }
   install -m 0644 "$photo_file" "$release_dir/assets/doctors/"
+done
+for hospital in hefei-first hefei-second hefei-third; do
+  partner_dir="$source_dir/assets/partners/$hospital"
+  [[ -d "$partner_dir" && ! -L "$partner_dir" ]] || { printf '%s\n' 'Partner portraits are missing.' >&2; exit 1; }
+  install -d -m 0755 "$release_dir/assets/partners/$hospital"
+  partner_photos=("$partner_dir"/*.png "$partner_dir"/*.jpg "$partner_dir"/*.jpeg "$partner_dir"/*.webp)
+  [[ ${#partner_photos[@]} -gt 0 ]] || { printf '%s\n' 'No partner portraits found.' >&2; exit 1; }
+  for partner_photo in "${partner_photos[@]}"; do
+    [[ -f "$partner_photo" && ! -L "$partner_photo" ]] || { printf '%s\n' 'Invalid partner portrait.' >&2; exit 1; }
+    install -m 0644 "$partner_photo" "$release_dir/assets/partners/$hospital/"
+  done
 done
 for source_module in "$release_dir"/*.mjs; do "$node_bin" --check "$source_module"; done
 

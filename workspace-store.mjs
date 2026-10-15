@@ -3,6 +3,7 @@ import path from 'node:path';
 import {randomUUID} from 'node:crypto';
 import {AppError} from './llm.mjs';
 import {createDownwardSeed} from './downward.mjs';
+import {PARTNER_DOCTORS, LEGACY_DOWNWARD_TEAMS} from './partner-roster.mjs';
 import {attachmentId,ATTACHMENT_FILE_LIMIT} from './attachment-store.mjs';
 
 export const WORKSPACE_BODY_LIMIT=2*1024*1024;
@@ -24,6 +25,8 @@ const byId=(items)=>items.sort((a,b)=>a.id.localeCompare(b.id));
 export function createWorkspaceValidator(doctors,seed=createDownwardSeed()){
   const roster=new Map(doctors.filter(d=>d.photo).map(d=>[d.id,d]));
   const seedPatients=new Map(seed.patients.map(p=>[p.id,p]));
+  const partnerRoster=new Map(PARTNER_DOCTORS.filter(d=>d.photo).map(d=>[d.id,d]));
+  const legacyTeamIds=new Set(LEGACY_DOWNWARD_TEAMS.map(d=>d.id));
   function record(r){
     check(object(r)&&id(r.id)&&object(r.doctor)&&roster.has(r.doctor.id));
     const d=roster.get(r.doctor.id);check(r.doctor.name===d.name&&r.doctor.department===d.department);
@@ -61,8 +64,11 @@ export function createWorkspaceValidator(doctors,seed=createDownwardSeed()){
       for(const m of p.measurements){check(object(m)&&id(m.id)&&moment(m.date)&&text(m.symptoms,1000,true)&&text(m.source,100));for(const [k,min,max]of [['sbp',40,300],['dbp',20,200],['heartRate',20,250],['spo2',40,100],['weight',10,300]])check(Number.isFinite(m[k])&&m[k]>=min&&m[k]<=max);check(m.dbp<m.sbp);}
     }
     for(const p of value.plans){
-      check(object(p)&&id(p.id)&&patients.has(p.patientId)&&['down-lincheng','down-zhouzhiyuan','down-guanning'].includes(p.doctorId)&&['住院延续治疗','心脏康复','术后护理','慢病随访'].includes(p.service)&&day(p.date)&&['pending','arranged','monitoring'].includes(p.status)&&moment(p.createdAt)&&moment(p.updatedAt));
+      check(object(p)&&id(p.id)&&patients.has(p.patientId)&&(partnerRoster.has(p.doctorId)||legacyTeamIds.has(p.doctorId))&&['住院延续治疗','心脏康复','术后护理','慢病随访'].includes(p.service)&&day(p.date)&&['pending','arranged','monitoring'].includes(p.status)&&moment(p.createdAt)&&moment(p.updatedAt));
       for(const key of ['doctorName','hospital','department'])check(text(p[key],200));
+      if(p.campus!==undefined)check(text(p.campus,200,true));
+      const receivingDoctor=partnerRoster.get(p.doctorId);
+      if(receivingDoctor)check(p.doctorName===receivingDoctor.name&&p.hospital===receivingDoctor.hospital&&p.department===receivingDoctor.department&&(p.campus===undefined||p.campus===(receivingDoctor.campus||'')));
       check(text(p.goal,2000)&&text(p.handoff,2000,true));
       if(p.status!=='pending')check(text(p.acceptedDepartment,100)&&text(p.location,200)&&text(p.arrangement,2000));
     }

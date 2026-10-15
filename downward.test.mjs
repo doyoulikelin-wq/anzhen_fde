@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createDownwardSeed,validateMeasurement,validateDownwardPatient,createDownwardWorkspace} from './downward.mjs';
+import {PARTNER_DOCTORS} from './partner-roster.mjs';
 const reading={date:'2026-09-20T14:30',sbp:'126',dbp:'78',heartRate:'74',spo2:'98',weight:'68.1',symptoms:' 暂无新发不适 '};
 test('监测输入转为有限数值并保留录入日期',()=>{
   const value=validateMeasurement(reading);
@@ -51,7 +52,7 @@ test('共享照护读取服务器种子并订阅跨客户端更新，不访问�
 const arrangedPlan={id:'plan-1',patientId:'patient-wang',doctorId:'down-zhouzhiyuan',doctorName:'周知远',hospital:'青禾康复医院',department:'康复医学科',service:'心脏康复',date:'2026-10-01',goal:'连续康复',handoff:'核对出院小结',status:'pending',createdAt:'2026-09-20T00:00:00Z'};
 const pendingAlert={id:'alert-1',patientId:'patient-wang',at:'2026-09-20T08:00:00Z',severity:'urgent',note:'患者新发不适，已联系接诊团队。',status:'ready',ai:{summary:'待医生复核。',changes:[],missing:[],handoff:'继续沟通。',source:'ai'}};
 const formCases=[
-  {label:'下转申请',action:['downAction','plan'],values:{doctorId:'down-zhouzhiyuan',service:'心脏康复',date:'2026-10-01',goal:'继续康复',handoff:'复核出院小结'},verify:s=>assert.equal(s.plans.length,1)},
+  {label:'下转申请',action:['downAction','plan'],values:{doctorId:PARTNER_DOCTORS[0]?.id,service:'心脏康复',date:'2026-10-01',goal:'继续康复',handoff:'复核出院小结'},verify:s=>assert.equal(s.plans.length,1)},
   {label:'接收安排',prepare:s=>s.plans.push(structuredClone(arrangedPlan)),role:'lower',action:['downAction','receive'],values:{department:'康复医学科',location:'2病区',arrangement:'每日观察'},verify:s=>assert.equal(s.plans[0].status,'arranged')},
   {label:'连续监测',action:['downAction','measurement'],values:reading,verify:s=>assert.equal(s.patients[0].measurements.length,8)},
   {label:'处理反馈',prepare:s=>s.alerts.push(structuredClone(pendingAlert)),action:['downHandle','alert-1'],values:{note:'已联系协作团队，安排人工复核。'},verify:s=>assert.equal(s.alerts[0].status,'handled')}
@@ -100,7 +101,7 @@ test('新建患者直到服务端确认才新增，失败保留输入并可重�
 });
 test('新增患者下转、明确下一步、接收登记和首条监测形成同一档案',async t=>{
   const h=workspaceHarness(t);h.controller.openNewPatient(newPatient);await h.submit(newPatient);const id=h.state.patients.at(-1).id;
-  await h.submit({doctorId:'down-zhouzhiyuan',service:'心脏康复',date:'2026-10-01',goal:newPatient.goal,handoff:newPatient.handoff});
+  await h.submit({doctorId:PARTNER_DOCTORS[0].id,service:'心脏康复',date:'2026-10-01',goal:newPatient.goal,handoff:newPatient.handoff});
   const plan=h.state.plans.at(-1);assert.equal(plan.patientId,id);assert.equal(plan.status,'pending');assert.match(h.stats.modalHTML,/前往下转接收中心/);
   h.element('#down-go-receiving').onclick();assert.equal(h.stats.navigation.at(-1),'down-receive');assert.match(h.container.innerHTML,/下转接收中心/);assert.match(h.container.innerHTML,/下转流程测试患者/);
   h.click('downReceivePlan',plan.id);await h.submit({department:'康复医学科',location:'康复病区 8 床',arrangement:'接收后每日监测并对接上级团队。'});
@@ -131,4 +132,33 @@ test('导入患者保留院内来源，并将来源医生带入上级责任团�
   const patient=h.state.patients.at(-1);
   assert.equal(patient.sourceSystem,'HIS');assert.equal(patient.sourcePatientId,'VISIT-001');assert.equal(patient.sourceDoctor,'来源医生甲');assert.equal(patient.sourceHospital,'上级医院');
   assert.match(patient.id,/^patient-[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/);
+});
+
+
+test('从真实医生详情发起下转，保存院方目录身份并允许独立填写服务需求',async t=>{
+  const d=PARTNER_DOCTORS[0];assert.ok(d,'应提供经来源核实的接收医生');
+  const h=workspaceHarness(t);
+  h.click('downDoctor',d.id);assert.ok(h.stats.modalHTML.includes(d.name));assert.ok(h.stats.modalHTML.includes(d.photo));
+  h.element('#down-use-doctor').onclick();
+  assert.ok(h.stats.modalHTML.includes(`value="${d.id}" selected`));
+  assert.ok(h.element('#down-selected-doctor').innerHTML.includes(d.hospital));
+  for(const service of ['住院延续治疗','心脏康复','术后护理','慢病随访']){
+    if(h.state.plans.length)h.click('downAction','plan');
+    await h.submit({doctorId:d.id,service,date:'2026-10-16',goal:'由院方评估服务条件并衔接治疗',handoff:'携带出院记录'});
+    assert.equal(h.state.plans.length,1);
+    const plan=h.state.plans[0];
+    assert.deepEqual({doctorId:plan.doctorId,doctorName:plan.doctorName,hospital:plan.hospital,department:plan.department},{doctorId:d.id,doctorName:d.name,hospital:d.hospital,department:d.department});
+    assert.equal(plan.campus,d.campus||'');assert.equal(plan.service,service);assert.equal(plan.status,'pending');
+  }
+});
+
+test('新申请不再选择旧虚构团队，历史计划仍可查看并调整',async t=>{
+  const h=workspaceHarness(t);h.click('downAction','plan');
+  assert.doesNotMatch(h.stats.modalHTML,/<option value="down-(lincheng|zhouzhiyuan|guanning)"/);
+  await h.submit({doctorId:'down-zhouzhiyuan',service:'心脏康复',date:'2026-10-16',goal:'继续康复',handoff:''});
+  assert.equal(h.stats.writes,0);assert.match(h.messages.at(-1),/请选择接收医生/);
+  h.remoteUpdate(s=>s.plans.push(structuredClone(arrangedPlan)));h.click('downAction','plan');
+  assert.match(h.stats.modalHTML,/既有计划接收团队/);assert.match(h.stats.modalHTML,/<option value="down-zhouzhiyuan" selected/);
+  await h.submit({doctorId:'down-zhouzhiyuan',service:'心脏康复',date:'2026-10-16',goal:'补充旧计划交接目标',handoff:'保留历史接收团队'});
+  assert.equal(h.state.plans.length,1);assert.equal(h.state.plans[0].id,arrangedPlan.id);assert.equal(h.state.plans[0].doctorName,arrangedPlan.doctorName);assert.equal(h.state.plans[0].goal,'补充旧计划交接目标');
 });

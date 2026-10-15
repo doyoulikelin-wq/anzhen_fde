@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "collectedAt": "2026-10-15",
+  "hospital": {
+    "id": "hefei-third",
+    "name": "合肥市第三人民医院",
+    "aliases": [
+      "合肥市中医院",
+      "安徽医科大学合肥第三临床学院"
+    ],
+    "aliasNote": "官网医院简介载明2017年增挂合肥市中医院，同时为安徽医科大学合肥第三临床学院。",
+    "officialUrl": "https://www.ahhfsy.cn/",
+    "profileUrl": "https://www.ahhfsy.cn/portal/channel_3/202409/313.html",
+    "department": "心血管内科",
+    "departmentUrl": "https://www.ahhfsy.cn/portal/channel_495/495.html",
+    "doctorListUrl": "https://www.ahhfsy.cn/portal/channel_497/497.html",
+    "campus": "上海路院区",
+    "address": "合肥市包河区淝河镇鱼梁路2号",
+    "addressSource": "https://www.ahhfsy.cn/index.html",
+    "relationshipStatus": "catalog-only-not-confirmed-partnership",
+    "campusNotices": [
+      {
+        "campus": "望江路院区",
+        "title": "合肥市三院关于望江路院区升级改造期间停诊所有医疗服务的公告",
+        "url": "https://mp.weixin.qq.com/s/5no6epakxoPOkbheFk0RCA",
+        "listedOn": "https://www.ahhfsy.cn/index.html",
+        "publishedAt": null,
+        "observedAt": "2026-10-15",
+        "verification": "官网首页可核实公告标题与链接；微信正文未能读取，未确认起止时间或恢复日期。",
+        "restriction": "不将望江路院区旧静态排班转为可预约时间；当前接收与出诊院区应由医院确认。"
+      }
+    ]
+  },
+  "coverage": {
+    "doctors": 6,
+    "photos": 6,
+    "scope": "官网上海路院区心血管内科科室专家列表；与望江路院区同科室名录重名合并。",
+    "isCompleteRoster": false,
+    "excluded": [
+      {
+        "name": "宋丽萍",
+        "reason": "官网职称为副主任护师，未作为医生收录。"
+      },
+      {
+        "name": "王琦",
+        "reason": "官网职称为副主任护师，未作为医生收录。"
+      }
+    ],
+    "limitations": [
+      "这是官网公开专家覆盖，不代表全部在岗医师；未将第三方旧名录中的额外姓名当作已核实的当前医生。",
+      "官网静态个人页的门诊时间与首页院区停诊公告存在时效差异；未采集或宣称实时排班、床位和号源。",
+      "所有医生归入上海路院区是依据官方目录归属，具体门诊/住院接诊地点须院方确认。",
+      "纳入Web App下转单位候选名录，不表示已签约或接入医院业务系统。",
+      "官网HTTPS公开页的证书链在当前环境未能校验；仅为收集公开网页和图片临时跳过证书链校验，未发送账号、凭据或患者数据。"
+    ]
+  },
+  "doctors": [
+    {
+      "id": "hefei-third-cheng-xiaobing",
+      "name": "程小兵",
+      "title": "主任医师",
+      "department": "心血管内科",
+      "hospital": "合肥市第三人民医院",
+      "campus": "上海路院区",
+      "campusBasis": "官网上海路院区心血管内科科室专家名录；不等于当前门诊出诊院区。",
+      "bio": "医学博士，官网列为心血管内科行政副主任；专业方向为冠心病、心律失常介入及复杂心血管病诊疗。",
+      "expertise": [
+        "冠心病介入",
+        "心律失常",
+        "顽固性心力衰竭",
+        "难治性高血压",
+        "起搏器植入与生理性起搏"
+      ],
+      "photo": "assets/partners/hefei-third/cheng-xiaobing.jpg",
+      "photoUrl": "https://www.ahhfsy.cn/upload/images/2024/9/5f4e9e95c9e2fae0.jpg",
+      "photoVerification": "照片取自该医生官方个人页顶部，已核对姓名与图片节点对应关系并查看图片。",
+      "photoSha256": "042e94f720e0d75b122082cfd2d7ed8317823d7c771fcf3baecfb8fb87eb79d0",
+      "sourceUrls": [
+        "https://www.ahhfsy.cn/portal/channel_497/202409/1943.html",
+        "https://www.ahhfsy.cn/portal/channel_497/497.html",
+        "https://www.ahhfsy.cn/portal/channel_495/495.html"
+      ],
+      "sourceUpdatedAt": null,
+      "sourceDateNote": "页面未展示可确认的发布日期或更新时间；URL含202409，不据此认定最新更新日期。",
+      "collectedAt": "2026-10-15",
+      "officialScheduleNote": "个人页列上海路院区周三上午，亦列望江路院区周二全天。静态时间可能已变化；望江路院区有停诊公告。",
+      "scheduleStatus": "not-live-confirmed",
+      "scheduleSourceUrl": "https://www.ahhfsy.cn/portal/channel_497/202409/1943.html"
+    },
+    {
+      "id": "hefei-third-zhong-wansheng",
+      "name": "钟万生",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "hospital": "合肥市第三人民医院",
+      "campus": "上海路院区",
+      "campusBasis": "官网上海路院区心血管内科科室专家名录；不等于当前门诊出诊院区。",
+      "bio": "本科学历，官网列为心血管内科技术主任、安徽医科大学副教授；从事心血管疾病规范诊疗。",
+      "expertise": [
+        "冠脉综合征",
+        "难治性高血压",
+        "顽固性心力衰竭",
+        "复杂心律失常"
+      ],
+      "photo": "assets/partners/hefei-third/zhong-wansheng.jpg",
+      "photoUrl": "https://www.ahhfsy.cn/upload/images/2024/9/85d6735c3e598681.jpg",
+      "photoVerification": "照片取自该医生官方个人页顶部，已核对姓名与图片节点对应关系并查看图片。",
+      "photoSha256": "d26cf65d2cce3c8e1af807a8d1a5b17b2ea9320b408a394cc216c1bf804c90a4",
+      "sourceUrls": [
+        "https://www.ahhfsy.cn/portal/channel_497/202409/1942.html",
+        "https://www.ahhfsy.cn/portal/channel_497/497.html",
+        "https://www.ahhfsy.cn/portal/channel_495/495.html"
+      ],
+      "sourceUpdatedAt": null,
+      "sourceDateNote": "页面未展示可确认的发布日期或更新时间；URL含202409，不据此认定最新更新日期。",
+      "collectedAt": "2026-10-15",
+      "officialScheduleNote": "个人页列上海路院区周一、周五下午及周四上午，亦列望江路院区时段。静态时间可能已变化；望江路院区有停诊公告。",
+      "scheduleStatus": "not-live-confirmed",
+      "scheduleSourceUrl": "https://www.ahhfsy.cn/portal/channel_497/202409/1942.html"
+    },
+    {
+      "id": "hefei-third-ding-ruyue",
+      "name": "丁汝跃",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "hospital": "合肥市第三人民医院",
+      "campus": "上海路院区",
+      "campusBasis": "官网上海路院区心血管内科科室专家名录；不等于当前门诊出诊院区。",
+      "bio": "硕士研究生学历，从事冠心病介入及心脏危重症诊治，担任心血管和心脏重症相关学会职务。",
+      "expertise": [
+        "冠心病介入",
+        "心脏危重症"
+      ],
+      "photo": "assets/partners/hefei-third/ding-ruyue.jpg",
+      "photoUrl": "https://www.ahhfsy.cn/upload/images/2024/9/4e5515ed886d3421.JPG",
+      "photoVerification": "照片取自该医生官方个人页顶部，已核对姓名与图片节点对应关系并查看图片。",
+      "photoSha256": "7d68012254d7c580c547be80d293377b54637884932ac0ac3839231fb9712532",
+      "sourceUrls": [
+        "https://www.ahhfsy.cn/portal/channel_497/202409/1941.html",
+        "https://www.ahhfsy.cn/portal/channel_497/497.html",
+        "https://www.ahhfsy.cn/portal/channel_495/495.html"
+      ],
+      "sourceUpdatedAt": null,
+      "sourceDateNote": "页面未展示可确认的发布日期或更新时间；URL含202409，不据此认定最新更新日期。",
+      "collectedAt": "2026-10-15",
+      "officialScheduleNote": "个人页位于上海路院区科室名录，但门诊时间正文只列望江路院区周五下午。望江路院区有停诊公告，当前门诊院区及出诊须院方确认。",
+      "scheduleStatus": "not-live-confirmed",
+      "scheduleSourceUrl": "https://www.ahhfsy.cn/portal/channel_497/202409/1941.html"
+    },
+    {
+      "id": "hefei-third-sheng-chunmei",
+      "name": "盛春梅",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "hospital": "合肥市第三人民医院",
+      "campus": "上海路院区",
+      "campusBasis": "官网上海路院区心血管内科科室专家名录；不等于当前门诊出诊院区。",
+      "bio": "毕业于皖南医学院临床医学系，学士学位；官网介绍具有冠心病介入诊疗资质，并从事心血管常见病及危重症诊疗。",
+      "expertise": [
+        "冠心病",
+        "高血压",
+        "心力衰竭",
+        "心律失常",
+        "心肌病",
+        "心脏瓣膜病"
+      ],
+      "photo": "assets/partners/hefei-third/sheng-chunmei.jpg",
+      "photoUrl": "https://www.ahhfsy.cn/upload/images/2024/9/5c1a83d69efe162e.jpg",
+      "photoVerification": "照片取自该医生官方个人页顶部，已核对姓名与图片节点对应关系并查看图片。",
+      "photoSha256": "923e5db9354b84f7547cade7efa5487678af62289159c73571178e5838388384",
+      "sourceUrls": [
+        "https://www.ahhfsy.cn/portal/channel_497/202409/1940.html",
+        "https://www.ahhfsy.cn/portal/channel_497/497.html",
+        "https://www.ahhfsy.cn/portal/channel_495/495.html"
+      ],
+      "sourceUpdatedAt": null,
+      "sourceDateNote": "页面未展示可确认的发布日期或更新时间；URL含202409，不据此认定最新更新日期。",
+      "collectedAt": "2026-10-15",
+      "officialScheduleNote": "个人页列上海路院区周一、望江路院区周三。静态时间可能已变化；望江路院区有停诊公告。",
+      "scheduleStatus": "not-live-confirmed",
+      "scheduleSourceUrl": "https://www.ahhfsy.cn/portal/channel_497/202409/1940.html"
+    },
+    {
+      "id": "hefei-third-liu-shenghao",
+      "name": "刘圣好",
+      "title": "副主任医师",
+      "department": "心血管内科",
+      "hospital": "合肥市第三人民医院",
+      "campus": "上海路院区",
+      "campusBasis": "官网上海路院区心血管内科科室专家名录；不等于当前门诊出诊院区。",
+      "bio": "硕士，专业方向为心脏起搏与电生理，官网介绍可进行起搏器随访、程控及器械植入；个人页说明分管上海路院区病房。",
+      "expertise": [
+        "心律失常",
+        "心脏起搏",
+        "电生理与导管消融",
+        "起搏器随访与程控"
+      ],
+      "photo": "assets/partners/hefei-third/liu-shenghao.jpg",
+      "photoUrl": "https://www.ahhfsy.cn/upload/images/2024/9/e2184e1b3e86e69b.jpg",
+      "photoVerification": "照片取自该医生官方个人页顶部，已核对姓名与图片节点对应关系并查看图片。",
+      "photoSha256": "b19b835387a2a2506c889d5fe845d3c02cb35980f03ba617b47e570bc7403901",
+      "sourceUrls": [
+        "https://www.ahhfsy.cn/portal/channel_497/202409/1939.html",
+        "https://www.ahhfsy.cn/portal/channel_497/497.html",
+        "https://www.ahhfsy.cn/portal/channel_495/495.html"
+      ],
+      "sourceUpdatedAt": null,
+      "sourceDateNote": "页面未展示可确认的发布日期或更新时间；URL含202409，不据此认定最新更新日期。",
+      "collectedAt": "2026-10-15",
+      "officialScheduleNote": "个人页明确写分管上海路院区病房、暂时无门诊，服从科室安排。不得根据该资料推定有普通门诊号源。",
+      "scheduleStatus": "not-live-confirmed",
+      "scheduleSourceUrl": "https://www.ahhfsy.cn/portal/channel_497/202409/1939.html"
+    },
+    {
+      "id": "hefei-third-chen-dong",
+      "name": "陈东",
+      "title": "主任医师",
+      "department": "心血管内科",
+      "hospital": "合肥市第三人民医院",
+      "campus": "上海路院区",
+      "campusBasis": "官网上海路院区心血管内科科室专家名录；不等于当前门诊出诊院区。",
+      "bio": "硕士，专业方向为电生理和心脏起搏；参与心血管及重症相关学会工作，开展常见心血管疾病诊疗。",
+      "expertise": [
+        "心律失常",
+        "心力衰竭",
+        "高血压",
+        "冠心病",
+        "电生理与心脏起搏"
+      ],
+      "photo": "assets/partners/hefei-third/chen-dong.jpg",
+      "photoUrl": "https://www.ahhfsy.cn/upload/images/2024/9/e58daf3f9595ff77.jpg",
+      "photoVerification": "照片取自该医生官方个人页顶部，已核对姓名与图片节点对应关系并查看图片。",
+      "photoSha256": "2ca1c8980f0b7604a1731ec770a7242986912ec1ab83abc92a8f89acf1827ff4",
+      "sourceUrls": [
+        "https://www.ahhfsy.cn/portal/channel_497/202409/1938.html",
+        "https://www.ahhfsy.cn/portal/channel_497/497.html",
+        "https://www.ahhfsy.cn/portal/channel_495/495.html"
+      ],
+      "sourceUpdatedAt": null,
+      "sourceDateNote": "页面未展示可确认的发布日期或更新时间；URL含202409，不据此认定最新更新日期。",
+      "collectedAt": "2026-10-15",
+      "officialScheduleNote": "个人页列上海路院区周四下午和周六，亦列望江路院区周一。静态时间可能已变化；望江路院区有停诊公告。",
+      "scheduleStatus": "not-live-confirmed",
+      "scheduleSourceUrl": "https://www.ahhfsy.cn/portal/channel_497/202409/1938.html"
+    }
+  ]
+}

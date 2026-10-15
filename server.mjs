@@ -8,9 +8,9 @@ import {createCareAiService,RECORD_EXTRACT_BODY_LIMIT} from './care-ai.mjs';
 import {createWorkspaceStore,WORKSPACE_BODY_LIMIT} from './workspace-store.mjs';
 import {createAttachmentStore,ATTACHMENT_BODY_LIMIT} from './attachment-store.mjs';
 export const root=path.dirname(fileURLToPath(import.meta.url));
-const mime={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.svg':'image/svg+xml','.ico':'image/x-icon'};
+const mime={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.ico':'image/x-icon'};
 const publicFiles=new Set(['/index.html','/styles.css','/app.mjs','/matching.mjs','/record-store.mjs','/data/doctors.json','/shared-ui.mjs','/portal.mjs','/portal.css','/downward.mjs','/downward.css','/guidance.mjs','/guidance.css']);
-for(const file of ['shared-client.mjs','schedule-policy.mjs','referral-workflow.mjs','approval-ui.mjs','data-intake.mjs','attachments.mjs','data-intake.css'])publicFiles.add('/'+file);
+for(const file of ['partner-roster.mjs','shared-client.mjs','schedule-policy.mjs','referral-workflow.mjs','approval-ui.mjs','data-intake.mjs','attachments.mjs','data-intake.css'])publicFiles.add('/'+file);
 function send(res,status,value) {res.writeHead(status,{'Content-Type':'application/json; charset=utf-8'});res.end(JSON.stringify(value));}
 async function readJson(req,limit=98304) {
   if (!/^application\/json(?:;|$)/i.test(req.headers['content-type'] || '')) throw new AppError(415,'JSON_REQUIRED','请求需要 JSON 格式。');
@@ -76,7 +76,7 @@ export async function createAppServer({config,fetchImpl=fetch,workspaceStore,dat
       }
       if (!['GET','HEAD'].includes(req.method)) throw new AppError(405,'METHOD_NOT_ALLOWED','请求方法不支持。');
       const relative=decodeURIComponent(url.pathname==='/'?'/index.html':url.pathname);
-      if (!publicFiles.has(relative) && !/^\/assets\/doctors\/doctor-[a-z0-9-]+\.(?:png|jpg)$/.test(relative)) throw new AppError(404,'NOT_FOUND','文件不存在。');
+      if (!publicFiles.has(relative) && !/^\/assets\/doctors\/doctor-[a-z0-9-]+\.(?:png|jpg)$/.test(relative) && !/^\/assets\/partners\/hefei-(?:first|second|third)\/[a-z0-9-]+\.(?:png|jpg|jpeg|webp)$/.test(relative)) throw new AppError(404,'NOT_FOUND','文件不存在。');
       const target=await fs.realpath(path.join(root,relative));
       if (!target.startsWith(root+path.sep)) throw new AppError(404,'NOT_FOUND','文件不存在。');
       const content=await fs.readFile(target);
