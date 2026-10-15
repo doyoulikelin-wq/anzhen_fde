@@ -10,7 +10,7 @@ import {createAttachmentStore,ATTACHMENT_BODY_LIMIT} from './attachment-store.mj
 export const root=path.dirname(fileURLToPath(import.meta.url));
 const mime={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.ico':'image/x-icon'};
 const publicFiles=new Set(['/index.html','/styles.css','/app.mjs','/matching.mjs','/record-store.mjs','/data/doctors.json','/shared-ui.mjs','/portal.mjs','/portal.css','/downward.mjs','/downward.css','/guidance.mjs','/guidance.css']);
-for(const file of ['partner-roster.mjs','shared-client.mjs','schedule-policy.mjs','referral-workflow.mjs','approval-ui.mjs','data-intake.mjs','attachments.mjs','data-intake.css'])publicFiles.add('/'+file);
+for(const file of ['partner-roster.mjs','receiving-options.mjs','shared-client.mjs','schedule-policy.mjs','referral-workflow.mjs','approval-ui.mjs','data-intake.mjs','attachments.mjs','data-intake.css'])publicFiles.add('/'+file);
 function send(res,status,value) {res.writeHead(status,{'Content-Type':'application/json; charset=utf-8'});res.end(JSON.stringify(value));}
 async function readJson(req,limit=98304) {
   if (!/^application\/json(?:;|$)/i.test(req.headers['content-type'] || '')) throw new AppError(415,'JSON_REQUIRED','请求需要 JSON 格式。');

@@ -70,7 +70,10 @@ export function createWorkspaceValidator(doctors,seed=createDownwardSeed()){
       const receivingDoctor=partnerRoster.get(p.doctorId);
       if(receivingDoctor)check(p.doctorName===receivingDoctor.name&&p.hospital===receivingDoctor.hospital&&p.department===receivingDoctor.department&&(p.campus===undefined||p.campus===(receivingDoctor.campus||'')));
       check(text(p.goal,2000)&&text(p.handoff,2000,true));
-      if(p.status!=='pending')check(text(p.acceptedDepartment,100)&&text(p.location,200)&&text(p.arrangement,2000));
+      // Structured selections are optional; old location-only records stay valid.
+      if(p.serviceLocation!==undefined)check(text(p.serviceLocation,200));
+      if(p.bed!==undefined)check(text(p.bed,40));
+      if(p.status!=='pending')check(text(p.acceptedDepartment,100)&&text(p.location,250)&&text(p.arrangement,2000));
     }
     for(const a of value.alerts){
       check(object(a)&&id(a.id)&&patients.has(a.patientId)&&moment(a.at)&&text(a.note,1000)&&a.severity==='urgent'&&['processing','failed','ready','handled'].includes(a.status));
